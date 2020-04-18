@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head><link rel="icon" href="/favicon_main.svg"><meta charset="utf-8" />
+  <head>
+	<meta name="generator" content="Hugo 0.69.0" /><link rel="icon" href="/favicon_main.svg"><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta http-equiv="x-ua-compatible" content="ie=edge" /><title>Personal website and blog</title>
     
@@ -17,7 +18,7 @@
 
     <div id="preloader">
       <div id="status"></div>
-    </div><nav class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
+    </div><section class="hero is-fullheight is-default is-bold"><nav class="navbar is-fresh is-transparent no-shadow" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
 
@@ -34,14 +35,14 @@
           <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
         </div>
         <div class="navbar-item left-menu-icon-wrapper">
-          Tags
+          Теги
         </div>
       </a>
 
       <div class="navbar-item is-expanded"></div>
       <a class="navbar-item is-hidden-desktop">  
         <div data-target="navbar-menu" class="navbar-item right-menu-icon-wrapper is-hidden-desktop">
-          Menu
+          Меню
         </div>
         <div data-target="navbar-menu" class="menu-icon-wrapper right-menu-icon-wrapper" style="visibility: visible;">
           <svg width="1000px" height="1000px">
@@ -59,7 +60,7 @@
     <div id="navbar-menu" class="navbar-menu is-static">
       
       <div class="navbar-end">
-        <a href="/posts/" class="navbar-item is-secondary">Posts</a></div>
+        </div>
     </div>
 
 
@@ -84,14 +85,14 @@
             <button id="menu-icon-trigger" class="menu-icon-trigger"></button>
           </div>
           <div class="navbar-item left-menu-icon-wrapper">
-            Tags
+            Теги
           </div>
         </a>
   
         <div class="navbar-item is-expanded"></div>
         <a class="navbar-item is-hidden-desktop">  
           <div data-target="cloned-navbar-menu" class="navbar-item right-menu-icon-wrapper is-hidden-desktop">
-            Menu
+            Меню
           </div>
           <div data-target="cloned-navbar-menu" class="menu-icon-wrapper right-menu-icon-wrapper" style="visibility: visible;">
             <svg width="1000px" height="1000px">
@@ -107,7 +108,7 @@
       
   
       <div id="cloned-navbar-menu" class="navbar-menu is-static">
-        <div class="navbar-end"><a href="/posts/" class="navbar-item is-secondary">Posts</a></div>
+        <div class="navbar-end"></div>
       </div>
   
   
@@ -115,66 +116,21 @@
   
     </div>
   </nav>
-<section class="section is-medium">
+<div class="hero-body">
         <div class="container">
-          
-            
-              <h1 class="title section-title">Posts</h1>
-              <h5 class="subtitle is-5 is-muted"></h5>
-              <div class="divider"></div>        
-              <div class="section is-small">
-                <div class="columns">
-                    <div class="column is-4"><div class="box">
-      <figure class="image is-3by2">
-        <a href="/posts/my-first/">
-        
-          <img src="/images/default_summary_hu2be732aee21a2469ead3fe1f2df8caca_2088687_600x0_resize_q75_box.jpg" alt="">
-        
-        </a>
-      </figure>
-      <h3 class="title is-5 refresh-summary-title">
-        My First
-      </h3>
-      <p class="refresh-summary">$ sudo bash -c &amp;#39;echo 0 &amp;gt; /proc/sys/kernel/randomize_va_space&amp;#39;  </p> 
-      <div class="action has-text-right">
-        <a href="/posts/my-first/" class="button is-primary">
-                Read more
-            </a>
-      </div>
-    </div>
-  </div>
-<div class="column is-4"><div class="box">
-      <figure class="image is-3by2">
-        <a href="/posts/my-first-post/">
-        
-          <img src="/images/default_summary_hu2be732aee21a2469ead3fe1f2df8caca_2088687_600x0_resize_q75_box.jpg" alt="">
-        
-        </a>
-      </figure>
-      <h3 class="title is-5 refresh-summary-title">
-        [Go]http server-REST API
-      </h3>
-      <p class="refresh-summary"> 透過gin框架可以快速寫一個伺服器
- 效果：
-http://localhost:8080/v1/word/jenny
-出現 hello jenny
-main.go
-func main() { rest.InitRouter() } rest/rest.go
-package rest import &amp;quot;github.com/gin-gonic/gin&amp;quot; func InitRouter() { router := gin.Default() v1 := router.Group(&amp;quot;/v1&amp;quot;) { v1.GET(&amp;quot;/word/:name&amp;quot;, getword) } router.Run(&amp;quot;:8080&amp;quot;) } rest/func.go
-func getword(c *gin.Context) { name := c.Param(&amp;quot;name&amp;quot;) c.String(http.StatusOK, &amp;quot;Hello %s&amp;quot;, name) } </p> 
-      <div class="action has-text-right">
-        <a href="/posts/my-first-post/" class="button is-primary">
-                Read more
-            </a>
-      </div>
-    </div>
-  </div>
-
-                  </div>
-                
-              </div>
-            
-          
+            <div class="columns is-vcentered">
+            <div class="column is-5 is-offset-1 landing-caption">
+                <h1 class="title is-1 is-bold is-spaced">Julia белая краска</h1><h2 class="subtitle is-5 is-muted">
+                Персональный сайт и блог
+                </h2>
+            </div>
+            <div class="column is-5 is-offset-1">
+                <figure class="image"><img src="/images/avataaars.png" 
+                     style="width:500px" alt="Myself">
+                </figure>
+            </div>
+            </div>
+        </div>
         </div>
     </section><footer class="footer footer-dark">
   <div class="container">
@@ -187,14 +143,12 @@ func getword(c *gin.Context) { name := c.Param(&amp;quot;name&amp;quot;) c.Strin
     <div class="column">
         <div class="footer-column">
           <div class="footer-header">
-              <h3>Website</h3>
+              <h3>Веб-сайт</h3>
           </div>
-          <ul class="link-list"><li>
-              <a href="/"><span class="icon"><i class="fa fa-home"></i></span> Homepage</a>
-            </li><li></li>
-            <li><a href="/tags/">
+          <ul class="link-list"><li></li>
+            <li><a href="/ru/tags/">
                 <span class="icon"><i class="fa fa-tag"></i></span> 
-                All Tags
+                Все теги
               </a></li>
           </ul>
         </div>
@@ -204,7 +158,7 @@ func getword(c *gin.Context) { name := c.Param(&amp;quot;name&amp;quot;) c.Strin
       <div class="column">
         <div class="footer-column">
           <div class="footer-header">
-              <h3>Contacts</h3>
+              <h3>контакты</h3>
           </div>
           <ul class="link-list">
             
@@ -212,7 +166,7 @@ func getword(c *gin.Context) { name := c.Param(&amp;quot;name&amp;quot;) c.Strin
               <a href="https://www.linkedin.com/your_linkedin_profile" target="_blank">
                 <span class="icon"><i class="fa fa-linkedin"></i></span>
                 
-                  My LinkedIn
+                  LinkedIn
                 
               </a>
             </li>
@@ -220,10 +174,10 @@ func getword(c *gin.Context) { name := c.Param(&amp;quot;name&amp;quot;) c.Strin
                          
             
             <li>
-              <a href="mailto:name.surname@domain.com" target="_blank">
+              <a href="mailto:%d0%b8%d0%bc%d1%8f.%d1%84%d0%b0%d0%bc%d0%b8%d0%bb%d0%b8%d1%8f@%d0%b4%d0%be%d0%bc%d0%b5%d0%bd.com" target="_blank">
                 <span class="icon"><i class="fa fa-envelope"></i></span>
                 
-                  My Email
+                  Эл. адрес
                 
               </a>
             </li>
@@ -240,13 +194,13 @@ func getword(c *gin.Context) { name := c.Param(&amp;quot;name&amp;quot;) c.Strin
       <div class="column">
         <div class="footer-column">
           <div class="footer-header">
-              <h3>Copyright</h3>
+              <h3>Авторские права</h3>
           </div>
           <ul class="link-list">
             <li>
               <a>
                 <span class="icon"><i class="fa fa-copyright"></i></span>
-                Julia The White - 2020
+                Julia белая краска - 2020
               </a>
             </li>
           </ul>
@@ -266,12 +220,12 @@ func getword(c *gin.Context) { name := c.Param(&amp;quot;name&amp;quot;) c.Strin
   </div>
   <div class="inner">
     <ul class="sidebar-menu">
-      <li class="no-children"><a href="/tags/"><div class="columns">
+      <li class="no-children"><a href="/ru/tags/"><div class="columns">
               <table width="100%">  
                 <tr>
                   <td class="">
                     <span class="icon"><i class="fa fa-cubes"></i></span>
-                    All Tags
+                    Все теги
                   </td>
                   <td class="has-text-right" >
                       
@@ -279,25 +233,7 @@ func getword(c *gin.Context) { name := c.Param(&amp;quot;name&amp;quot;) c.Strin
                 </tr>
               </table>
             </div>
-          </a>
-      <li class="no-children">
-          <a href="/tags/golang">
-            <div class="columns">
-              
-              <table width="100%">  
-                  <tr>
-                    <td class=""><span class="icon"><i class="fa fa-cube"></i></span>golang</td>
-                    <td class="has-text-right" >
-                        <div class="tag-number">1</div>
-                      
-                    </td>
-                    
-                  </tr>
-              </table>
-              
-            </div>
-          </a>
-      </li></ul>
+          </a></ul>
   </div>
 </div>
 <script src="/js/jquery-2.2.4.893e90f6230962e42231635df650f20544ad22affc3ee396df768eaa6bc5a6a2.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="></script>
