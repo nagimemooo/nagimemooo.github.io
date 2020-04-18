@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Nagimemooo Blog</title>
+    <link>https://nagimemooo.github.io/posts/</link>
+    <description>Recent content in Posts on Nagimemooo Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <copyright>All rights reserved - 2015</copyright>
+    <lastBuildDate>Sat, 18 Apr 2020 11:24:01 +0800</lastBuildDate>
+    
+	<atom:link href="https://nagimemooo.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My First</title>
+      <link>https://nagimemooo.github.io/posts/my-first/</link>
+      <pubDate>Sat, 18 Apr 2020 11:24:01 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/posts/my-first/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>https://nagimemooo.github.io/posts/my-first-post/</link>
+      <pubDate>Sat, 18 Apr 2020 10:30:25 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/posts/my-first-post/</guid>
+      <description>1 </description>
+    </item>
+    
+  </channel>
+</rss>
