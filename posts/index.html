@@ -59,7 +59,12 @@
     <div id="navbar-menu" class="navbar-menu is-static">
       
       <div class="navbar-end">
-        <a href="/posts/" class="navbar-item is-secondary">Posts</a></div>
+        <a href="/about/" class="navbar-item is-secondary">About Me</a><a href="/posts/" class="navbar-item is-secondary">Posts</a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a href="/life/" class="navbar-link">Life</a>
+            <div class="navbar-dropdown">
+              <a href="/life/subtopic_3/" class="navbar-item">Title of SubTopic 3</a><a href="/life/subtopic_4/" class="navbar-item">Title of Subtopic 4</a></div>
+          </div><a href="/topic_1/" class="navbar-item is-secondary">Title of Topic 1</a></div>
     </div>
 
 
@@ -107,7 +112,11 @@
       
   
       <div id="cloned-navbar-menu" class="navbar-menu is-static">
-        <div class="navbar-end"><a href="/posts/" class="navbar-item is-secondary">Posts</a></div>
+        <div class="navbar-end"><a href="/about/" class="navbar-item is-secondary">About Me</a><a href="/posts/" class="navbar-item is-secondary">Posts</a><div class="navbar-item has-dropdown is-hoverable">
+              <a href="/life/" class="navbar-link">Life</a>
+              <div class="navbar-dropdown">
+                <a href="/life/subtopic_3/" class="navbar-item">Title of SubTopic 3</a><a href="/life/subtopic_4/" class="navbar-item">Title of Subtopic 4</a></div>
+            </div><a href="/topic_1/" class="navbar-item is-secondary">Title of Topic 1</a></div>
       </div>
   
   
@@ -135,9 +144,29 @@
       <h3 class="title is-5 refresh-summary-title">
         My First
       </h3>
-      <p class="refresh-summary">$ sudo bash -c &amp;#39;echo 0 &amp;gt; /proc/sys/kernel/randomize_va_space&amp;#39;  </p> 
+      <p class="refresh-summary">ggg $ sudo bash -c &amp;#39;echo 0 &amp;gt; /proc/sys/kernel/randomize_va_space&amp;#39; 
+</p> 
       <div class="action has-text-right">
         <a href="/posts/my-first/" class="button is-primary">
+                Read more
+            </a>
+      </div>
+    </div>
+  </div>
+<div class="column is-4"><div class="box">
+      <figure class="image is-3by2">
+        <a href="/posts/css-mind/">
+        
+          <img src="/images/default_summary_hu2be732aee21a2469ead3fe1f2df8caca_2088687_600x0_resize_q75_box.jpg" alt="">
+        
+        </a>
+      </figure>
+      <h3 class="title is-5 refresh-summary-title">
+        [CSS]CSS 學習地圖
+      </h3>
+      <p class="refresh-summary"></p> 
+      <div class="action has-text-right">
+        <a href="/posts/css-mind/" class="button is-primary">
                 Read more
             </a>
       </div>
@@ -191,7 +220,10 @@ func getword(c *gin.Context) { name := c.Param(&amp;quot;name&amp;quot;) c.Strin
           </div>
           <ul class="link-list"><li>
               <a href="/"><span class="icon"><i class="fa fa-home"></i></span> Homepage</a>
-            </li><li></li>
+            </li><li><a href="/credits/">
+                  <span class="icon"><i class="fa fa-cube"></i></span>
+                  Credits
+                </a></li>
             <li><a href="/tags/">
                 <span class="icon"><i class="fa fa-tag"></i></span> 
                 All Tags
@@ -281,12 +313,156 @@ func getword(c *gin.Context) { name := c.Param(&amp;quot;name&amp;quot;) c.Strin
             </div>
           </a>
       <li class="no-children">
+          <a href="/tags/custom_summary">
+            <div class="columns">
+              
+              <table width="100%">  
+                  <tr>
+                    <td class=""><span class="icon"><i class="fa fa-cube"></i></span>custom_summary</td>
+                    <td class="has-text-right" >
+                        <div class="tag-number">4</div>
+                      
+                    </td>
+                    
+                  </tr>
+              </table>
+              
+            </div>
+          </a>
+      </li>
+      <li class="no-children">
+          <a href="/tags/code">
+            <div class="columns">
+              
+              <table width="100%">  
+                  <tr>
+                    <td class=""><span class="icon"><i class="fa fa-cube"></i></span>code</td>
+                    <td class="has-text-right" >
+                        <div class="tag-number">3</div>
+                      
+                    </td>
+                    
+                  </tr>
+              </table>
+              
+            </div>
+          </a>
+      </li>
+      <li class="no-children">
+          <a href="/tags/default_image">
+            <div class="columns">
+              
+              <table width="100%">  
+                  <tr>
+                    <td class=""><span class="icon"><i class="fa fa-cube"></i></span>default_image</td>
+                    <td class="has-text-right" >
+                        <div class="tag-number">3</div>
+                      
+                    </td>
+                    
+                  </tr>
+              </table>
+              
+            </div>
+          </a>
+      </li>
+      <li class="no-children">
+          <a href="/tags/leaf_bundle">
+            <div class="columns">
+              
+              <table width="100%">  
+                  <tr>
+                    <td class=""><span class="icon"><i class="fa fa-cube"></i></span>leaf_bundle</td>
+                    <td class="has-text-right" >
+                        <div class="tag-number">3</div>
+                      
+                    </td>
+                    
+                  </tr>
+              </table>
+              
+            </div>
+          </a>
+      </li>
+      <li class="no-children">
+          <a href="/tags/no_summary">
+            <div class="columns">
+              
+              <table width="100%">  
+                  <tr>
+                    <td class=""><span class="icon"><i class="fa fa-cube"></i></span>no_summary</td>
+                    <td class="has-text-right" >
+                        <div class="tag-number">3</div>
+                      
+                    </td>
+                    
+                  </tr>
+              </table>
+              
+            </div>
+          </a>
+      </li>
+      <li class="no-children">
+          <a href="/tags/custom_image">
+            <div class="columns">
+              
+              <table width="100%">  
+                  <tr>
+                    <td class=""><span class="icon"><i class="fa fa-cube"></i></span>custom_image</td>
+                    <td class="has-text-right" >
+                        <div class="tag-number">2</div>
+                      
+                    </td>
+                    
+                  </tr>
+              </table>
+              
+            </div>
+          </a>
+      </li>
+      <li class="no-children">
+          <a href="/tags/css">
+            <div class="columns">
+              
+              <table width="100%">  
+                  <tr>
+                    <td class=""><span class="icon"><i class="fa fa-cube"></i></span>css</td>
+                    <td class="has-text-right" >
+                        <div class="tag-number">1</div>
+                      
+                    </td>
+                    
+                  </tr>
+              </table>
+              
+            </div>
+          </a>
+      </li>
+      <li class="no-children">
           <a href="/tags/golang">
             <div class="columns">
               
               <table width="100%">  
                   <tr>
                     <td class=""><span class="icon"><i class="fa fa-cube"></i></span>golang</td>
+                    <td class="has-text-right" >
+                        <div class="tag-number">1</div>
+                      
+                    </td>
+                    
+                  </tr>
+              </table>
+              
+            </div>
+          </a>
+      </li>
+      <li class="no-children">
+          <a href="/tags/love">
+            <div class="columns">
+              
+              <table width="100%">  
+                  <tr>
+                    <td class=""><span class="icon"><i class="fa fa-cube"></i></span>love</td>
                     <td class="has-text-right" >
                         <div class="tag-number">1</div>
                       
