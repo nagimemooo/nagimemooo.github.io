@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golang on nagimemooo 筆記</title>
+    <link>https://nagimemooo.github.io/tags/golang/</link>
+    <description>Recent content in golang on nagimemooo 筆記</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Sat, 18 Apr 2020 10:30:25 +0800</lastBuildDate>
+    
+	<atom:link href="https://nagimemooo.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Ｇo] 安裝環境 MAC Note</title>
+      <link>https://nagimemooo.github.io/posts/0_go_env/</link>
+      <pubDate>Sat, 18 Apr 2020 10:30:25 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/posts/0_go_env/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;之前在windows環境下安裝過go環境，這次在ＭＡＣ環境也裝一次並記錄
+1.安裝官方ＧＯ：https://golang.org/
+2.配置Ｇo所需要環境變數
+3.找個喜歡的ＩＤＥ設定開始寫Ｇo 「推薦Visual Studio Code」
+因為網上已經不少文章關於這些說明，所以簡單記錄幾個keyword與操作&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

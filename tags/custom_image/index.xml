@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>custom_image on nagimemooo 筆記</title>
+    <link>https://nagimemooo.github.io/tags/custom_image/</link>
+    <description>Recent content in custom_image on nagimemooo 筆記</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Mon, 17 Jun 2019 23:53:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://nagimemooo.github.io/tags/custom_image/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Topic 1 is very cool!</title>
+      <link>https://nagimemooo.github.io/topic_1/example_3_topic_1/</link>
+      <pubDate>Mon, 17 Jun 2019 23:53:00 +0100</pubDate>
+      
+      <guid>https://nagimemooo.github.io/topic_1/example_3_topic_1/</guid>
+      <description>The summary image should be a custom one</description>
+    </item>
+    
+    <item>
+      <title>Topic 2 is very cool!</title>
+      <link>https://nagimemooo.github.io/life/example_2_topic_2/</link>
+      <pubDate>Mon, 17 Jun 2019 23:53:00 +0100</pubDate>
+      
+      <guid>https://nagimemooo.github.io/life/example_2_topic_2/</guid>
+      <description>The summary image should be a custom one</description>
+    </item>
+    
+  </channel>
+</rss>

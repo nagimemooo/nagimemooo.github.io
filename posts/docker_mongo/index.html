@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+[docker]啟動mongo DB與簡單操作
+</title>
+
+    
+
+
+  
+  <meta name="author" content="nagi" />
+  <meta name="description" content="本章介紹
+ 使用docker-compose快速啟動mongodb 簡單的工具操作與MongoDB Shell 更新資料 " />
+
+
+
+<meta name="generator" content="Hugo 0.69.0" />
+
+<link rel="canonical" href="https://nagimemooo.github.io/posts/docker_mongo/" />
+
+
+<meta property="og:title" content="[docker]啟動mongo DB與簡單操作" />
+<meta property="og:description" content="本章介紹
+
+使用docker-compose快速啟動mongodb
+簡單的工具操作與MongoDB Shell 更新資料
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nagimemooo.github.io/posts/docker_mongo/" />
+<meta property="article:published_time" content="2020-05-01T10:30:25+08:00" />
+<meta property="article:modified_time" content="2020-05-01T10:30:25+08:00" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[docker]啟動mongo DB與簡單操作"/>
+<meta name="twitter:description" content="本章介紹
+
+使用docker-compose快速啟動mongodb
+簡單的工具操作與MongoDB Shell 更新資料
+"/>
+
+
+<link rel="stylesheet" href="/css/github-markdown.css" />
+<link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/site.css" />
+
+
+<style>
+  a {
+    color: seagreen !important;
+  }
+</style>
+
+
+
+
+  </head>
+
+  
+  <body style="background-image: url(/me/background.jpg);">
+  
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="首页" onclick="window.location.href = 'https:\/\/nagimemooo.github.io'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h2 class="ui header">
+          [docker]啟動mongo DB與簡單操作
+          <div class="sub header">@ nagi · Friday, May 1, 2020 · 1 分钟阅读 · 更新于 May 1, 2020</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><p>本章介紹</p>
+<ul>
+<li>使用docker-compose快速啟動mongodb</li>
+<li>簡單的工具操作與MongoDB Shell 更新資料</li>
+</ul>
+<blockquote>
+<p>MongoDB是NoSQL的資料庫，以文件儲存資料，一般資料庫開Table須定義欄位(大小、型別、名稱等)，但是Collection完全不事先定義欄位，每筆document可以有不等數量的欄位。。</p>
+</blockquote>
+<p>名詞對應：</p>
+<table>
+<thead>
+<tr>
+<th>MongoDB</th>
+<th>RDBMS</th>
+<th>意思</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>db</td>
+<td>DB</td>
+<td>資料庫</td>
+</tr>
+<tr>
+<td>collection</td>
+<td>Table</td>
+<td>表格</td>
+</tr>
+<tr>
+<td>document</td>
+<td>record</td>
+<td>一筆紀錄</td>
+</tr>
+</tbody>
+</table>
+<h1 id="1啟動mongo-docker">1.啟動mongo docker</h1>
+<p>這邊直接用編輯docker-compose.yml  貼上網路找到的內容</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">version</span>: <span style="color:#e6db74">&#39;3.1&#39;</span>
+
+<span style="color:#66d9ef">services</span>:
+
+  <span style="color:#66d9ef">mongo</span>:
+    <span style="color:#66d9ef">image</span>: mongo
+    <span style="color:#66d9ef">ports</span>:
+      - <span style="color:#e6db74">&#34;27017:27017&#34;</span>
+    <span style="color:#66d9ef">restart</span>: always
+    <span style="color:#66d9ef">environment</span>:
+      <span style="color:#66d9ef">MONGO_INITDB_ROOT_USERNAME</span>: root
+      <span style="color:#66d9ef">MONGO_INITDB_ROOT_PASSWORD</span>: example
+</code></pre></div><p>啟動</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">➜  mongo git:<span style="color:#f92672">(</span>master<span style="color:#f92672">)</span> ✗ docker-compose up -d   
+Creating network <span style="color:#e6db74">&#34;mongo_default&#34;</span> with the default driver
+Creating mongo_mongo_1         ... <span style="color:#66d9ef">done</span>
+</code></pre></div><h1 id="2操作資料內容">2.操作資料內容</h1>
+<p>以下可用透過一些網上mongo工具 ex Robo3T操作</p>
+<p>先進行連線進入介面host: localhost, port: 27017</p>
+<p>CreateDB&quot;test&rdquo;，新增一筆Collection&quot;user&rdquo;，與新增Documanet如下(Json格式)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;profile&#34;</span> : {
+        <span style="color:#f92672">&#34;name&#34;</span> : <span style="color:#e6db74">&#34;user1&#34;</span>,
+        <span style="color:#f92672">&#34;gender&#34;</span> : <span style="color:#e6db74">&#34;F&#34;</span>,
+        <span style="color:#f92672">&#34;age&#34;</span> : <span style="color:#ae81ff">18</span>
+    }
+}
+</code></pre></div><p>新增完會自動產生唯一的objectID，透過工具也可以對資料做簡單的修改動作。</p>
+<h1 id="3mongo-shell">3.mongo shell</h1>
+<ul>
+<li>可以再有提供shell指令視窗的工具上下指令去做更新進階的搜尋，</li>
+<li>例如mongo 3T上方就有視窗可以使用．</li>
+</ul>
+<h2 id="搜尋指令">搜尋指令</h2>
+<h4 id="搜尋全部">搜尋全部</h4>
+<p>db.getCollection(&lsquo;user&rsquo;).find({})</p>
+<h4 id="搜尋by_id">搜尋by_id</h4>
+<p>db.getCollection(&lsquo;user&rsquo;).find({_id:ObjectId(&ldquo;5eaa780f3dfac43981e4412c&rdquo;)})</p>
+<h4 id="搜尋內容值">搜尋內容值</h4>
+<p>db.getCollection(&lsquo;user&rsquo;).find({&ldquo;profile.name&rdquo;:&ldquo;user1&rdquo;})</p>
+<h4 id="搜尋範圍-數字型態">搜尋範圍 數字型態</h4>
+<p>[gt大於，gte大於等於，lt小於，lte小於等於]
+db.getCollection(&lsquo;user&rsquo;).find({&ldquo;profile.gender&rdquo;:&ldquo;F&rdquo;,&ldquo;profile.age&rdquo;:{$gt:2,$lte:18}})</p>
+<h4 id="搜尋範圍-字串型態">搜尋範圍 字串型態</h4>
+<p>按UTF-8進行字典排序 表搜尋字母A~Z間
+db.getCollection(&lsquo;user&rsquo;).find({&ldquo;profile.name&rdquo;:{$gt:&ldquo;a&rdquo;,$lte:&ldquo;z&rdquo;}})</p>
+<h2 id="計算總數">計算總數</h2>
+<p>db.getCollection(&lsquo;user&rsquo;).find().count()</p>
+<h2 id="排序">排序</h2>
+<p>依命名排序，其中 1 为升序排列，而 -1 是用于降序排列
+db.getCollection(&lsquo;user&rsquo;).find({}).sort({name:1})</p>
+<h3 id="顯示筆數limit與開始skip">顯示筆數(limit)與開始(skip)</h3>
+<p>可以用他來做分頁讀取
+db.getCollection(&lsquo;user&rsquo;).find({}).sort({name:1}).skip(0).limit(2)</p>
+<h2 id="批次更新">批次更新</h2>
+<p>一般來說工具就可以做內容更新，但如果需要透過指令，</p>
+<h4 id="更新欄位">更新欄位</h4>
+<p>將性別欄位“F”全改成“woman”</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">db.getCollection<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;user&#39;</span><span style="color:#f92672">)</span>.find<span style="color:#f92672">()</span>.forEach<span style="color:#f92672">(</span> <span style="color:#66d9ef">function</span><span style="color:#f92672">(</span>d<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+     
+<span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>d.profile.gender<span style="color:#f92672">==</span><span style="color:#e6db74">&#34;F&#34;</span><span style="color:#f92672">){</span>
+    d.profile.gender<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;woman&#34;</span>
+    db.getCollection<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;user&#39;</span><span style="color:#f92672">)</span>.update<span style="color:#f92672">({</span><span style="color:#e6db74">&#34;profile.name&#34;</span>:d.profile.name<span style="color:#f92672">}</span>,d<span style="color:#f92672">)</span>;
+    print<span style="color:#f92672">(</span>d.profile.name+<span style="color:#e6db74">&#34; process change done&#34;</span> <span style="color:#f92672">)</span>;  
+<span style="color:#f92672">}</span>;
+<span style="color:#f92672">})</span>;
+</code></pre></div><h4 id="新增欄位合併內容">新增欄位合併內容</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">db.getCollection<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;user&#39;</span><span style="color:#f92672">)</span>.find<span style="color:#f92672">()</span>.forEach<span style="color:#f92672">(</span> <span style="color:#66d9ef">function</span><span style="color:#f92672">(</span>d<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+d.description<span style="color:#f92672">=</span> d.profile.name+<span style="color:#e6db74">&#34;,&#34;</span>+d.profile.gender;
+db.getCollection<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;user&#39;</span><span style="color:#f92672">)</span>.update<span style="color:#f92672">({</span><span style="color:#e6db74">&#34;profile.name&#34;</span>:d.profile.name<span style="color:#f92672">}</span>,d<span style="color:#f92672">)</span>;
+    print<span style="color:#f92672">(</span>d.profile.name+<span style="color:#e6db74">&#34; process change done&#34;</span> <span style="color:#f92672">)</span>;  
+<span style="color:#f92672">})</span>;
+</code></pre></div><h2 id="刪除欄位">刪除欄位</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">db.getCollection<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;user&#39;</span><span style="color:#f92672">)</span>.find<span style="color:#f92672">()</span>.forEach<span style="color:#f92672">(</span> <span style="color:#66d9ef">function</span><span style="color:#f92672">(</span>d<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+delete d.description
+db.getCollection<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;user&#39;</span><span style="color:#f92672">)</span>.update<span style="color:#f92672">({</span><span style="color:#e6db74">&#34;profile.name&#34;</span>:d.profile.name<span style="color:#f92672">}</span>,d<span style="color:#f92672">)</span>;
+    print<span style="color:#f92672">(</span>d.profile.name+<span style="color:#e6db74">&#34; process change done&#34;</span> <span style="color:#f92672">)</span>;  
+<span style="color:#f92672">})</span>;
+</code></pre></div><ul>
+<li>如果是要在mongo的docker環境上面下指令
+需要把指令包成js，檔案丟進去docker裡面，
+然後下指令</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">load<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;script/Change.js&#34;</span><span style="color:#f92672">)</span> //檔案位置
+mongo 127.0.0.1:27017/test Change.js
+</code></pre></div><p>執行結果與上述內容一樣</p>
+<p>本章對mongo的簡單操作到此結束，
+之後再介紹如何用golang程式去對mongo CRUD操作．</p></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+        
+          <a class="ui label" href="/tags/mongo" title="mongo">mongo</a>
+        
+          <a class="ui label" href="/tags/docker" title="docker">docker</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; background: #1b1c1d !important; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i> Save as image
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+        <img src="/img/docker.jpg">
+      
+    </div>
+
+    <h1 class="ui medium header">nagi的部落格<div class="sub header" style="margin-top: 0.5rem;">ㄓ。</div>
+    </h1>
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="/posts">
+        <i class="archive icon" title="归档"></i>
+      </a>
+      
+      <a class="item" href="/tags">
+        <i class="tags icon" title="所有标签"></i>
+      </a>
+      <a class="item" href="/categories">
+        <i class="th list icon" title="所有分类"></i>
+      </a>
+    </div>
+  </section>
+
+  
+  <section class="ui attached center aligned segment dream-tags">
+    
+      <a class="ui label" href="/tags/css" title="css">css</a>
+    
+      <a class="ui label" href="/tags/docker" title="docker">docker</a>
+    
+      <a class="ui label" href="/tags/git" title="git">git</a>
+    
+      <a class="ui label" href="/tags/golang" title="golang">golang</a>
+    
+      <a class="ui label" href="/tags/mongo" title="mongo">mongo</a>
+    
+  </section>
+  
+
+  
+  <section class="ui attached segment dream-categories">
+    <div class="ui accordion">
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/tech%E7%AD%86%E8%A8%98" class="item">tech筆記</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://nagimemooo.github.io/posts/docker_mongo/" class="item">[docker]啟動mongo DB與簡單操作</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://nagimemooo.github.io/posts/git/" class="item">[git]常用指令與名詞筆記</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+    </div>
+  </section>
+  
+
+  <section class="ui attached segment header-socials">
+    <nav class="ui secondary menu dream-menu dream-socials">
+  
+    <div class="item">
+      <a href="mailto:nagimemooo@gmail.com">
+        <i class=" mail icon" title="email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</nav>
+
+  </section>
+
+  <section class="ui bottom attached center aligned segment">
+    
+      <p>© 2020 nagimemooo 筆記</p>
+    
+
+    <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+  </section>
+</article>
+
+  </div>
+</div>
+
+        </section>
+        <section class="back">
+          
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="首页" onclick="window.location.href = 'https:\/\/nagimemooo.github.io'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          <div class="ui centered relaxed grid dream-grid dream-back">
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">社交链接</h3>
+      </div>
+      <div class="ui attached segment">
+        <nav class="ui secondary menu dream-menu dream-socials">
+  
+    <div class="item">
+      <a href="mailto:nagimemooo@gmail.com">
+        <i class="large mail icon" title="email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</nav>
+
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+  
+</div>
+
+        </section>
+      </div>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+<script src="/js/semantic.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/theme.js"></script>
+<script src="/js/html2canvas.min.js"></script>
+
+
+
+  </body>
+</html>

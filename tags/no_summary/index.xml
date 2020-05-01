@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>no_summary on nagimemooo 筆記</title>
+    <link>https://nagimemooo.github.io/tags/no_summary/</link>
+    <description>Recent content in no_summary on nagimemooo 筆記</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Mon, 17 Jun 2019 23:53:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://nagimemooo.github.io/tags/no_summary/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Example 1 of Topic 2</title>
+      <link>https://nagimemooo.github.io/life/example_1_topic_2/</link>
+      <pubDate>Mon, 17 Jun 2019 23:53:00 +0100</pubDate>
+      
+      <guid>https://nagimemooo.github.io/life/example_1_topic_2/</guid>
+      <description>This summary is the real content of the article.</description>
+    </item>
+    
+    <item>
+      <title>Example 2 of subtopic 4</title>
+      <link>https://nagimemooo.github.io/life/subtopic_4/example_2_subtopic_4/</link>
+      <pubDate>Mon, 17 Jun 2019 23:53:00 +0100</pubDate>
+      
+      <guid>https://nagimemooo.github.io/life/subtopic_4/example_2_subtopic_4/</guid>
+      <description>This summary is the real content of the article.</description>
+    </item>
+    
+    <item>
+      <title>Subtopic 3 is very cool!</title>
+      <link>https://nagimemooo.github.io/life/subtopic_3/example_1_subtopic_3/</link>
+      <pubDate>Mon, 17 Jun 2019 23:53:00 +0100</pubDate>
+      
+      <guid>https://nagimemooo.github.io/life/subtopic_3/example_1_subtopic_3/</guid>
+      <description>This is the real text of the article.
+def sum_function(a, b): c = a + b return c </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+Github_hugo
+</title>
+
+    
+
+
+  
+  <meta name="author" content="nagi" />
+  <meta name="description" content=" 本章介紹如何在github套用hugo主題做好一個自己的部落格網站． 文章來源整理： ＨＵＧＯ官網 在-github-部署-hugo-靜態網站
+" />
+
+
+
+<meta name="generator" content="Hugo 0.69.0" />
+
+<link rel="canonical" href="https://nagimemooo.github.io/posts/github_hugo/" />
+
+
+<meta property="og:title" content="Github_hugo" />
+<meta property="og:description" content="
+本章介紹如何在github套用hugo主題做好一個自己的部落格網站．
+文章來源整理：
+ＨＵＧＯ官網
+在-github-部署-hugo-靜態網站
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nagimemooo.github.io/posts/github_hugo/" />
+<meta property="article:published_time" content="2020-05-01T18:42:55+08:00" />
+<meta property="article:modified_time" content="2020-05-01T18:42:55+08:00" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Github_hugo"/>
+<meta name="twitter:description" content="
+本章介紹如何在github套用hugo主題做好一個自己的部落格網站．
+文章來源整理：
+ＨＵＧＯ官網
+在-github-部署-hugo-靜態網站
+"/>
+
+
+<link rel="stylesheet" href="/css/github-markdown.css" />
+<link rel="stylesheet" href="/css/semantic.min.css" />
+<link rel="stylesheet" href="/css/site.css" />
+
+
+<style>
+  a {
+    color: seagreen !important;
+  }
+</style>
+
+
+
+
+  </head>
+
+  
+  <body style="background-image: url(/me/background.jpg);">
+  
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="首页" onclick="window.location.href = 'https:\/\/nagimemooo.github.io'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h2 class="ui header">
+          Github_hugo
+          <div class="sub header">@ nagi · Friday, May 1, 2020 · 1 分钟阅读 · 更新于 May 1, 2020</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><blockquote>
+<p>本章介紹如何在github套用hugo主題做好一個自己的部落格網站．
+文章來源整理：
+<a href="https://gohugo.io/getting-started/quick-start/">ＨＵＧＯ官網</a>
+<a href="https://medium.com/@chswei/%E5%9C%A8-github-%E9%83%A8%E7%BD%B2-hugo-%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99-9c40682dfe40">在-github-部署-hugo-靜態網站</a></p>
+</blockquote>
+<h4 id="step-1-安裝hugo">Step 1: 安裝Hugo</h4>
+<p>開啟終端機，依序執行下列指令：</p>
+<ul>
+<li>brew install hugo
+//macOs 須先安裝Homebrew</li>
+<li>hugo version
+//確認安裝成功版本
+Hugo Static Site Generator v0.69.0/extended darwin/amd64 BuildDate: unknow</li>
+<li>hugo new site <strong>website-hugo</strong></li>
+<li>cd <strong>website-hugo</strong>
+// 新增網站，粗體可以自命名，安裝完會新增該資料夾</li>
+</ul>
+<h4 id="step-2-新增主題">Step 2: 新增主題</h4>
+<p><a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a>
+hugo網站有很多可以選擇與查看效果
+進入該主題的github/README 可以看安裝步驟執行
+基本執行：git submodule add <a href="https://github.com/alex-shpak/hugo-book">https://github.com/alex-shpak/hugo-book</a> themes/book
+//這樣就會在<strong>website-hugo</strong>/themes/新增主題</p>
+<h4 id="step-3-編輯-configtoml">Step 3: 編輯 config.toml</h4>
+<p>這檔案與整體網站設定有關</p>
+<blockquote>
+<p>baseURL = &ldquo;<a href="https://xxx.github.io/%22">https://xxx.github.io/&quot;</a> <br>
+languageCode = &ldquo;zh-tw&rdquo;
+title = &ldquo;xxx Blog&rdquo;</p>
+</blockquote>
+<ul>
+<li>#domain設定 xxx改成你的GitHub帳號名稱</li>
+<li>根據主題不同 這檔案也可能會有更多不同設定
+ex: 設定主題 theme = &ldquo;ananke&rdquo;</li>
+</ul>
+<h4 id="step-4-新增文章">Step 4: 新增文章</h4>
+<ul>
+<li>hugo new posts/my-first-post.md
+新增預設檔案在以下位置 採用markdown編寫
+content/<CATEGORY>/<FILE>.<FORMAT></li>
+</ul>
+<blockquote>
+<p>title: &ldquo;My First Post&rdquo;
+date: 2019-03-26T08:47:11+01:00
+draft: true //是草稿是否 改成false可被發布</p>
+</blockquote>
+<p>可以根據主題新增：
+tags: [&ldquo;hugo&rdquo;, &ldquo;web&rdquo;]
+summary: &ldquo;The summary image should be a custom one&rdquo;
+summaryImage: &ldquo;summary_2.jpg&rdquo;
+resources:</p>
+<ul>
+<li>src: summary_2.jpg</li>
+</ul>
+<h4 id="step-5-啟動本地server">Step 5: 啟動本地server</h4>
+<ul>
+<li>hugo server -D
+Web Server is available at http://localhost:1313/
+Press Ctrl+C to stop
+記得結束務必按 不然下次啟動</li>
+</ul>
+<h4 id="step-6-build-static-pages">Step 6: Build static pages</h4>
+<ul>
+<li>hugo -D</li>
+</ul>
+<p>將會生成./public/ 資料夾，
+每次編輯完要記得更新，之後發布的時候也要上傳</p>
+<hr>
+<h3 id="githug網站上傳">githug網站上傳</h3>
+<p>新增兩個repo
+xxx.github.io (xxx改成自己的帳號名稱)
+website-hugo 上述的site名稱</p>
+<p>上傳public資料夾</p>
+<blockquote>
+<p>cd public
+git init
+git remote add origin <a href="https://github.com/xxx/xxx.github.io.git">https://github.com/xxx/xxx.github.io.git</a>
+git add .
+git commit -m &ldquo;Initial commit&rdquo;
+git push -u origin master</p>
+</blockquote>
+<p>上傳整個website-hugo資料夾</p>
+<blockquote>
+<p>cd ../
+git init
+git remote add origin <a href="https://github.com/xxx/website-hugo.git">https://github.com/xxx/website-hugo.git</a>
+git add .
+git commit -m &ldquo;Initial commit&rdquo;
+git push -u origin master</p>
+</blockquote>
+<p>開啟https://xxx.github.io/ 看到結果</p></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+          <a class="ui label">暂无标签</a>
+      
+      <div
+        class="ui label"
+        style="float: right; background: #1b1c1d !important; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i> Save as image
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+        <img src="/img/docker.jpg">
+      
+    </div>
+
+    <h1 class="ui medium header">nagi的部落格<div class="sub header" style="margin-top: 0.5rem;">ㄓ。</div>
+    </h1>
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="/posts">
+        <i class="archive icon" title="归档"></i>
+      </a>
+      
+      <a class="item" href="/tags">
+        <i class="tags icon" title="所有标签"></i>
+      </a>
+      <a class="item" href="/categories">
+        <i class="th list icon" title="所有分类"></i>
+      </a>
+    </div>
+  </section>
+
+  
+  <section class="ui attached center aligned segment dream-tags">
+    
+      <a class="ui label" href="/tags/css" title="css">css</a>
+    
+      <a class="ui label" href="/tags/docker" title="docker">docker</a>
+    
+      <a class="ui label" href="/tags/git" title="git">git</a>
+    
+      <a class="ui label" href="/tags/golang" title="golang">golang</a>
+    
+      <a class="ui label" href="/tags/mongo" title="mongo">mongo</a>
+    
+  </section>
+  
+
+  
+  <section class="ui attached segment dream-categories">
+    <div class="ui accordion">
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/tech%E7%AD%86%E8%A8%98" class="item">tech筆記</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://nagimemooo.github.io/posts/docker_mongo/" class="item">[docker]啟動mongo DB與簡單操作</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://nagimemooo.github.io/posts/git/" class="item">[git]常用指令與名詞筆記</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+    </div>
+  </section>
+  
+
+  <section class="ui attached segment header-socials">
+    <nav class="ui secondary menu dream-menu dream-socials">
+  
+    <div class="item">
+      <a href="mailto:nagimemooo@gmail.com">
+        <i class=" mail icon" title="email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</nav>
+
+  </section>
+
+  <section class="ui bottom attached center aligned segment">
+    
+      <p>© 2020 nagimemooo 筆記</p>
+    
+
+    <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+  </section>
+</article>
+
+  </div>
+</div>
+
+        </section>
+        <section class="back">
+          
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="首页" onclick="window.location.href = 'https:\/\/nagimemooo.github.io'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+</nav>
+
+          <div class="ui centered relaxed grid dream-grid dream-back">
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">社交链接</h3>
+      </div>
+      <div class="ui attached segment">
+        <nav class="ui secondary menu dream-menu dream-socials">
+  
+    <div class="item">
+      <a href="mailto:nagimemooo@gmail.com">
+        <i class="large mail icon" title="email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</nav>
+
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+  
+</div>
+
+        </section>
+      </div>
+    </div>
+
+    <script src="/js/jquery.min.js"></script>
+<script src="/js/semantic.min.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/theme.js"></script>
+<script src="/js/html2canvas.min.js"></script>
+
+
+
+  </body>
+</html>

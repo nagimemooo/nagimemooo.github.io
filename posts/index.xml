@@ -1,33 +1,76 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Nagimemooo Blog</title>
+    <title>Posts on nagimemooo 筆記</title>
     <link>https://nagimemooo.github.io/posts/</link>
-    <description>Recent content in Posts on Nagimemooo Blog</description>
+    <description>Recent content in Posts on nagimemooo 筆記</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-tw</language>
-    <copyright>All rights reserved - 2015</copyright>
-    <lastBuildDate>Sat, 18 Apr 2020 11:24:01 +0800</lastBuildDate>
+    <language>zh-Hans</language>
+    <lastBuildDate>Fri, 01 May 2020 18:42:55 +0800</lastBuildDate>
     
 	<atom:link href="https://nagimemooo.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>My First</title>
-      <link>https://nagimemooo.github.io/posts/my-first/</link>
-      <pubDate>Sat, 18 Apr 2020 11:24:01 +0800</pubDate>
+      <title>Github_hugo</title>
+      <link>https://nagimemooo.github.io/posts/github_hugo/</link>
+      <pubDate>Fri, 01 May 2020 18:42:55 +0800</pubDate>
       
-      <guid>https://nagimemooo.github.io/posts/my-first/</guid>
-      <description></description>
+      <guid>https://nagimemooo.github.io/posts/github_hugo/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;本章介紹如何在github套用hugo主題做好一個自己的部落格網站．
+文章來源整理：
+&lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34;&gt;ＨＵＧＯ官網&lt;/a&gt;
+&lt;a href=&#34;https://medium.com/@chswei/%E5%9C%A8-github-%E9%83%A8%E7%BD%B2-hugo-%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99-9c40682dfe40&#34;&gt;在-github-部署-hugo-靜態網站&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
-      <title>My First Post</title>
-      <link>https://nagimemooo.github.io/posts/my-first-post/</link>
+      <title>[docker]啟動mongo DB與簡單操作</title>
+      <link>https://nagimemooo.github.io/posts/docker_mongo/</link>
+      <pubDate>Fri, 01 May 2020 10:30:25 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/posts/docker_mongo/</guid>
+      <description>&lt;p&gt;本章介紹&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用docker-compose快速啟動mongodb&lt;/li&gt;
+&lt;li&gt;簡單的工具操作與MongoDB Shell 更新資料&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>[CSS]CSS 學習地圖</title>
+      <link>https://nagimemooo.github.io/posts/css_map/</link>
       <pubDate>Sat, 18 Apr 2020 10:30:25 +0800</pubDate>
       
-      <guid>https://nagimemooo.github.io/posts/my-first-post/</guid>
-      <description>1 </description>
+      <guid>https://nagimemooo.github.io/posts/css_map/</guid>
+      <description>&lt;p&gt;記錄簡單個人的ＣＳＳ學習樹&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[git]常用指令與名詞筆記</title>
+      <link>https://nagimemooo.github.io/posts/git/</link>
+      <pubDate>Sat, 18 Apr 2020 10:30:25 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/posts/git/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;本文文字版紀錄git常用使用筆記&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Ｇo] 安裝環境 MAC Note</title>
+      <link>https://nagimemooo.github.io/posts/0_go_env/</link>
+      <pubDate>Sat, 18 Apr 2020 10:30:25 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/posts/0_go_env/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;之前在windows環境下安裝過go環境，這次在ＭＡＣ環境也裝一次並記錄
+1.安裝官方ＧＯ：https://golang.org/
+2.配置Ｇo所需要環境變數
+3.找個喜歡的ＩＤＥ設定開始寫Ｇo 「推薦Visual Studio Code」
+因為網上已經不少文章關於這些說明，所以簡單記錄幾個keyword與操作&lt;/p&gt;
+&lt;/blockquote&gt;</description>
     </item>
     
   </channel>
