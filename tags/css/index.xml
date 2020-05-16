@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>css on nagimemooo 筆記</title>
+    <title>css on nagimemooo</title>
     <link>https://nagimemooo.github.io/tags/css/</link>
-    <description>Recent content in css on nagimemooo 筆記</description>
+    <description>Recent content in css on nagimemooo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <lastBuildDate>Sat, 18 Apr 2020 10:30:25 +0800</lastBuildDate>
@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>[CSS]CSS 學習地圖</title>
+      <title>[ CSS ] CSS 學習地圖</title>
       <link>https://nagimemooo.github.io/posts/css_map/</link>
       <pubDate>Sat, 18 Apr 2020 10:30:25 +0800</pubDate>
       

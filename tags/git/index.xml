@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>git on nagimemooo 筆記</title>
+    <title>git on nagimemooo</title>
     <link>https://nagimemooo.github.io/tags/git/</link>
-    <description>Recent content in git on nagimemooo 筆記</description>
+    <description>Recent content in git on nagimemooo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <lastBuildDate>Sat, 18 Apr 2020 10:30:25 +0800</lastBuildDate>
@@ -12,13 +12,13 @@
     
     
     <item>
-      <title>[git]常用指令與名詞筆記</title>
+      <title>[ Git ]常用指令與名詞筆記</title>
       <link>https://nagimemooo.github.io/posts/git/</link>
       <pubDate>Sat, 18 Apr 2020 10:30:25 +0800</pubDate>
       
       <guid>https://nagimemooo.github.io/posts/git/</guid>
       <description>&lt;blockquote&gt;
-&lt;p&gt;本文文字版紀錄git常用使用筆記&lt;/p&gt;
+&lt;p&gt;本文文字版紀錄 git 常用使用筆記&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
     

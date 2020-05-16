@@ -1,15 +1,74 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on nagimemooo 筆記</title>
+    <title>Posts on nagimemooo</title>
     <link>https://nagimemooo.github.io/posts/</link>
-    <description>Recent content in Posts on nagimemooo 筆記</description>
+    <description>Recent content in Posts on nagimemooo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Fri, 01 May 2020 18:42:55 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2020 15:42:53 +0800</lastBuildDate>
     
 	<atom:link href="https://nagimemooo.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[ React ] 初始開發環境設定與名詞介紹</title>
+      <link>https://nagimemooo.github.io/posts/react_setting/</link>
+      <pubDate>Sat, 16 May 2020 15:42:53 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/posts/react_setting/</guid>
+      <description>&lt;p&gt;本章內容：
+快速安裝 React 專案與建置開發環境&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[ Go 05 ] 寫測試並產生網頁版報告看覆蓋率</title>
+      <link>https://nagimemooo.github.io/posts/05_go_test_coverage/</link>
+      <pubDate>Sat, 09 May 2020 00:02:42 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/posts/05_go_test_coverage/</guid>
+      <description>&lt;p&gt;本章介紹：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;為上一篇 Gin 框架的 User &amp;amp; PostName func.寫個簡單測試&lt;/li&gt;
+&lt;li&gt;跑測試並瞭解 coverage 覆蓋率，產生測試報告&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>[ Go 04 ] 使用 Gin 框架快速建立 http 服務</title>
+      <link>https://nagimemooo.github.io/posts/04_go_gin_http/</link>
+      <pubDate>Sat, 09 May 2020 00:00:05 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/posts/04_go_gin_http/</guid>
+      <description>&lt;p&gt;本章介紹：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如何用 Gin 框架建立 HTTP [ GET/POST/PUT/DELETE 等方法]&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>[ Go 03 ] 使用 zap 框架印出 log</title>
+      <link>https://nagimemooo.github.io/posts/03_go_zap_log/</link>
+      <pubDate>Fri, 08 May 2020 23:51:23 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/posts/03_go_zap_log/</guid>
+      <description>&lt;p&gt;本章內容：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用高性能zap框架配置&lt;/li&gt;
+&lt;li&gt;擁有log level配置 (常用debug/warn/info/error)&lt;/li&gt;
+&lt;li&gt;可以選擇印出在console或是文件（要外掛lumberjack去分割）&lt;/li&gt;
+&lt;li&gt;zap有suger函式可以增加易用性，但犧牲效能&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>[ Go 02 ] 信號處理和退出程式</title>
+      <link>https://nagimemooo.github.io/posts/02_go_signal/</link>
+      <pubDate>Fri, 01 May 2020 22:36:13 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/posts/02_go_signal/</guid>
+      <description>&lt;p&gt;go實作接收命令而中止指令．&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Github_hugo</title>
@@ -26,7 +85,7 @@
     </item>
     
     <item>
-      <title>[docker]啟動mongo DB與簡單操作</title>
+      <title>[ docker ]啟動 mongo DB 與簡單操作</title>
       <link>https://nagimemooo.github.io/posts/docker_mongo/</link>
       <pubDate>Fri, 01 May 2020 10:30:25 +0800</pubDate>
       
@@ -39,7 +98,7 @@
     </item>
     
     <item>
-      <title>[CSS]CSS 學習地圖</title>
+      <title>[ CSS ] CSS 學習地圖</title>
       <link>https://nagimemooo.github.io/posts/css_map/</link>
       <pubDate>Sat, 18 Apr 2020 10:30:25 +0800</pubDate>
       
@@ -48,22 +107,22 @@
     </item>
     
     <item>
-      <title>[git]常用指令與名詞筆記</title>
+      <title>[ Git ]常用指令與名詞筆記</title>
       <link>https://nagimemooo.github.io/posts/git/</link>
       <pubDate>Sat, 18 Apr 2020 10:30:25 +0800</pubDate>
       
       <guid>https://nagimemooo.github.io/posts/git/</guid>
       <description>&lt;blockquote&gt;
-&lt;p&gt;本文文字版紀錄git常用使用筆記&lt;/p&gt;
+&lt;p&gt;本文文字版紀錄 git 常用使用筆記&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
     
     <item>
-      <title>[Ｇo] 安裝環境 MAC Note</title>
-      <link>https://nagimemooo.github.io/posts/0_go_env/</link>
+      <title>[ Go 01 ] 安裝環境 MAC Note</title>
+      <link>https://nagimemooo.github.io/posts/01_go_env/</link>
       <pubDate>Sat, 18 Apr 2020 10:30:25 +0800</pubDate>
       
-      <guid>https://nagimemooo.github.io/posts/0_go_env/</guid>
+      <guid>https://nagimemooo.github.io/posts/01_go_env/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;之前在windows環境下安裝過go環境，這次在ＭＡＣ環境也裝一次並記錄
 1.安裝官方ＧＯ：https://golang.org/

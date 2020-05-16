@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tech筆記 on nagimemooo 筆記</title>
+    <title>Tech筆記 on nagimemooo</title>
     <link>https://nagimemooo.github.io/categories/tech%E7%AD%86%E8%A8%98/</link>
-    <description>Recent content in Tech筆記 on nagimemooo 筆記</description>
+    <description>Recent content in Tech筆記 on nagimemooo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <lastBuildDate>Fri, 01 May 2020 10:30:25 +0800</lastBuildDate>
@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>[docker]啟動mongo DB與簡單操作</title>
+      <title>[ docker ]啟動 mongo DB 與簡單操作</title>
       <link>https://nagimemooo.github.io/posts/docker_mongo/</link>
       <pubDate>Fri, 01 May 2020 10:30:25 +0800</pubDate>
       
@@ -25,13 +25,22 @@
     </item>
     
     <item>
-      <title>[git]常用指令與名詞筆記</title>
+      <title>[ CSS ] CSS 學習地圖</title>
+      <link>https://nagimemooo.github.io/posts/css_map/</link>
+      <pubDate>Sat, 18 Apr 2020 10:30:25 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/posts/css_map/</guid>
+      <description>&lt;p&gt;記錄簡單個人的ＣＳＳ學習樹&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[ Git ]常用指令與名詞筆記</title>
       <link>https://nagimemooo.github.io/posts/git/</link>
       <pubDate>Sat, 18 Apr 2020 10:30:25 +0800</pubDate>
       
       <guid>https://nagimemooo.github.io/posts/git/</guid>
       <description>&lt;blockquote&gt;
-&lt;p&gt;本文文字版紀錄git常用使用筆記&lt;/p&gt;
+&lt;p&gt;本文文字版紀錄 git 常用使用筆記&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
     

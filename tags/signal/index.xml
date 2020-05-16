@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>signal on nagimemooo</title>
+    <link>https://nagimemooo.github.io/tags/signal/</link>
+    <description>Recent content in signal on nagimemooo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Fri, 01 May 2020 22:36:13 +0800</lastBuildDate>
+    
+	<atom:link href="https://nagimemooo.github.io/tags/signal/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[ Go 02 ] 信號處理和退出程式</title>
+      <link>https://nagimemooo.github.io/posts/02_go_signal/</link>
+      <pubDate>Fri, 01 May 2020 22:36:13 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/posts/02_go_signal/</guid>
+      <description>&lt;p&gt;go實作接收命令而中止指令．&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

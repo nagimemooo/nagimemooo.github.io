@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-[git]常用指令與名詞筆記
+[ Git ]常用指令與名詞筆記
 </title>
 
     
@@ -13,7 +13,7 @@
 
   
   <meta name="author" content="nagi" />
-  <meta name="description" content=" 本文文字版紀錄git常用使用筆記
+  <meta name="description" content=" 本文文字版紀錄 git 常用使用筆記
 " />
 
 
@@ -23,9 +23,9 @@
 <link rel="canonical" href="https://nagimemooo.github.io/posts/git/" />
 
 
-<meta property="og:title" content="[git]常用指令與名詞筆記" />
+<meta property="og:title" content="[ Git ]常用指令與名詞筆記" />
 <meta property="og:description" content="
-本文文字版紀錄git常用使用筆記
+本文文字版紀錄 git 常用使用筆記
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nagimemooo.github.io/posts/git/" />
@@ -35,9 +35,9 @@
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[git]常用指令與名詞筆記"/>
+<meta name="twitter:title" content="[ Git ]常用指令與名詞筆記"/>
 <meta name="twitter:description" content="
-本文文字版紀錄git常用使用筆記
+本文文字版紀錄 git 常用使用筆記
 "/>
 
 
@@ -58,7 +58,7 @@
   </head>
 
   
-  <body style="background-image: url(/me/background.jpg);">
+  <body style="background-image: url(/img/dream.jpg);">
   
     <div class="flip-container">
       <div class="flipper">
@@ -70,7 +70,7 @@
     <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
   </div>
   <div class="item">
-    <i class="large link home icon" title="首页" onclick="window.location.href = 'https:\/\/nagimemooo.github.io'"></i>
+    <i class="large link home icon" title="首頁" onclick="window.location.href = 'https:\/\/nagimemooo.github.io'"></i>
   </div>
   <div class="item">
     <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
@@ -84,40 +84,66 @@
     <section class="ui top attached segment" id="dream-save-post-as-img">
       <header style="margin-top: 0 !important;">
         <h2 class="ui header">
-          [git]常用指令與名詞筆記
-          <div class="sub header">@ nagi · Saturday, Apr 18, 2020 · 1 分钟阅读 · 更新于 Apr 18, 2020</div>
+          [ Git ]常用指令與名詞筆記
+          <div class="sub header">@ nagi · Saturday, Apr 18, 2020 · 1 分鐘閱讀 · 更新于 Apr 18, 2020</div>
         </h2>
       </header>
       <article style="margin-top: 2rem;"><blockquote>
-<p>本文文字版紀錄git常用使用筆記</p>
+<p>本文文字版紀錄 git 常用使用筆記</p>
 </blockquote>
-<h4 id="git-資料夾連結">git 資料夾連結</h4>
-<p>切換到本地項目地址git init初始化項目。
-該步驟會創建一個.git文件夾是附屬於該倉庫的工作樹
-通常在github新創repo都會有指令導引，照著新創建的指令去下即可連結</p>
-<h4 id="git-下載">git 下載</h4>
-<p>到遠端項目上複製git clone指令，新建資料夾後下指令</p>
+<p>其實很少記得 git 指令，都是遇到些問題，長期獨立開發，所以很少用到merge．</p>
+<ul>
+<li>HEAD 表示「目前所在分支」</li>
+<li>遠端的節點預設會使用 origin 這個名字</li>
+</ul>
+<h4 id="git初始化-將遠端與本地資料夾連結">git初始化 將遠端與本地資料夾連結</h4>
+<p>通常在github新創repo都會有指令導引，照著新創建的指令去下即可連結</p>
+<p>…or create a new repository on the command line
+echo &ldquo;# go_demo&rdquo; &raquo; README.md
+git init
+git add README.md
+git commit -m &ldquo;first commit&rdquo;
+git remote add origin <a href="https://github.com/nagimemooo/go_demo.git">https://github.com/nagimemooo/go_demo.git</a>
+git push -u origin master</p>
+<p>…or push an existing repository from the command line
+git remote add origin <a href="https://github.com/nagimemooo/go_demo.git">https://github.com/nagimemooo/go_demo.git</a>
+git push -u origin master</p>
+<ul>
+<li>解說
+git init : 初始化建一個.git文件夾是附屬於該倉庫的工作樹
+git remote -v : 查看遠端位置
+git remote add <remote> <url> : 新增遠端git位置
+git remote remove <remote> : 移除遠端git位置
+git push -u 遠端 本地</li>
+</ul>
+<h4 id="git-下載已存在遠端項目">git 下載已存在遠端項目</h4>
+<p>新建資料夾後下指令
+到遠端項目上複製git clone指令</p>
 <h4 id="git-上傳與分支操作">git 上傳與分支操作</h4>
 <p>完成連結後，我還是習慣使用vscode去做git上傳操作
-好處是可以快速切換分支，每次變動後可以再分割視窗review再上傳，
+好處是可以快速切換分支
+每次變動後可以在分割視窗review再上傳，
 如果不更改也可以恢復更改</p>
+<h4 id="git-status">git status</h4>
+<p>查看狀態</p>
+<h4 id="git-config">git config</h4>
+<p>git config &ndash;list
+git config &ndash;global user.email
+git config &ndash;global user.email <a href="mailto:nagimemooo@gmail.com">nagimemooo@gmail.com</a>
+vi .git/config ·編輯內容（按下q離開）</p>
+<p>&ndash;global 參數，代表在此系統，Git 做任何事都會採用此資訊。
+若想指定特定專案不同的設定就拿掉 global 參數。</p>
 <h4 id="git-刪除分支">git 刪除分支</h4>
-<blockquote>
 <p>git branch 查詢
 git branch -d <branch> 刪除</p>
-</blockquote>
-<h4 id="做錯commit的回覆方法">做錯commit的回覆方法</h4>
-<blockquote>
+<h4 id="做錯-commit-還沒-push-時的恢復方法">做錯 commit 還沒 push 時的恢復方法</h4>
 <p>$ git log &ndash;oneline
 $ git reset 66cb4b3^
-^表示上一步，＾＾表式上兩步，或直接打分支命名</p>
-</blockquote>
-<ul>
-<li>HEAD表示「目前所在分支」，遠端的節點預設會使用 origin 這個名字</li>
-</ul>
+^表示上一步，＾＾表示上兩步，或直接打分支命名</p>
 <h4 id="git-rebase">git rebase</h4>
-<p>當有很多分支走不同路後，希望某一個分支重新 (re-)定義某個 branch 的參考基準 (base)，就可以使用，如有需要請小心謹慎使用．</p>
-<p>後記：長期都是獨立開發，所以rebase/merge使用較少，就記錄到這邊．</p></article>
+<p>當有很多分支走不同路後，
+希望某一個分支重新 (re-)定義某個 branch 的參考基準 (base)，
+就可以使用．</p></article>
     </section>
 
     <footer class="ui attached segment dream-tags">
@@ -148,7 +174,7 @@ $ git reset 66cb4b3^
       
     </div>
 
-    <h1 class="ui medium header">nagi的部落格<div class="sub header" style="margin-top: 0.5rem;">ㄓ。</div>
+    <h1 class="ui medium header">nagi 備忘錄<div class="sub header" style="margin-top: 0.5rem;">如有疑問與建議可以mail給我讓我知道，列表式顯示請點下一排icon。</div>
     </h1>
 
     <div class="ui horizontal list">
@@ -158,10 +184,10 @@ $ git reset 66cb4b3^
       </a>
       
       <a class="item" href="/tags">
-        <i class="tags icon" title="所有标签"></i>
+        <i class="tags icon" title="所有標籤"></i>
       </a>
       <a class="item" href="/categories">
-        <i class="th list icon" title="所有分类"></i>
+        <i class="th list icon" title="所有分類"></i>
       </a>
     </div>
   </section>
@@ -173,11 +199,27 @@ $ git reset 66cb4b3^
     
       <a class="ui label" href="/tags/docker" title="docker">docker</a>
     
+      <a class="ui label" href="/tags/gin" title="gin">gin</a>
+    
       <a class="ui label" href="/tags/git" title="git">git</a>
     
       <a class="ui label" href="/tags/golang" title="golang">golang</a>
     
+      <a class="ui label" href="/tags/hugo" title="hugo">hugo</a>
+    
+      <a class="ui label" href="/tags/life" title="life">life</a>
+    
+      <a class="ui label" href="/tags/log" title="log">log</a>
+    
       <a class="ui label" href="/tags/mongo" title="mongo">mongo</a>
+    
+      <a class="ui label" href="/tags/react" title="react">react</a>
+    
+      <a class="ui label" href="/tags/signal" title="signal">signal</a>
+    
+      <a class="ui label" href="/tags/test" title="test">test</a>
+    
+      <a class="ui label" href="/tags/vscode" title="vscode">vscode</a>
     
   </section>
   
@@ -188,6 +230,46 @@ $ git reset 66cb4b3^
       
         <div class="title">
           <i class="dropdown icon"></i>
+          <a href="/categories/go" class="item">go</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://nagimemooo.github.io/posts/05_go_test_coverage/" class="item">[ Go 05 ] 寫測試並產生網頁版報告看覆蓋率</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://nagimemooo.github.io/posts/04_go_gin_http/" class="item">[ Go 04 ] 使用 Gin 框架快速建立 http 服務</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://nagimemooo.github.io/posts/03_go_zap_log/" class="item">[ Go 03 ] 使用 zap 框架印出 log</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://nagimemooo.github.io/posts/02_go_signal/" class="item">[ Go 02 ] 信號處理和退出程式</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://nagimemooo.github.io/posts/01_go_env/" class="item">[ Go 01 ] 安裝環境 MAC Note</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
           <a href="/categories/tech%E7%AD%86%E8%A8%98" class="item">tech筆記</a>
         </div>
         <div class="content">
@@ -195,13 +277,35 @@ $ git reset 66cb4b3^
           
             <div class="item">
               <div class="content">
-                <a href="https://nagimemooo.github.io/posts/docker_mongo/" class="item">[docker]啟動mongo DB與簡單操作</a>
+                <a href="https://nagimemooo.github.io/posts/docker_mongo/" class="item">[ docker ]啟動 mongo DB 與簡單操作</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="https://nagimemooo.github.io/posts/git/" class="item">[git]常用指令與名詞筆記</a>
+                <a href="https://nagimemooo.github.io/posts/css_map/" class="item">[ CSS ] CSS 學習地圖</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://nagimemooo.github.io/posts/git/" class="item">[ Git ]常用指令與名詞筆記</a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <a href="/categories/%E5%89%8D%E7%AB%AF" class="item">前端</a>
+        </div>
+        <div class="content">
+          <div class="ui list">
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://nagimemooo.github.io/posts/react_setting/" class="item">[ React ] 初始開發環境設定與名詞介紹</a>
               </div>
             </div>
           
@@ -241,7 +345,7 @@ $ git reset 66cb4b3^
 
   <section class="ui bottom attached center aligned segment">
     
-      <p>© 2020 nagimemooo 筆記</p>
+      <p>© 2020 nagimemooo</p>
     
 
     <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
@@ -260,7 +364,7 @@ $ git reset 66cb4b3^
     <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
   </div>
   <div class="item">
-    <i class="large link home icon" title="首页" onclick="window.location.href = 'https:\/\/nagimemooo.github.io'"></i>
+    <i class="large link home icon" title="首頁" onclick="window.location.href = 'https:\/\/nagimemooo.github.io'"></i>
   </div>
   <div class="item">
     <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
