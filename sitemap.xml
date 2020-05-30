@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://nagimemooo.github.io/categories/</loc>
-    <lastmod>2020-05-30T18:36:32+08:00</lastmod>
+    <lastmod>2020-05-30T18:37:32+08:00</lastmod>
   </url>
   
   <url>
@@ -14,12 +14,12 @@
   
   <url>
     <loc>https://nagimemooo.github.io/</loc>
-    <lastmod>2020-05-30T18:36:32+08:00</lastmod>
+    <lastmod>2020-05-30T18:37:32+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://nagimemooo.github.io/posts/</loc>
-    <lastmod>2020-05-30T18:36:32+08:00</lastmod>
+    <lastmod>2020-05-30T18:37:32+08:00</lastmod>
   </url>
   
   <url>
@@ -29,7 +29,7 @@
   
   <url>
     <loc>https://nagimemooo.github.io/tags/</loc>
-    <lastmod>2020-05-30T18:36:32+08:00</lastmod>
+    <lastmod>2020-05-30T18:37:32+08:00</lastmod>
   </url>
   
   <url>
@@ -58,18 +58,18 @@
   </url>
   
   <url>
+    <loc>https://nagimemooo.github.io/categories/&#43;%E5%BE%8C%E7%AB%AF-go/</loc>
+    <lastmod>2020-05-30T18:37:32+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nagimemooo.github.io/posts/05_go_test_coverage/</loc>
     <lastmod>2020-05-09T00:02:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://nagimemooo.github.io/categories/go/</loc>
-    <lastmod>2020-05-09T00:02:42+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://nagimemooo.github.io/tags/golang/</loc>
-    <lastmod>2020-05-09T00:02:42+08:00</lastmod>
+    <lastmod>2020-05-30T18:37:32+08:00</lastmod>
   </url>
   
   <url>
@@ -145,6 +145,11 @@
   <url>
     <loc>https://nagimemooo.github.io/posts/git/</loc>
     <lastmod>2020-04-18T10:30:25+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nagimemooo.github.io/posts/01-2_go_start/</loc>
+    <lastmod>2020-05-30T18:37:32+08:00</lastmod>
   </url>
   
   <url>

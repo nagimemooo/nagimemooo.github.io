@@ -61,18 +61,15 @@
     </item>
     
     <item>
-      <title>[ Go 01 ] 安裝環境 MAC Note</title>
+      <title>[Ｇo 01] 配置GO開發環境三步驟 筆記</title>
       <link>https://nagimemooo.github.io/posts/01_go_env/</link>
       <pubDate>Sat, 18 Apr 2020 10:30:25 +0800</pubDate>
       
       <guid>https://nagimemooo.github.io/posts/01_go_env/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;之前在windows環境下安裝過go環境，這次在ＭＡＣ環境也裝一次並記錄
-1.安裝官方ＧＯ：https://golang.org/
+      <description>&lt;h2 id=&#34;配置go開發環境三步驟&#34;&gt;配置GO開發環境三步驟&lt;/h2&gt;
+&lt;p&gt;1.安裝官方ＧＯ：https://golang.org/
 2.配置Ｇo所需要環境變數
-3.找個喜歡的ＩＤＥ設定開始寫Ｇo 「推薦Visual Studio Code」
-因為網上已經不少文章關於這些說明，所以簡單記錄幾個keyword與操作&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+3.找個喜歡的ＩＤＥ設定開始寫Ｇo 「推薦Visual Studio Code」&lt;/p&gt;</description>
     </item>
     
   </channel>
