@@ -13,8 +13,7 @@
 
   
   <meta name="author" content="nagi" />
-  <meta name="description" content=" 本文文字版紀錄 git 常用使用筆記
-" />
+  <meta name="description" content=" 本文文字版紀錄 git 常用使用筆記 " />
 
 
 
@@ -25,7 +24,7 @@
 
 <meta property="og:title" content="[ Git ]常用指令與名詞筆記" />
 <meta property="og:description" content="
-本文文字版紀錄 git 常用使用筆記
+本文文字版紀錄 git 常用使用筆記 
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nagimemooo.github.io/posts/git/" />
@@ -37,7 +36,7 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[ Git ]常用指令與名詞筆記"/>
 <meta name="twitter:description" content="
-本文文字版紀錄 git 常用使用筆記
+本文文字版紀錄 git 常用使用筆記 
 "/>
 
 
@@ -89,61 +88,61 @@
         </h2>
       </header>
       <article style="margin-top: 2rem;"><blockquote>
-<p>本文文字版紀錄 git 常用使用筆記</p>
+<p>本文文字版紀錄 git 常用使用筆記 <br></p>
 </blockquote>
-<p>其實很少記得 git 指令，都是遇到些問題，長期獨立開發，所以很少用到merge．</p>
+<p>其實很少記得 git 指令，都是遇到些問題，長期獨立開發，所以很少用到merge．<br></p>
 <ul>
-<li>HEAD 表示「目前所在分支」</li>
-<li>遠端的節點預設會使用 origin 這個名字</li>
+<li>HEAD 表示「目前所在分支」<br></li>
+<li>遠端的節點預設會使用 origin 這個名字<br></li>
 </ul>
 <h4 id="git初始化-將遠端與本地資料夾連結">git初始化 將遠端與本地資料夾連結</h4>
-<p>通常在github新創repo都會有指令導引，照著新創建的指令去下即可連結</p>
-<p>…or create a new repository on the command line
-echo &ldquo;# go_demo&rdquo; &raquo; README.md
-git init
-git add README.md
-git commit -m &ldquo;first commit&rdquo;
-git remote add origin <a href="https://github.com/nagimemooo/go_demo.git">https://github.com/nagimemooo/go_demo.git</a>
-git push -u origin master</p>
-<p>…or push an existing repository from the command line
-git remote add origin <a href="https://github.com/nagimemooo/go_demo.git">https://github.com/nagimemooo/go_demo.git</a>
-git push -u origin master</p>
+<p>通常在github新創repo都會有指令導引，照著新創建的指令去下即可連結<br></p>
+<p>…or create a new repository on the command line<br>
+echo &ldquo;# go_demo&rdquo; &raquo; README.md<br>
+git init<br>
+git add README.md<br>
+git commit -m &ldquo;first commit&quot;<br>
+git remote add origin <a href="https://github.com/nagimemooo/go_demo.git">https://github.com/nagimemooo/go_demo.git</a><br>
+git push -u origin master<br></p>
+<p>…or push an existing repository from the command line<br>
+git remote add origin <a href="https://github.com/nagimemooo/go_demo.git">https://github.com/nagimemooo/go_demo.git</a><br>
+git push -u origin master<br></p>
 <ul>
 <li>解說
-git init : 初始化建一個.git文件夾是附屬於該倉庫的工作樹
-git remote -v : 查看遠端位置
-git remote add <remote> <url> : 新增遠端git位置
-git remote remove <remote> : 移除遠端git位置
-git push -u 遠端 本地</li>
+git init : 初始化建一個.git文件夾是附屬於該倉庫的工作樹<br>
+git remote -v : 查看遠端位置<br>
+git remote add <remote> <url> : 新增遠端git位置<br>
+git remote remove <remote> : 移除遠端git位置<br>
+git push -u 遠端 本地<br></li>
 </ul>
 <h4 id="git-下載已存在遠端項目">git 下載已存在遠端項目</h4>
-<p>新建資料夾後下指令
-到遠端項目上複製git clone指令</p>
+<p>新建資料夾後下指令<br>
+到遠端項目上複製git clone指令<br></p>
 <h4 id="git-上傳與分支操作">git 上傳與分支操作</h4>
-<p>完成連結後，我還是習慣使用vscode去做git上傳操作
-好處是可以快速切換分支
-每次變動後可以在分割視窗review再上傳，
-如果不更改也可以恢復更改</p>
+<p>完成連結後，我還是習慣使用vscode去做git上傳操作<br>
+好處是可以快速切換分支<br>
+每次變動後可以在分割視窗review再上傳，<br>
+如果不更改也可以恢復更改<br></p>
 <h4 id="git-status">git status</h4>
 <p>查看狀態</p>
 <h4 id="git-config">git config</h4>
-<p>git config &ndash;list
-git config &ndash;global user.email
-git config &ndash;global user.email <a href="mailto:nagimemooo@gmail.com">nagimemooo@gmail.com</a>
-vi .git/config ·編輯內容（按下q離開）</p>
-<p>&ndash;global 參數，代表在此系統，Git 做任何事都會採用此資訊。
+<p>git config &ndash;list<br>
+git config &ndash;global user.email<br>
+git config &ndash;global user.email <a href="mailto:nagimemooo@gmail.com">nagimemooo@gmail.com</a> <br>
+vi .git/config ·編輯內容（按下q離開）<br></p>
+<p>&ndash;global 參數，代表在此系統，Git 做任何事都會採用此資訊。 <br>
 若想指定特定專案不同的設定就拿掉 global 參數。</p>
 <h4 id="git-刪除分支">git 刪除分支</h4>
-<p>git branch 查詢
-git branch -d <branch> 刪除</p>
+<p>git branch 查詢<br>
+git branch -d <branch> 刪除<br></p>
 <h4 id="做錯-commit-還沒-push-時的恢復方法">做錯 commit 還沒 push 時的恢復方法</h4>
-<p>$ git log &ndash;oneline
-$ git reset 66cb4b3^
-^表示上一步，＾＾表示上兩步，或直接打分支命名</p>
+<p>$ git log &ndash;oneline<br>
+$ git reset 66cb4b3^<br>
+^表示上一步，＾＾表示上兩步，或直接打分支命名<br></p>
 <h4 id="git-rebase">git rebase</h4>
-<p>當有很多分支走不同路後，
-希望某一個分支重新 (re-)定義某個 branch 的參考基準 (base)，
-就可以使用．</p></article>
+<p>當有很多分支走不同路後，<br>
+希望某一個分支重新 (re-)定義某個 branch 的參考基準 (base)，<br>
+就可以使用．<br></p></article>
     </section>
 
     <footer class="ui attached segment dream-tags">
@@ -277,13 +276,13 @@ $ git reset 66cb4b3^
           
             <div class="item">
               <div class="content">
-                <a href="https://nagimemooo.github.io/posts/docker_mongo/" class="item">[ docker ]啟動 mongo DB 與簡單操作</a>
+                <a href="https://nagimemooo.github.io/posts/github_hugo/" class="item">Github_hugo</a>
               </div>
             </div>
           
             <div class="item">
               <div class="content">
-                <a href="https://nagimemooo.github.io/posts/css_map/" class="item">[ CSS ] CSS 學習地圖</a>
+                <a href="https://nagimemooo.github.io/posts/docker_mongo/" class="item">[ docker ]啟動 mongo DB 與簡單操作</a>
               </div>
             </div>
           
@@ -305,7 +304,31 @@ $ git reset 66cb4b3^
           
             <div class="item">
               <div class="content">
-                <a href="https://nagimemooo.github.io/posts/react_setting/" class="item">[ React ] 初始開發環境設定與名詞介紹</a>
+                <a href="https://nagimemooo.github.io/posts/react04_class_setstate/" class="item">My First Post</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://nagimemooo.github.io/posts/react03_component_props/" class="item">My First Post</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://nagimemooo.github.io/posts/react02_jsx/" class="item">My First Post</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://nagimemooo.github.io/posts/react01_setting/" class="item">[ React ] 初始開發環境設定與名詞介紹</a>
+              </div>
+            </div>
+          
+            <div class="item">
+              <div class="content">
+                <a href="https://nagimemooo.github.io/posts/css_map/" class="item">[ CSS ] CSS 學習地圖</a>
               </div>
             </div>
           

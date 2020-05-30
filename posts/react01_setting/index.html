@@ -5,34 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-所有分類
+[ React ] 初始開發環境設定與名詞介紹
 </title>
 
     
 
 
   
-  <meta name="author" content="nagi" />
-  <meta name="description" content="nagi 沙發馬鈴薯 少女 " />
+  <meta name="author" content="Nagi" />
+  <meta name="description" content="本章內容： 快速安裝 React 專案與建置開發環境
+" />
 
 
 
 <meta name="generator" content="Hugo 0.69.0" />
 
-<link rel="canonical" href="https://nagimemooo.github.io/categories/" />
+<link rel="canonical" href="https://nagimemooo.github.io/posts/react01_setting/" />
 
 
-<meta property="og:title" content="Categories" />
-<meta property="og:description" content="nagi 沙發馬鈴薯 少女 " />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://nagimemooo.github.io/categories/" />
-<meta property="og:updated_time" content="2020-05-30T18:36:32+08:00" />
+<meta property="og:title" content="[ React ] 初始開發環境設定與名詞介紹" />
+<meta property="og:description" content="本章內容：
+快速安裝 React 專案與建置開發環境" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nagimemooo.github.io/posts/react01_setting/" />
+<meta property="article:published_time" content="2020-05-16T15:42:53+08:00" />
+<meta property="article:modified_time" content="2020-05-16T15:42:53+08:00" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Categories"/>
-<meta name="twitter:description" content="nagi 沙發馬鈴薯 少女 "/>
+<meta name="twitter:title" content="[ React ] 初始開發環境設定與名詞介紹"/>
+<meta name="twitter:description" content="本章內容：
+快速安裝 React 專案與建置開發環境"/>
 
 
 <link rel="stylesheet" href="/css/github-markdown.css" />
@@ -73,6 +77,78 @@
 
           
 <div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
+
+    <section class="ui top attached segment" id="dream-save-post-as-img">
+      <header style="margin-top: 0 !important;">
+        <h2 class="ui header">
+          [ React ] 初始開發環境設定與名詞介紹
+          <div class="sub header">@ Nagi · Saturday, May 16, 2020 · 1 分鐘閱讀 · 更新于 May 16, 2020</div>
+        </h2>
+      </header>
+      <article style="margin-top: 2rem;"><p>本章內容：
+快速安裝 React 專案與建置開發環境</p>
+<h4 id="安裝nodejs-npm">安裝node.js (npm)</h4>
+<ul>
+<li>Node.js是能執行JavaScript 的執行環境，讓JS可以在伺服器(瀏覽器以外)運作</li>
+<li>npm（全稱 Node Package Manager，即「node包管理器」）是Node.js預設的、用JavaScript編寫的軟體套件管理系統</li>
+</ul>
+<h4 id="使用-npm-安裝create-react-app">使用 npm 安裝create-react-app</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm install -g create-react-app
+/usr/local/bin/create-react-app -&gt; /usr/local/lib/node_modules/create-react-app/index.js
++ create-react-app@3.4.1
+~ create-react-app --version
+3.4.1
+</code></pre></div><ul>
+<li>-g 代表全局安裝</li>
+<li>create-react-app 是適合學習 React 的環境及單頁（single-page）應用程式，不需再安装或配置 Webpack 或 Babel 等工具， 它們是預先配置好並隐藏的</li>
+<li>create-react-app &ndash;version 確認版本的指令-</li>
+</ul>
+<h4 id="使用create-react-app-建立專案">使用create-react-app 建立專案</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">～create-react-app my-react-demo
+Creating a new React app in /Users/xxx/front/my-react-demo.
+</code></pre></div><h4 id="啟動專案">啟動專案</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm start
+</code></pre></div><p>public/index.html
+基本的HTML架構，內有```html
+&ldquo;<div id="root"></div>&rdquo;</p>
+<pre><code class="language-這樣的內容" data-lang="這樣的內容">
+
+#### vscode 外掛
+- ESlint 插件 -&gt;程式碼規範檢查
+- JS JSX Snippets  插件  -&gt;程式碼快速鍵
+
+------------
+
+
+#### 延伸閱讀 [wait]
+[有看沒懂的npx方式](https://www.itread01.com/content/1544755994.html &quot;有看沒懂的npx方式&quot;)
+
+
+</code></pre></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags">
+      
+        
+          <a class="ui label" href="/tags/react" title="react">react</a>
+        
+          <a class="ui label" href="/tags/vscode" title="vscode">vscode</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; background: #1b1c1d !important; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i> Save as image
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
   <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
     <article class="dream-header">
   <section class="ui top attached center aligned segment">
@@ -285,101 +361,6 @@
 </article>
 
   </div>
-  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column">
-    <div class="ui segment dream-categories-section">
-      <h2 class="ui header">
-        所有分類
-        <div class="ui grey sub header">
-          
-            3 分類
-          
-        </div>
-      </h2>
-
-      
-      
-        
-        <h3 class="ui header">
-          <a href="/categories/go/">go</a>
-          5篇文章
-        </h3>
-        <ul>
-          
-            <li>
-              <a href="https://nagimemooo.github.io/posts/05_go_test_coverage/">[ Go 05 ] 寫測試並產生網頁版報告看覆蓋率</a>
-            </li>
-          
-            <li>
-              <a href="https://nagimemooo.github.io/posts/04_go_gin_http/">[ Go 04 ] 使用 Gin 框架快速建立 http 服務</a>
-            </li>
-          
-            <li>
-              <a href="https://nagimemooo.github.io/posts/03_go_zap_log/">[ Go 03 ] 使用 zap 框架印出 log</a>
-            </li>
-          
-            <li>
-              <a href="https://nagimemooo.github.io/posts/02_go_signal/">[ Go 02 ] 信號處理和退出程式</a>
-            </li>
-          
-            <li>
-              <a href="https://nagimemooo.github.io/posts/01_go_env/">[ Go 01 ] 安裝環境 MAC Note</a>
-            </li>
-          
-        </ul>
-      
-        
-        <h3 class="ui header">
-          <a href="/categories/tech%E7%AD%86%E8%A8%98/">tech筆記</a>
-          3篇文章
-        </h3>
-        <ul>
-          
-            <li>
-              <a href="https://nagimemooo.github.io/posts/github_hugo/">Github_hugo</a>
-            </li>
-          
-            <li>
-              <a href="https://nagimemooo.github.io/posts/docker_mongo/">[ docker ]啟動 mongo DB 與簡單操作</a>
-            </li>
-          
-            <li>
-              <a href="https://nagimemooo.github.io/posts/git/">[ Git ]常用指令與名詞筆記</a>
-            </li>
-          
-        </ul>
-      
-        
-        <h3 class="ui header">
-          <a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
-          5篇文章
-        </h3>
-        <ul>
-          
-            <li>
-              <a href="https://nagimemooo.github.io/posts/react04_class_setstate/">My First Post</a>
-            </li>
-          
-            <li>
-              <a href="https://nagimemooo.github.io/posts/react03_component_props/">My First Post</a>
-            </li>
-          
-            <li>
-              <a href="https://nagimemooo.github.io/posts/react02_jsx/">My First Post</a>
-            </li>
-          
-            <li>
-              <a href="https://nagimemooo.github.io/posts/react01_setting/">[ React ] 初始開發環境設定與名詞介紹</a>
-            </li>
-          
-            <li>
-              <a href="https://nagimemooo.github.io/posts/css_map/">[ CSS ] CSS 學習地圖</a>
-            </li>
-          
-        </ul>
-      
-
-    </div>
-  </div>
 </div>
 
         </section>
@@ -441,7 +422,6 @@
 
   
   
-
 </div>
 
         </section>
