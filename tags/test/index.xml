@@ -5,18 +5,18 @@
     <link>https://nagimemooo.github.io/tags/test/</link>
     <description>Recent content in test on nagimemooo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-Hans</language>
+    <language>en</language>
     <lastBuildDate>Sat, 09 May 2020 00:02:42 +0800</lastBuildDate>
     
 	<atom:link href="https://nagimemooo.github.io/tags/test/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>[ Go 05 ] 寫測試並產生網頁版報告看覆蓋率</title>
-      <link>https://nagimemooo.github.io/posts/05_go_test_coverage/</link>
+      <title>[Go 05] 寫測試並產出一目瞭然的網頁版覆蓋率報告 再也不用怕遺漏</title>
+      <link>https://nagimemooo.github.io/post/05_go_test_coverage/</link>
       <pubDate>Sat, 09 May 2020 00:02:42 +0800</pubDate>
       
-      <guid>https://nagimemooo.github.io/posts/05_go_test_coverage/</guid>
+      <guid>https://nagimemooo.github.io/post/05_go_test_coverage/</guid>
       <description>&lt;p&gt;本章介紹：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;為上一篇 Gin 框架的 User &amp;amp; PostName func.寫個簡單測試&lt;/li&gt;

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>markdown on nagimemooo</title>
+    <link>https://nagimemooo.github.io/tags/markdown/</link>
+    <description>Recent content in markdown on nagimemooo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nagimemooo.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>https://nagimemooo.github.io/posts/01_go_env/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nagimemooo.github.io/posts/01_go_env/</guid>
+      <description>&lt;h2 id=&#34;配置go開發環境三步驟&#34;&gt;配置GO開發環境三步驟&lt;/h2&gt;
+&lt;p&gt;1.安裝官方ＧＯ：https://golang.org/ &lt;!-- raw HTML omitted --&gt;
+2.配置Ｇo所需要環境變數 &lt;!-- raw HTML omitted --&gt;
+3.找個喜歡的ＩＤＥ設定開始寫Ｇo 「推薦Visual Studio Code」 &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

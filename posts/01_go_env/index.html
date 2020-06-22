@@ -1,102 +1,152 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>
-[Ｇo 01] 配置GO開發環境三步驟 筆記
-</title>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.69.0" />
 
-    
+  <title>[Ｇo 01] 配置GO開發環境三步驟 筆記 &middot; nagimemooo</title>
 
+  <meta name="description" content="Sample article showcasing basic Markdown syntax and formatting for HTML elements." />
 
   
-  <meta name="author" content="nagi" />
-  <meta name="description" content="配置GO開發環境三步驟 1.安裝官方ＧＯ：https://golang.org/ 2.配置Ｇo所需要環境變數 3.找個喜歡的ＩＤＥ設定開始寫Ｇo 「推薦Visual Studio Code」 " />
+
+<meta itemprop="name" content="[Ｇo 01] 配置GO開發環境三步驟 筆記">
+<meta itemprop="description" content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
+<meta itemprop="datePublished" content="2019-03-11T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-03-11T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="103">
+<meta itemprop="image" content="https://nagimemooo.github.io/images/profile.png"/>
 
 
 
-<meta name="generator" content="Hugo 0.69.0" />
+<meta itemprop="keywords" content="golang," />
 
-<link rel="canonical" href="https://nagimemooo.github.io/posts/01_go_env/" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://nagimemooo.github.io/images/profile.png"/>
+
+<meta name="twitter:title" content="[Ｇo 01] 配置GO開發環境三步驟 筆記"/>
+<meta name="twitter:description" content="Sample article showcasing basic Markdown syntax and formatting for HTML elements."/>
 
 
 <meta property="og:title" content="[Ｇo 01] 配置GO開發環境三步驟 筆記" />
-<meta property="og:description" content="配置GO開發環境三步驟
-1.安裝官方ＧＯ：https://golang.org/ 
-2.配置Ｇo所需要環境變數 
-3.找個喜歡的ＩＤＥ設定開始寫Ｇo 「推薦Visual Studio Code」 " />
+<meta property="og:description" content="Sample article showcasing basic Markdown syntax and formatting for HTML elements." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nagimemooo.github.io/posts/01_go_env/" />
-<meta property="article:published_time" content="2020-04-18T10:30:25+08:00" />
-<meta property="article:modified_time" content="2020-04-18T10:30:25+08:00" />
-
-
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[Ｇo 01] 配置GO開發環境三步驟 筆記"/>
-<meta name="twitter:description" content="配置GO開發環境三步驟
-1.安裝官方ＧＯ：https://golang.org/ 
-2.配置Ｇo所需要環境變數 
-3.找個喜歡的ＩＤＥ設定開始寫Ｇo 「推薦Visual Studio Code」 "/>
-
-
-<link rel="stylesheet" href="/css/github-markdown.css" />
-<link rel="stylesheet" href="/css/semantic.min.css" />
-<link rel="stylesheet" href="/css/site.css" />
-
-
-<style>
-  a {
-    color: seagreen !important;
-  }
-</style>
+<meta property="og:image" content="https://nagimemooo.github.io/images/profile.png"/>
+<meta property="article:published_time" content="2019-03-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-03-11T00:00:00+00:00" /><meta property="og:site_name" content="Soho Theme" />
 
 
 
 
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/hyde.css">
+
+  
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
   </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="/images/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
 
-  
-  <body style="background-image: url(/img/dream.jpg);">
-  
-    <div class="flip-container">
-      <div class="flipper">
-        <section class="front">
-          
-<nav class="ui secondary menu dream-menu">
+      <h1>nagimemooo</h1>
 
-  <div class="item">
-    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
+      
+      <p class="lead">Example Blog</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://nagimemooo.github.io">Home</a>
+        </li>
+        <li>
+          <a href="/about/">About</a>
+        </li><li>
+          <a href="/contact/">Contact</a>
+        </li><li>
+          <a href="/posts/">Posts</a>
+        </li><li>
+          <a href="/categories/">Categories</a>
+        </li><li>
+          <a href="/tags/">Tags</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="#" rel="me" title="Linkedin" target="_blank">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://github.com/alexandrevicenzi/soho" rel="me" title="GitHub" target="_blank">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="#" rel="me" title="Twitter" target="_blank">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
   </div>
-  <div class="item">
-    <i class="large link home icon" title="首頁" onclick="window.location.href = 'https:\/\/nagimemooo.github.io'"></i>
-  </div>
-  <div class="item">
-    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
-  </div>
-</nav>
+</aside>
 
-          
-<div class="ui centered relaxed grid dream-grid">
-  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single">
 
-    <section class="ui top attached segment" id="dream-save-post-as-img">
-      <header style="margin-top: 0 !important;">
-        <h2 class="ui header">
-          [Ｇo 01] 配置GO開發環境三步驟 筆記
-          <div class="sub header">@ nagi · Saturday, Apr 18, 2020 · 1 分鐘閱讀 · 更新于 Apr 18, 2020</div>
-        </h2>
-      </header>
-      <article style="margin-top: 2rem;"><h2 id="配置go開發環境三步驟">配置GO開發環境三步驟</h2>
-<p>1.安裝官方ＧＯ：https://golang.org/ <br>
-2.配置Ｇo所需要環境變數 <br>
-3.找個喜歡的ＩＤＥ設定開始寫Ｇo 「推薦Visual Studio Code」 <br></p>
-<p>直接看參考文章: <br>
-<a href="https://oranwind.org/go-go-yu-yan-yu-windows-shang-zhi-an-zhuang-yu-huan-jing-she-ding/" title="[Go] Go 語言於 Windows 上之安裝與環境設定">[Go] Go 語言於 Windows 上之安裝與環境設定</a> <br>
-<a href="https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/391186/">Mac上Go環境和VS Code的正確安裝與配置方法</a> <br>
-<a href="https://oranwind.org/go-ide-visual-studio-code/" title="[Go] 使用 Visual Studio Code 上建置 Go 開發環境">[Go] 使用 Visual Studio Code 上建置 Go 開發環境</a> <br></p>
+  <main class="content container">
+  <div class="post">
+  <h1>[Ｇo 01] 配置GO開發環境三步驟 筆記</h1>
+
+  <div class="post-date">
+    <time datetime="2019-03-11T00:00:00Z">Mar 11, 2019</time> &middot; 1 min read
+  </div>
+
+  <h2 id="配置go開發環境三步驟">配置GO開發環境三步驟</h2>
+<p>1.安裝官方ＧＯ：https://golang.org/ <!-- raw HTML omitted -->
+2.配置Ｇo所需要環境變數 <!-- raw HTML omitted -->
+3.找個喜歡的ＩＤＥ設定開始寫Ｇo 「推薦Visual Studio Code」 <!-- raw HTML omitted --></p>
+<p>直接看參考文章: <!-- raw HTML omitted -->
+<a href="https://oranwind.org/go-go-yu-yan-yu-windows-shang-zhi-an-zhuang-yu-huan-jing-she-ding/" title="[Go] Go 語言於 Windows 上之安裝與環境設定">[Go] Go 語言於 Windows 上之安裝與環境設定</a> <!-- raw HTML omitted -->
+<a href="https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/391186/">Mac上Go環境和VS Code的正確安裝與配置方法</a> <!-- raw HTML omitted -->
+<a href="https://oranwind.org/go-ide-visual-studio-code/" title="[Go] 使用 Visual Studio Code 上建置 Go 開發環境">[Go] 使用 Visual Studio Code 上建置 Go 開發環境</a> <!-- raw HTML omitted --></p>
 <hr>
 <p>以下記錄本人的安裝筆記</p>
 <h3 id="mac安裝筆記">MAC安裝筆記</h3>
@@ -131,338 +181,43 @@ go version go1.14 darwin/amd64
 會列出上述設定可以確認
 </code></pre><p>註:如果要重新安裝
 也是要把/usr/local/go刪除，環境變數拿掉，再安裝一次動作。</p>
-<p><strong>3.IDE推薦</strong> (直接看參考文章介紹即可)<br>
-3-1 下載 Visual Studio Code<br>
-3-2 安裝Go外掛<br>
-3-3 安裝依賴包支援go get下載以下工具:<br>
-dlv.exe	go 语言调试工具<br>
-gocode.exe	go语言检查，自动补全<br>
-godef.exe 	go语言定义和引用的跳转<br>
-golint.exe 	go语言规范检查<br>
-go-outline.exe 	用于在Go源文件中提取JSON形式声明的简单工具<br>
-gopkgs.exe 	快速列出可用包的工具<br>
-gorename.exe 	在Go源代码中执行标识符的精确类型安全重命名<br>
-goreturns.exe 	类似fmt和import的工具，使用零值填充Go返回语句以匹配func返回类型<br>
-go-symbols.exe 	从go源码树中提取JSON形式的包符号的工具<br>
-gotour.exe 	go语言指南网页版<br>
-guru.exe 	go语言源代码有关工具，如代码高亮等<br></p></article>
-    </section>
-
-    <footer class="ui attached segment dream-tags">
-      
-        
-          <a class="ui label" href="/tags/golang" title="golang">golang</a>
-        
-      
-      <div
-        class="ui label"
-        style="float: right; background: #1b1c1d !important; cursor: pointer;"
-        onclick="savePostAsImg()">
-        <i class="save icon"></i> Save as image
-      </div>
-    </footer>
-
-    
-
-    
-
-  </div>
-  <div class="sixteen wide mobile sixteen wide tablet four wide computer column">
-    <article class="dream-header">
-  <section class="ui top attached center aligned segment">
-    <div class="ui small circular image">
-      
-        <img src="/img/docker.jpg">
-      
-    </div>
-
-    <h1 class="ui medium header">nagi 備忘錄<div class="sub header" style="margin-top: 0.5rem;">如有疑問與建議可以mail給我讓我知道，列表式顯示請點下一排icon。</div>
-    </h1>
-
-    <div class="ui horizontal list">
-      
-      <a class="item" href="/posts">
-        <i class="archive icon" title="归档"></i>
-      </a>
-      
-      <a class="item" href="/tags">
-        <i class="tags icon" title="所有標籤"></i>
-      </a>
-      <a class="item" href="/categories">
-        <i class="th list icon" title="所有分類"></i>
-      </a>
-    </div>
-  </section>
-
-  
-  <section class="ui attached center aligned segment dream-tags">
-    
-      <a class="ui label" href="/tags/css" title="css">css</a>
-    
-      <a class="ui label" href="/tags/docker" title="docker">docker</a>
-    
-      <a class="ui label" href="/tags/gin" title="gin">gin</a>
-    
-      <a class="ui label" href="/tags/git" title="git">git</a>
-    
-      <a class="ui label" href="/tags/golang" title="golang">golang</a>
-    
-      <a class="ui label" href="/tags/hugo" title="hugo">hugo</a>
-    
-      <a class="ui label" href="/tags/life" title="life">life</a>
-    
-      <a class="ui label" href="/tags/log" title="log">log</a>
-    
-      <a class="ui label" href="/tags/mongo" title="mongo">mongo</a>
-    
-      <a class="ui label" href="/tags/react" title="react">react</a>
-    
-      <a class="ui label" href="/tags/signal" title="signal">signal</a>
-    
-      <a class="ui label" href="/tags/test" title="test">test</a>
-    
-      <a class="ui label" href="/tags/vscode" title="vscode">vscode</a>
-    
-  </section>
-  
-
-  
-  <section class="ui attached segment dream-categories">
-    <div class="ui accordion">
-      
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/&#43;%E5%BE%8C%E7%AB%AF-go" class="item">&#43;後端-go</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/05_go_test_coverage/" class="item">[ Go 05 ] 寫測試並產生網頁版報告看覆蓋率</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/04_go_gin_http/" class="item">[ Go 04 ] 使用 Gin 框架快速建立 http 服務</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/03_go_zap_log/" class="item">[ Go 03 ] 使用 zap 框架印出 log</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/02_go_signal/" class="item">[ Go 02 ] 信號處理和退出程式</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/01-2_go_start/" class="item">[ Go 01-2]開始ＧＯ之 Golang收藏教學文</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/01_go_env/" class="item">[Ｇo 01] 配置GO開發環境三步驟 筆記</a>
-              </div>
-            </div>
-          
-          </div>
-        </div>
-      
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/tech%E7%AD%86%E8%A8%98" class="item">tech筆記</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/github_hugo/" class="item">Github_hugo</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/docker_mongo/" class="item">[ docker ]啟動 mongo DB 與簡單操作</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/git/" class="item">[ Git ]常用指令與名詞筆記</a>
-              </div>
-            </div>
-          
-          </div>
-        </div>
-      
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/%E5%89%8D%E7%AB%AF" class="item">前端</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/react04_class_setstate/" class="item">My First Post</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/react03_component_props/" class="item">My First Post</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/react02_jsx/" class="item">My First Post</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/react01_setting/" class="item">[ React ] 初始開發環境設定與名詞介紹</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/css_map/" class="item">[ CSS ] CSS 學習地圖</a>
-              </div>
-            </div>
-          
-          </div>
-        </div>
-      
-    </div>
-  </section>
-  
-
-  <section class="ui attached segment header-socials">
-    <nav class="ui secondary menu dream-menu dream-socials">
-  
-    <div class="item">
-      <a href="mailto:nagimemooo@gmail.com">
-        <i class=" mail icon" title="email"></i>
-      </a>
-    </div>
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</nav>
-
-  </section>
-
-  <section class="ui bottom attached center aligned segment">
-    
-      <p>© 2020 nagimemooo</p>
-    
-
-    <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
-  </section>
-</article>
-
-  </div>
+<p><strong>3.IDE推薦</strong> (直接看參考文章介紹即可)<!-- raw HTML omitted -->
+3-1 下載 Visual Studio Code<!-- raw HTML omitted -->
+3-2 安裝Go外掛<!-- raw HTML omitted -->
+3-3 安裝依賴包支援go get下載以下工具:<!-- raw HTML omitted -->
+dlv.exe	go 语言调试工具<!-- raw HTML omitted -->
+gocode.exe	go语言检查，自动补全<!-- raw HTML omitted -->
+godef.exe 	go语言定义和引用的跳转<!-- raw HTML omitted -->
+golint.exe 	go语言规范检查<!-- raw HTML omitted -->
+go-outline.exe 	用于在Go源文件中提取JSON形式声明的简单工具<!-- raw HTML omitted -->
+gopkgs.exe 	快速列出可用包的工具<!-- raw HTML omitted -->
+gorename.exe 	在Go源代码中执行标识符的精确类型安全重命名<!-- raw HTML omitted -->
+goreturns.exe 	类似fmt和import的工具，使用零值填充Go返回语句以匹配func返回类型<!-- raw HTML omitted -->
+go-symbols.exe 	从go源码树中提取JSON形式的包符号的工具<!-- raw HTML omitted -->
+gotour.exe 	go语言指南网页版<!-- raw HTML omitted -->
+guru.exe 	go语言源代码有关工具，如代码高亮等<!-- raw HTML omitted --></p>
 </div>
 
-        </section>
-        <section class="back">
-          
-<nav class="ui secondary menu dream-menu">
 
-  <div class="item">
-    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
+  </main>
+
+  <footer>
+  <div>
+    &copy; Author Name 2020
+
+    &middot; <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank">CC BY-SA 4.0</a>
+
+    &middot; Build with <a href="https://gohugo.io/" target="_blank">Hugo</a> & <a href="https://themes.gohugo.io/soho/" target="_blank">Soho</a> theme
   </div>
-  <div class="item">
-    <i class="large link home icon" title="首頁" onclick="window.location.href = 'https:\/\/nagimemooo.github.io'"></i>
-  </div>
-  <div class="item">
-    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
-  </div>
-</nav>
+</footer>
 
-          <div class="ui centered relaxed grid dream-grid dream-back">
-  
 
-  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-    <article>
-      <div class="ui top attached segment">
-        <h3 class="ui header">社交链接</h3>
-      </div>
-      <div class="ui attached segment">
-        <nav class="ui secondary menu dream-menu dream-socials">
-  
-    <div class="item">
-      <a href="mailto:nagimemooo@gmail.com">
-        <i class="large mail icon" title="email"></i>
-      </a>
-    </div>
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
 
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-</nav>
-
-      </div>
-    </article>
-  </section>
-
-  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-    
-  </section>
-
-  
-  
-</div>
-
-        </section>
-      </div>
-    </div>
-
-    <script src="/js/jquery.min.js"></script>
-<script src="/js/semantic.min.js"></script>
-<script src="/js/imagesloaded.pkgd.min.js"></script>
-<script src="/js/masonry.pkgd.min.js"></script>
-<script src="/js/nav.js"></script>
-<script src="/js/header.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/theme.js"></script>
-<script src="/js/html2canvas.min.js"></script>
-
-
-
-  </body>
+</body>
 </html>

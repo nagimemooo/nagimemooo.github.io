@@ -5,7 +5,7 @@
     <link>https://nagimemooo.github.io/categories/%E5%89%8D%E7%AB%AF/</link>
     <description>Recent content in 前端 on nagimemooo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-Hans</language>
+    <language>en</language>
     <lastBuildDate>Sat, 30 May 2020 18:36:32 +0800</lastBuildDate>
     
 	<atom:link href="https://nagimemooo.github.io/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
@@ -13,47 +13,47 @@
     
     <item>
       <title>My First Post</title>
-      <link>https://nagimemooo.github.io/posts/react04_class_setstate/</link>
+      <link>https://nagimemooo.github.io/post/react04_class_setstate/</link>
       <pubDate>Sat, 30 May 2020 18:36:32 +0800</pubDate>
       
-      <guid>https://nagimemooo.github.io/posts/react04_class_setstate/</guid>
+      <guid>https://nagimemooo.github.io/post/react04_class_setstate/</guid>
       <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>My First Post</title>
-      <link>https://nagimemooo.github.io/posts/react03_component_props/</link>
+      <link>https://nagimemooo.github.io/post/react03_component_props/</link>
       <pubDate>Sat, 30 May 2020 18:34:33 +0800</pubDate>
       
-      <guid>https://nagimemooo.github.io/posts/react03_component_props/</guid>
+      <guid>https://nagimemooo.github.io/post/react03_component_props/</guid>
       <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>My First Post</title>
-      <link>https://nagimemooo.github.io/posts/react02_jsx/</link>
+      <link>https://nagimemooo.github.io/post/react02_jsx/</link>
       <pubDate>Sat, 30 May 2020 18:32:15 +0800</pubDate>
       
-      <guid>https://nagimemooo.github.io/posts/react02_jsx/</guid>
+      <guid>https://nagimemooo.github.io/post/react02_jsx/</guid>
       <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[ React ] 初始開發環境設定與名詞介紹</title>
-      <link>https://nagimemooo.github.io/posts/react01_setting/</link>
+      <link>https://nagimemooo.github.io/post/react01_setting/</link>
       <pubDate>Sat, 16 May 2020 15:42:53 +0800</pubDate>
       
-      <guid>https://nagimemooo.github.io/posts/react01_setting/</guid>
+      <guid>https://nagimemooo.github.io/post/react01_setting/</guid>
       <description>&lt;p&gt;本章內容：
 快速安裝 React 專案與建置開發環境&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[ CSS ] CSS 學習地圖</title>
-      <link>https://nagimemooo.github.io/posts/css_map/</link>
+      <link>https://nagimemooo.github.io/post/css_map/</link>
       <pubDate>Sat, 18 Apr 2020 10:30:25 +0800</pubDate>
       
-      <guid>https://nagimemooo.github.io/posts/css_map/</guid>
+      <guid>https://nagimemooo.github.io/post/css_map/</guid>
       <description>&lt;p&gt;記錄簡單個人的ＣＳＳ學習樹&lt;/p&gt;</description>
     </item>
     

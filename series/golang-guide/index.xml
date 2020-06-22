@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golang Guide on nagimemooo</title>
+    <link>https://nagimemooo.github.io/series/golang-guide/</link>
+    <description>Recent content in golang Guide on nagimemooo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nagimemooo.github.io/series/golang-guide/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Go 01] 配置GO開發環境只要三步驟之筆記</title>
+      <link>https://nagimemooo.github.io/post/01_go_env/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nagimemooo.github.io/post/01_go_env/</guid>
+      <description>&lt;h2 id=&#34;配置go開發環境三步驟&#34;&gt;配置GO開發環境三步驟&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;安裝官方ＧＯ：https://golang.org/&lt;/li&gt;
+&lt;li&gt;配置Ｇo所需要環境變數&lt;/li&gt;
+&lt;li&gt;找個喜歡的ＩＤＥ設定開始寫Ｇo 「推薦Visual Studio Code加上插件」&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

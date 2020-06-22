@@ -5,7 +5,7 @@
     <link>https://nagimemooo.github.io/posts/</link>
     <description>Recent content in Posts on nagimemooo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-Hans</language>
+    <language>en</language>
     <lastBuildDate>Sat, 30 May 2020 18:36:32 +0800</lastBuildDate>
     
 	<atom:link href="https://nagimemooo.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -140,7 +140,7 @@
       
       <guid>https://nagimemooo.github.io/posts/git/</guid>
       <description>&lt;blockquote&gt;
-&lt;p&gt;本文文字版紀錄 git 常用使用筆記 &lt;br&gt;&lt;/p&gt;
+&lt;p&gt;本文文字版紀錄 git 常用使用筆記 &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
     
@@ -158,13 +158,13 @@
     <item>
       <title>[Ｇo 01] 配置GO開發環境三步驟 筆記</title>
       <link>https://nagimemooo.github.io/posts/01_go_env/</link>
-      <pubDate>Sat, 18 Apr 2020 10:30:25 +0800</pubDate>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://nagimemooo.github.io/posts/01_go_env/</guid>
       <description>&lt;h2 id=&#34;配置go開發環境三步驟&#34;&gt;配置GO開發環境三步驟&lt;/h2&gt;
-&lt;p&gt;1.安裝官方ＧＯ：https://golang.org/ &lt;br&gt;
-2.配置Ｇo所需要環境變數 &lt;br&gt;
-3.找個喜歡的ＩＤＥ設定開始寫Ｇo 「推薦Visual Studio Code」 &lt;br&gt;&lt;/p&gt;</description>
+&lt;p&gt;1.安裝官方ＧＯ：https://golang.org/ &lt;!-- raw HTML omitted --&gt;
+2.配置Ｇo所需要環境變數 &lt;!-- raw HTML omitted --&gt;
+3.找個喜歡的ＩＤＥ設定開始寫Ｇo 「推薦Visual Studio Code」 &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

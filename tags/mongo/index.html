@@ -1,425 +1,142 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.69.0" />
 
+  <title>mongo &middot; nagimemooo</title>
 
-  tag | mongo
-
-
-
-
-</title>
-
-    
-
+  <meta name="description" content="" />
 
   
-  <meta name="author" content="nagi" />
-  <meta name="description" content="nagi 沙發馬鈴薯 少女 " />
 
+<meta itemprop="name" content="mongo">
+<meta itemprop="description" content="Nagi&#39;s technical memo">
 
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://nagimemooo.github.io/images/profile.png"/>
 
-<meta name="generator" content="Hugo 0.69.0" />
-
-<link rel="canonical" href="https://nagimemooo.github.io/tags/mongo/" />
+<meta name="twitter:title" content="mongo"/>
+<meta name="twitter:description" content="Nagi&#39;s technical memo"/>
 
 
 <meta property="og:title" content="mongo" />
-<meta property="og:description" content="nagi 沙發馬鈴薯 少女 " />
+<meta property="og:description" content="Nagi&#39;s technical memo" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://nagimemooo.github.io/tags/mongo/" />
-<meta property="og:updated_time" content="2020-05-01T10:30:25+08:00" />
+<meta property="og:image" content="https://nagimemooo.github.io/images/profile.png"/>
+<meta property="og:updated_time" content="2020-05-01T10:30:25+08:00" /><meta property="og:site_name" content="Nagi Memo" />
 
 
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="mongo"/>
-<meta name="twitter:description" content="nagi 沙發馬鈴薯 少女 "/>
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/hyde.css">
+
+  
 
 
-<link rel="stylesheet" href="/css/github-markdown.css" />
-<link rel="stylesheet" href="/css/semantic.min.css" />
-<link rel="stylesheet" href="/css/site.css" />
+  
 
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
 
-<style>
-  a {
-    color: seagreen !important;
-  }
-</style>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
 
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
 
+  <link rel="shortcut icon" href="/favicon.png">
 
-
+  
+  <link href="https://nagimemooo.github.io/tags/mongo/index.xml" rel="alternate" type="application/rss+xml" title="nagimemooo" />
   </head>
-
-  
-  <body style="background-image: url(/img/dream.jpg);">
-  
-    <div class="flip-container">
-      <div class="flipper">
-        <section class="front">
-          
-<nav class="ui secondary menu dream-menu">
-
-  <div class="item">
-    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
-  </div>
-  <div class="item">
-    <i class="large link home icon" title="首頁" onclick="window.location.href = 'https:\/\/nagimemooo.github.io'"></i>
-  </div>
-  <div class="item">
-    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
-  </div>
-</nav>
-
-          
-<div class="ui centered relaxed grid dream-grid">
-  <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-    <article class="dream-header">
-  <section class="ui top attached center aligned segment">
-    <div class="ui small circular image">
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
       
-        <img src="/img/docker.jpg">
-      
-    </div>
-
-    <h1 class="ui medium header">nagi 備忘錄<div class="sub header" style="margin-top: 0.5rem;">如有疑問與建議可以mail給我讓我知道，列表式顯示請點下一排icon。</div>
-    </h1>
-
-    <div class="ui horizontal list">
-      
-      <a class="item" href="/posts">
-        <i class="archive icon" title="归档"></i>
-      </a>
-      
-      <a class="item" href="/tags">
-        <i class="tags icon" title="所有標籤"></i>
-      </a>
-      <a class="item" href="/categories">
-        <i class="th list icon" title="所有分類"></i>
-      </a>
-    </div>
-  </section>
-
-  
-  <section class="ui attached center aligned segment dream-tags">
-    
-      <a class="ui label" href="/tags/css" title="css">css</a>
-    
-      <a class="ui label" href="/tags/docker" title="docker">docker</a>
-    
-      <a class="ui label" href="/tags/gin" title="gin">gin</a>
-    
-      <a class="ui label" href="/tags/git" title="git">git</a>
-    
-      <a class="ui label" href="/tags/golang" title="golang">golang</a>
-    
-      <a class="ui label" href="/tags/hugo" title="hugo">hugo</a>
-    
-      <a class="ui label" href="/tags/life" title="life">life</a>
-    
-      <a class="ui label" href="/tags/log" title="log">log</a>
-    
-      <a class="ui label" href="/tags/mongo" title="mongo">mongo</a>
-    
-      <a class="ui label" href="/tags/react" title="react">react</a>
-    
-      <a class="ui label" href="/tags/signal" title="signal">signal</a>
-    
-      <a class="ui label" href="/tags/test" title="test">test</a>
-    
-      <a class="ui label" href="/tags/vscode" title="vscode">vscode</a>
-    
-  </section>
-  
-
-  
-  <section class="ui attached segment dream-categories">
-    <div class="ui accordion">
-      
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/&#43;%E5%BE%8C%E7%AB%AF-go" class="item">&#43;後端-go</a>
+        
+        <div class="author-image">
+          <img src="/images/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
         </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/05_go_test_coverage/" class="item">[ Go 05 ] 寫測試並產生網頁版報告看覆蓋率</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/04_go_gin_http/" class="item">[ Go 04 ] 使用 Gin 框架快速建立 http 服務</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/03_go_zap_log/" class="item">[ Go 03 ] 使用 zap 框架印出 log</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/02_go_signal/" class="item">[ Go 02 ] 信號處理和退出程式</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/01-2_go_start/" class="item">[ Go 01-2]開始ＧＯ之 Golang收藏教學文</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/01_go_env/" class="item">[Ｇo 01] 配置GO開發環境三步驟 筆記</a>
-              </div>
-            </div>
-          
-          </div>
-        </div>
+        
       
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/tech%E7%AD%86%E8%A8%98" class="item">tech筆記</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/github_hugo/" class="item">Github_hugo</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/docker_mongo/" class="item">[ docker ]啟動 mongo DB 與簡單操作</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/git/" class="item">[ Git ]常用指令與名詞筆記</a>
-              </div>
-            </div>
-          
-          </div>
-        </div>
+
+      <h1>nagimemooo</h1>
+
       
-        <div class="title">
-          <i class="dropdown icon"></i>
-          <a href="/categories/%E5%89%8D%E7%AB%AF" class="item">前端</a>
-        </div>
-        <div class="content">
-          <div class="ui list">
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/react04_class_setstate/" class="item">My First Post</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/react03_component_props/" class="item">My First Post</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/react02_jsx/" class="item">My First Post</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/react01_setting/" class="item">[ React ] 初始開發環境設定與名詞介紹</a>
-              </div>
-            </div>
-          
-            <div class="item">
-              <div class="content">
-                <a href="https://nagimemooo.github.io/posts/css_map/" class="item">[ CSS ] CSS 學習地圖</a>
-              </div>
-            </div>
-          
-          </div>
-        </div>
+      <p class="lead">Nagi&#39;s technical memo</p>
       
     </div>
-  </section>
-  
 
-  <section class="ui attached segment header-socials">
-    <nav class="ui secondary menu dream-menu dream-socials">
-  
-    <div class="item">
-      <a href="mailto:nagimemooo@gmail.com">
-        <i class=" mail icon" title="email"></i>
-      </a>
-    </div>
-  
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://nagimemooo.github.io">Home</a>
+        </li>
+        <li>
+          <a href="/posts/">Posts</a>
+        </li><li>
+          <a href="/categories/">Categories</a>
+        </li><li>
+          <a href="/tags/">Tags</a>
+        </li><li>
+          <a href="/about/">About</a>
+        </li>
+      </ul>
+    </nav>
 
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</nav>
-
-  </section>
-
-  <section class="ui bottom attached center aligned segment">
-    
-      <p>© 2020 nagimemooo</p>
-    
-
-    <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
-  </section>
-</article>
-
-  </div>
-
-  
-  
-    <div class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <section class="social-icons">
       
-<article class="ui raised card dream-card" style="box-shadow: none;">
+    </section>
+  </div>
+</aside>
 
-  <div class="image">
+
+  <main class="content container">
+  <ul class="posts">
+  <h1>Tag: mongo</h1>
+  <li>
+    <span>
+        <a href="https://nagimemooo.github.io/post/docker_mongo/">[ docker ]啟動 mongo DB 與簡單操作</a>
+        <time class="pull-right post-list" datetime="2020-05-01T10:30:25&#43;0800">May 1, 2020</time>
+    </span>
+  </li>
+</ul>
+  </main>
+
+  <footer>
+  <div>
+    &copy; Nagi 2020
+
     
-      <img src="/img/docker.jpg" alt="[ docker ]啟動 mongo DB 與簡單操作" />
-    
+
+    &middot; Build with <a href="https://gohugo.io/" target="_blank">Hugo</a> & <a href="https://themes.gohugo.io/soho/" target="_blank">Soho</a> theme
   </div>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="https://nagimemooo.github.io/posts/docker_mongo/">[ docker ]啟動 mongo DB 與簡單操作</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Friday, May 1, 2020</p>
-      <p class="author">@ nagi</p>
-    </div>
-    <div class="description">
-      本章介紹
- 使用docker-compose快速啟動mongodb 簡單的工具操作與MongoDB Shell 更新資料 
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a>
-      <i class="clock icon"></i>
-      1 分鐘閱讀
-    </a>
-  </div>
-</article>
-
-    </div>
-  
-</div>
-
-<div class="ui secondary menu dream-menu dream-paginator">
-  
-
-  
-</div>
+</footer>
 
 
-        </section>
-        <section class="back">
-          
-<nav class="ui secondary menu dream-menu">
-
-  <div class="item">
-    <i class="large link bullseye icon dream-flip-toggle" title="翻转！"></i>
-  </div>
-  <div class="item">
-    <i class="large link home icon" title="首頁" onclick="window.location.href = 'https:\/\/nagimemooo.github.io'"></i>
-  </div>
-  <div class="item">
-    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
-  </div>
-</nav>
-
-          <div class="ui centered relaxed grid dream-grid dream-back">
-  
-
-  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-    <article>
-      <div class="ui top attached segment">
-        <h3 class="ui header">社交链接</h3>
-      </div>
-      <div class="ui attached segment">
-        <nav class="ui secondary menu dream-menu dream-socials">
-  
-    <div class="item">
-      <a href="mailto:nagimemooo@gmail.com">
-        <i class="large mail icon" title="email"></i>
-      </a>
-    </div>
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
 
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-</nav>
-
-      </div>
-    </article>
-  </section>
-
-  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
-    
-  </section>
-
-  
-  
-
-</div>
-
-        </section>
-      </div>
-    </div>
-
-    <script src="/js/jquery.min.js"></script>
-<script src="/js/semantic.min.js"></script>
-<script src="/js/imagesloaded.pkgd.min.js"></script>
-<script src="/js/masonry.pkgd.min.js"></script>
-<script src="/js/nav.js"></script>
-<script src="/js/header.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/theme.js"></script>
-<script src="/js/html2canvas.min.js"></script>
-
-
-
-  </body>
+</body>
 </html>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>後端 go on nagimemooo</title>
+    <link>https://nagimemooo.github.io/categories/%E5%BE%8C%E7%AB%AF-go/</link>
+    <description>Recent content in 後端 go on nagimemooo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 18 May 2020 23:51:23 +0800</lastBuildDate>
+    
+	<atom:link href="https://nagimemooo.github.io/categories/%E5%BE%8C%E7%AB%AF-go/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Go 06] 使用 zap 框架印出 log</title>
+      <link>https://nagimemooo.github.io/post/06_go_zap_log/</link>
+      <pubDate>Mon, 18 May 2020 23:51:23 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/post/06_go_zap_log/</guid>
+      <description>&lt;p&gt;本章內容：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;實作使用高性能zap log框架&lt;/li&gt;
+&lt;li&gt;擁有log level配置 (常用debug/warn/info/error)與程式碼位置&lt;/li&gt;
+&lt;li&gt;可以選擇印出在console或是文件（要外掛lumberjack去分割）&lt;/li&gt;
+&lt;li&gt;zap有suger函式可以增加易用性，但犧牲效能&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Go 05] 寫測試並產出一目瞭然的網頁版覆蓋率報告 再也不用怕遺漏</title>
+      <link>https://nagimemooo.github.io/post/05_go_test_coverage/</link>
+      <pubDate>Sat, 09 May 2020 00:02:42 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/post/05_go_test_coverage/</guid>
+      <description>&lt;p&gt;本章介紹：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;為上一篇 Gin 框架的 User &amp;amp; PostName func.寫個簡單測試&lt;/li&gt;
+&lt;li&gt;跑測試並瞭解 coverage 覆蓋率，產生測試報告&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Go 04] 使用 Gin 框架快速建立 http 服務</title>
+      <link>https://nagimemooo.github.io/post/04_go_gin_http/</link>
+      <pubDate>Sat, 09 May 2020 00:00:05 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/post/04_go_gin_http/</guid>
+      <description>&lt;p&gt;本章介紹：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如何用 Gin 框架建立 HTTP [ GET/POST/PUT/DELETE 等方法]&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Go 03] 信號處理和退出程式</title>
+      <link>https://nagimemooo.github.io/post/03_go_signal/</link>
+      <pubDate>Fri, 01 May 2020 22:36:13 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/post/03_go_signal/</guid>
+      <description>&lt;p&gt;本文教學：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;go實作接收命令而中止程式．&lt;/li&gt;
+&lt;li&gt;會用到channel管道來進行阻塞，並接收os/signal訊號&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Go 02] 開始Ｇo開發之Golang收藏教學文</title>
+      <link>https://nagimemooo.github.io/post/02_go_start/</link>
+      <pubDate>Sat, 18 Apr 2020 10:30:25 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/post/02_go_start/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;分享自己初學GO時看的教學文章，安裝完GO環境之後，就可以撰寫自己第一支GO的程式了，抱歉這邊感覺都大同小異就不特別寫了，然後像是IT邦幫忙上也有很多鐵人文章可以跟著學習，以下則是自己收藏很有用的網路文章。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Go 01] 配置GO開發環境只要三步驟之筆記</title>
+      <link>https://nagimemooo.github.io/post/01_go_env/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nagimemooo.github.io/post/01_go_env/</guid>
+      <description>&lt;h2 id=&#34;配置go開發環境三步驟&#34;&gt;配置GO開發環境三步驟&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;安裝官方ＧＯ：https://golang.org/&lt;/li&gt;
+&lt;li&gt;配置Ｇo所需要環境變數&lt;/li&gt;
+&lt;li&gt;找個喜歡的ＩＤＥ設定開始寫Ｇo 「推薦Visual Studio Code加上插件」&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

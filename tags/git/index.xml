@@ -5,7 +5,7 @@
     <link>https://nagimemooo.github.io/tags/git/</link>
     <description>Recent content in git on nagimemooo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-Hans</language>
+    <language>en</language>
     <lastBuildDate>Sat, 18 Apr 2020 10:30:25 +0800</lastBuildDate>
     
 	<atom:link href="https://nagimemooo.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
@@ -13,12 +13,12 @@
     
     <item>
       <title>[ Git ]常用指令與名詞筆記</title>
-      <link>https://nagimemooo.github.io/posts/git/</link>
+      <link>https://nagimemooo.github.io/post/git/</link>
       <pubDate>Sat, 18 Apr 2020 10:30:25 +0800</pubDate>
       
-      <guid>https://nagimemooo.github.io/posts/git/</guid>
+      <guid>https://nagimemooo.github.io/post/git/</guid>
       <description>&lt;blockquote&gt;
-&lt;p&gt;本文文字版紀錄 git 常用使用筆記 &lt;br&gt;&lt;/p&gt;
+&lt;p&gt;本文文字版紀錄 git 常用使用筆記 &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;/blockquote&gt;</description>
     </item>
     
