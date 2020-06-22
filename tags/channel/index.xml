@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Channel on nagimemooo</title>
+    <link>https://nagimemooo.github.io/tags/channel/</link>
+    <description>Recent content in Channel on nagimemooo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 22 Jun 2020 15:56:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://nagimemooo.github.io/tags/channel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[go]使用for-select-case 注意事項</title>
+      <link>https://nagimemooo.github.io/post/10_go_channel_select_notice/</link>
+      <pubDate>Mon, 22 Jun 2020 15:56:24 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/post/10_go_channel_select_notice/</guid>
+      <description>&lt;h4 id=&#34;使用for-select-case-注意事項&#34;&gt;使用for-select-case 注意事項&lt;/h4&gt;
+&lt;p&gt;這一天在查詢 select 用法看到這一篇文章:&lt;a href=&#34;https://zhuanlan.zhihu.com/p/91044663&#34; title=&#34;golang select 的温柔陷阱&#34;&gt;golang select 的温柔陷阱&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;才發現完成case執行時間也是會依照其他case而影響，&lt;/li&gt;
+&lt;li&gt;因此這篇最後有提醒:請盡量在返回chan的函数中減少耗時操作&lt;/li&gt;
+&lt;li&gt;另外case 在一起準備好的情況下，是隨機執行的，避免顺序敏感的情形&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>[go]練習Channel select的用法</title>
+      <link>https://nagimemooo.github.io/post/09_go_channel_select/</link>
+      <pubDate>Mon, 22 Jun 2020 15:52:56 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/post/09_go_channel_select/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;練習Channel select的用法&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>[go]練習Goroutines 與Channel的傳送與接收</title>
+      <link>https://nagimemooo.github.io/post/08_go_channel_goroutine/</link>
+      <pubDate>Mon, 22 Jun 2020 15:41:33 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/post/08_go_channel_goroutine/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;練習Goroutines 與Channel的傳送與接收&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本文內文：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;練習Goroutines 與Channel的傳送與接收&lt;/li&gt;
+&lt;li&gt;調整Buffered Channel來查看差異&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>[go]練習Channel的關閉與否判斷</title>
+      <link>https://nagimemooo.github.io/post/07_go_channel_close/</link>
+      <pubDate>Mon, 22 Jun 2020 15:35:55 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/post/07_go_channel_close/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;練習Channel的關閉與否判斷&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本章內文&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Buffered Channels&lt;/li&gt;
+&lt;li&gt;close Channel&lt;/li&gt;
+&lt;li&gt;判斷關閉ok 與range差異&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

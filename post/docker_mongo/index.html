@@ -19,7 +19,7 @@
 ">
 <meta itemprop="datePublished" content="2020-05-01T10:30:25&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-01T10:30:25&#43;08:00" />
-<meta itemprop="wordCount" content="171">
+<meta itemprop="wordCount" content="181">
 <meta itemprop="image" content="https://nagimemooo.github.io/images/profile.png"/>
 
 
@@ -206,11 +206,17 @@ Creating mongo_mongo_1         ... <span style="color:#66d9ef">done</span>
 <li>可以再有提供shell指令視窗的工具上下指令去做更新進階的搜尋，</li>
 <li>例如mongo 3T上方就有視窗可以使用．</li>
 </ul>
+<hr>
 <h2 id="搜尋指令">搜尋指令</h2>
 <h4 id="搜尋全部">搜尋全部</h4>
 <p>db.getCollection(&lsquo;user&rsquo;).find({})</p>
 <h4 id="搜尋by_id">搜尋by_id</h4>
 <p>db.getCollection(&lsquo;user&rsquo;).find({_id:ObjectId(&ldquo;5eaa780f3dfac43981e4412c&rdquo;)})</p>
+<h4 id="限制顯示的欄位-1可見0不可見">限制顯示的欄位: 1可見,0不可見</h4>
+<p>db.getCollection(&lsquo;user&rsquo;).find({},{profile.name:1})</p>
+<p>有一點像是
+SELECT profile.name FROM user
+_id預設顯示，可以關掉_id:0 ,</p>
 <h4 id="搜尋內容值">搜尋內容值</h4>
 <p>db.getCollection(&lsquo;user&rsquo;).find({&ldquo;profile.name&rdquo;:&ldquo;user1&rdquo;})</p>
 <h4 id="搜尋範圍-數字型態">搜尋範圍 數字型態</h4>
@@ -219,14 +225,16 @@ db.getCollection(&lsquo;user&rsquo;).find({&ldquo;profile.gender&rdquo;:&ldquo;F
 <h4 id="搜尋範圍-字串型態">搜尋範圍 字串型態</h4>
 <p>按UTF-8進行字典排序 表搜尋字母A~Z間
 db.getCollection(&lsquo;user&rsquo;).find({&ldquo;profile.name&rdquo;:{$gt:&ldquo;a&rdquo;,$lte:&ldquo;z&rdquo;}})</p>
-<h2 id="計算總數">計算總數</h2>
-<p>db.getCollection(&lsquo;user&rsquo;).find().count()</p>
-<h2 id="排序">排序</h2>
+<h4 id="排序">排序</h4>
 <p>依命名排序，其中 1 为升序排列，而 -1 是用于降序排列
 db.getCollection(&lsquo;user&rsquo;).find({}).sort({name:1})</p>
-<h3 id="顯示筆數limit與開始skip">顯示筆數(limit)與開始(skip)</h3>
+<h4 id="顯示筆數limit與開始skip">顯示筆數(limit)與開始(skip)</h4>
 <p>可以用他來做分頁讀取
 db.getCollection(&lsquo;user&rsquo;).find({}).sort({name:1}).skip(0).limit(2)</p>
+<hr>
+<h3 id="計算總數">計算總數</h3>
+<p>db.getCollection(&lsquo;user&rsquo;).find().count()</p>
+<hr>
 <h2 id="批次更新">批次更新</h2>
 <p>一般來說工具就可以做內容更新，但如果需要透過指令，</p>
 <h4 id="更新欄位">更新欄位</h4>
@@ -245,13 +253,14 @@ d.description<span style="color:#f92672">=</span> d.profile.name+<span style="co
 db.getCollection<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;user&#39;</span><span style="color:#f92672">)</span>.update<span style="color:#f92672">({</span><span style="color:#e6db74">&#34;profile.name&#34;</span>:d.profile.name<span style="color:#f92672">}</span>,d<span style="color:#f92672">)</span>;
     print<span style="color:#f92672">(</span>d.profile.name+<span style="color:#e6db74">&#34; process change done&#34;</span> <span style="color:#f92672">)</span>;  
 <span style="color:#f92672">})</span>;
-</code></pre></div><h2 id="刪除欄位">刪除欄位</h2>
+</code></pre></div><h4 id="刪除欄位">刪除欄位</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">db.getCollection<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;user&#39;</span><span style="color:#f92672">)</span>.find<span style="color:#f92672">()</span>.forEach<span style="color:#f92672">(</span> <span style="color:#66d9ef">function</span><span style="color:#f92672">(</span>d<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 delete d.description
 db.getCollection<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;user&#39;</span><span style="color:#f92672">)</span>.update<span style="color:#f92672">({</span><span style="color:#e6db74">&#34;profile.name&#34;</span>:d.profile.name<span style="color:#f92672">}</span>,d<span style="color:#f92672">)</span>;
     print<span style="color:#f92672">(</span>d.profile.name+<span style="color:#e6db74">&#34; process change done&#34;</span> <span style="color:#f92672">)</span>;  
 <span style="color:#f92672">})</span>;
-</code></pre></div><ul>
+</code></pre></div><hr>
+<ul>
 <li>如果是要在mongo的docker環境上面下指令
 需要把指令包成js，檔案丟進去docker裡面，
 然後下指令</li>
@@ -259,6 +268,7 @@ db.getCollection<span style="color:#f92672">(</span><span style="color:#e6db74">
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">load<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;script/Change.js&#34;</span><span style="color:#f92672">)</span> //檔案位置
 mongo 127.0.0.1:27017/test Change.js
 </code></pre></div><p>執行結果與上述內容一樣</p>
+<hr>
 <p>本章對mongo的簡單操作到此結束，
 之後再介紹如何用golang程式去對mongo CRUD操作．</p>
 </div>

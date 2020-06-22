@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jsx on nagimemooo</title>
+    <link>https://nagimemooo.github.io/tags/jsx/</link>
+    <description>Recent content in jsx on nagimemooo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 30 May 2020 18:32:15 +0800</lastBuildDate>
+    
+	<atom:link href="https://nagimemooo.github.io/tags/jsx/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[React] react JSX 基本語法說明</title>
+      <link>https://nagimemooo.github.io/post/react02_jsx/</link>
+      <pubDate>Sat, 30 May 2020 18:32:15 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/post/react02_jsx/</guid>
+      <description>上一篇提到建立一個基本專案，這次來做一些介紹，及對index.js做一些改寫練習。
+ 參考網址: 【React.js入門 - 06】 JSX @IT邦幫忙鐵人分享
+React篇: JSX語法撰寫指引</description>
+    </item>
+    
+  </channel>
+</rss>

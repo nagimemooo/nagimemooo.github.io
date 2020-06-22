@@ -5,32 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="Hugo 0.69.0" />
 
-  <title>My First Post &middot; nagimemooo</title>
+  <title>[React] react JSX 基本語法說明 &middot; nagimemooo</title>
 
   <meta name="description" content="" />
 
   
 
-<meta itemprop="name" content="My First Post">
-<meta itemprop="description" content="Cut out summary from your post content here.">
+<meta itemprop="name" content="[React] react JSX 基本語法說明">
+<meta itemprop="description" content="上一篇提到建立一個基本專案，這次來做一些介紹，及對index.js做一些改寫練習。
+ 參考網址: 【React.js入門 - 06】 JSX @IT邦幫忙鐵人分享
+React篇: JSX語法撰寫指引">
 <meta itemprop="datePublished" content="2020-05-30T18:32:15&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-30T18:32:15&#43;08:00" />
-<meta itemprop="wordCount" content="14">
+<meta itemprop="wordCount" content="150">
 <meta itemprop="image" content="https://nagimemooo.github.io/images/profile.png"/>
 
 
 
-<meta itemprop="keywords" content="react,vscode," />
+<meta itemprop="keywords" content="react,jsx," />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://nagimemooo.github.io/images/profile.png"/>
 
-<meta name="twitter:title" content="My First Post"/>
-<meta name="twitter:description" content="Cut out summary from your post content here."/>
+<meta name="twitter:title" content="[React] react JSX 基本語法說明"/>
+<meta name="twitter:description" content="上一篇提到建立一個基本專案，這次來做一些介紹，及對index.js做一些改寫練習。
+ 參考網址: 【React.js入門 - 06】 JSX @IT邦幫忙鐵人分享
+React篇: JSX語法撰寫指引"/>
 
 
-<meta property="og:title" content="My First Post" />
-<meta property="og:description" content="Cut out summary from your post content here." />
+<meta property="og:title" content="[React] react JSX 基本語法說明" />
+<meta property="og:description" content="上一篇提到建立一個基本專案，這次來做一些介紹，及對index.js做一些改寫練習。
+ 參考網址: 【React.js入門 - 06】 JSX @IT邦幫忙鐵人分享
+React篇: JSX語法撰寫指引" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nagimemooo.github.io/post/react02_jsx/" />
 <meta property="og:image" content="https://nagimemooo.github.io/images/profile.png"/>
@@ -118,14 +124,84 @@
 
   <main class="content container">
   <div class="post">
-  <h1>My First Post</h1>
+  <h1>[React] react JSX 基本語法說明</h1>
 
   <div class="post-date">
     <time datetime="2020-05-30T18:32:15&#43;0800">May 30, 2020</time> &middot; 1 min read
   </div>
 
-  <p>Cut out summary from your post content here.</p>
-<p>The remaining content of your post.</p>
+  <blockquote>
+<p>上一篇提到建立一個基本專案，這次來做一些介紹，及對index.js做一些改寫練習。</p>
+</blockquote>
+<h4 id="參考網址">參考網址:</h4>
+<p><a href="https://ithelp.ithome.com.tw/articles/10216468" title="【React.js入門 - 06】 JSX">【React.js入門 - 06】 JSX</a> @IT邦幫忙鐵人分享</p>
+<p><a href="https://eyesofkids.gitbooks.io/react-basic-zh-tw/content/day18_deeper_jsx/" title="React篇: JSX語法撰寫指引">React篇: JSX語法撰寫指引</a></p>
+<hr>
+<h4 id="html-區域">html 區域</h4>
+<p>public/index.html<!-- raw HTML omitted -->
+含有基本HTML範本id=&quot;root&quot;的div區塊<!-- raw HTML omitted --></p>
+<hr>
+<h4 id="react-中的-jsx-區域">React 中的 JSX 區域</h4>
+<p>src/index.js
+基本範例1: &lt;&gt; html 部分</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">ReactDOM</span>.<span style="color:#a6e22e">render</span>(<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">App</span> <span style="color:#f92672">/&gt;</span>, document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;root&#39;</span>));
+<span style="color:#a6e22e">或是</span>
+<span style="color:#a6e22e">ReactDOM</span>.<span style="color:#a6e22e">render</span>(<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">world</span><span style="color:#f92672">!&lt;</span><span style="color:#960050;background-color:#1e0010">/h1&gt;,</span>
+document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;root&#39;</span>));
+</code></pre></div><ul>
+<li>由 React DOM 函式將元素渲染 ROOT 這個DOM 節點中</li>
+<li>而將 html當參數傳遞是使用一種Javascript語法: JSX</li>
+</ul>
+<hr>
+<p>範例2: {JS}</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//js函式宣告或是變數宣告區
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">styleRed</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;red&#39;</span> };
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pic</span><span style="color:#f92672">=</span>()=&gt;{
+  <span style="color:#66d9ef">return</span> (
+  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;&lt;</span><span style="color:#a6e22e">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://picsum.photos/200/200?image=229&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#66d9ef">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;circle-profile&#34;</span><span style="color:#f92672">/&gt;&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;);</span>
+}
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">arr</span> <span style="color:#f92672">=</span> [
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">REACT學習</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h1&gt;,</span>
+        <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h2</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">如何使用JSX</span><span style="color:#960050;background-color:#1e0010">！</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h2&gt;,</span>
+];
+<span style="color:#a6e22e">ReactDOM</span>.<span style="color:#a6e22e">render</span>(
+<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">StrictMode</span><span style="color:#f92672">&gt;</span>
+   <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span> <span style="color:#a6e22e">style</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">styleRed</span> } <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">Hello</span>, <span style="color:#a6e22e">world</span><span style="color:#f92672">!</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h1&gt;</span>
+   <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>{ <span style="color:#a6e22e">pic</span>(} <span style="color:#f92672">&lt;</span><span style="color:#e6db74">/div&gt; {/</span><span style="color:#f92672">*</span><span style="color:#a6e22e">註解這樣寫</span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/}</span>
+   <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span><span style="color:#f92672">&gt;</span>{<span style="color:#a6e22e">arr</span>}<span style="color:#f92672">&lt;</span><span style="color:#e6db74">/div&gt;,{/</span><span style="color:#f92672">*</span><span style="color:#a6e22e">可以放入數組</span><span style="color:#f92672">*</span><span style="color:#960050;background-color:#1e0010">/}</span>
+ <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/React.StrictMode&gt;,</span>
+    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;root&#39;</span>)
+);
+</code></pre></div><ul>
+<li>可在 html 標籤中利用 {} 寫 javascript 表示式</li>
+<li>其中style = {{ color: &lsquo;red&rsquo; }} 這樣的表示也可以。</li>
+</ul>
+<hr>
+<p>範例3: 屬性類</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">getValue</span><span style="color:#f92672">=</span>(<span style="color:#a6e22e">event</span>)=&gt;{
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">value</span>)
+}
+<span style="color:#a6e22e">ReactDOM</span>.<span style="color:#a6e22e">render</span>(
+<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">StrictMode</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span> <span style="color:#a6e22e">className</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;title&#34;</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">Hello</span>, <span style="color:#a6e22e">world</span><span style="color:#f92672">!</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h1&gt;</span>
+	 <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">button</span> <span style="color:#a6e22e">value</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">getValue</span>}<span style="color:#f92672">&gt;</span><span style="color:#a6e22e">按下以取得數值</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/button&gt;</span>
+    <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">button</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span>{<span style="color:#66d9ef">true</span>} <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">getValue</span>}<span style="color:#f92672">&gt;</span><span style="color:#a6e22e">按下以取得數值</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/button&gt;</span>
+<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/React.StrictMode&gt;,</span>
+    document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;root&#39;</span>)
+);
+</code></pre></div><ul>
+<li>駱駝式命名
+<ul>
+<li>class 要用 className 然後可以在 style.css中更改樣式</li>
+<li>onclick 也要改onClick{函數名稱} 駱駝式命名</li>
+<li>實測命名打錯 console 會出現報 Warning: Invalid DOM property <code>class</code>. Did you mean <code>className</code>?</li>
+</ul>
+</li>
+<li>輸入類的元件button/input/textarea互動事件觸發時，函式只會接收到一個event類別的參數，並不能傳遞其他參數</li>
+<li>布林=true 的屬性值可以不寫</li>
+</ul>
+<hr>
+
 </div>
 
 

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.69.0" />
+
+  <title>[docker]常用docker指令筆記整理 &middot; nagimemooo</title>
+
+  <meta name="description" content="" />
+
+  
+
+<meta itemprop="name" content="[docker]常用docker指令筆記整理">
+<meta itemprop="description" content="本章紀錄
+
+常用docker指令筆記整理
+">
+<meta itemprop="datePublished" content="2020-06-22T14:33:48&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-22T14:33:48&#43;08:00" />
+<meta itemprop="wordCount" content="179">
+<meta itemprop="image" content="https://nagimemooo.github.io/images/profile.png"/>
+
+
+
+<meta itemprop="keywords" content="docker," />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://nagimemooo.github.io/images/profile.png"/>
+
+<meta name="twitter:title" content="[docker]常用docker指令筆記整理"/>
+<meta name="twitter:description" content="本章紀錄
+
+常用docker指令筆記整理
+"/>
+
+
+<meta property="og:title" content="[docker]常用docker指令筆記整理" />
+<meta property="og:description" content="本章紀錄
+
+常用docker指令筆記整理
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nagimemooo.github.io/post/docker_cmd/" />
+<meta property="og:image" content="https://nagimemooo.github.io/images/profile.png"/>
+<meta property="article:published_time" content="2020-06-22T14:33:48+08:00" />
+<meta property="article:modified_time" content="2020-06-22T14:33:48+08:00" /><meta property="og:site_name" content="Nagi Memo" />
+
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/hyde.css">
+
+  
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="/images/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>nagimemooo</h1>
+
+      
+      <p class="lead">Nagi&#39;s technical memo</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://nagimemooo.github.io">Home</a>
+        </li>
+        <li>
+          <a href="/posts/">Posts</a>
+        </li><li>
+          <a href="/categories/">Categories</a>
+        </li><li>
+          <a href="/tags/">Tags</a>
+        </li><li>
+          <a href="/about/">About</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>[docker]常用docker指令筆記整理</h1>
+
+  <div class="post-date">
+    <time datetime="2020-06-22T14:33:48&#43;0800">Jun 22, 2020</time> &middot; 1 min read
+  </div>
+
+  <p>本章紀錄</p>
+<ul>
+<li>常用docker指令筆記整理</li>
+</ul>
+<h4 id="啟動-docker-image">啟動 docker image</h4>
+<p>使用docker有兩種方式，docker hub 有些會寫好內容 ex:<a href="https://hub.docker.com/_/mongo" title="mongo-docker hub">mongo-docker hub</a></p>
+<ul>
+<li>一種是直接下docker run，再下對應參數，下一次起一個程式。
+ex:docker run -v D:\home/work:/home/work &ndash;name myub -it ubuntu bash</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&ndash;name</td>
+<td>替container取名</td>
+</tr>
+<tr>
+<td>-p（小寫）</td>
+<td>hostPort對應containerPort</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>分享空間</td>
+</tr>
+<tr>
+<td>-it</td>
+<td>代表在執行Docker 虛擬容器環境時，開啟虛擬終端機，以互動的模式執行</td>
+</tr>
+<tr>
+<td>&ndash;cpus=1.5</td>
+<td>限制 CPU 使用量</td>
+</tr>
+<tr>
+<td>&ndash;memory=300m &ndash;memory-swap=1g</td>
+<td>限制記憶體與 swap 交換空間的用量</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>另一種是把它寫成docker-compose.yml方式，可以一次啟動多個程式。
+有些image會提供已編寫好的內容。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>docker-compose up -d</td>
+<td>啟動，-d detached 在背景執行</td>
+</tr>
+<tr>
+<td>docker-compose stop</td>
+<td>停止容器</td>
+</tr>
+<tr>
+<td>docker-compose down</td>
+<td>刪除容器</td>
+</tr>
+</tbody>
+</table>
+<h4 id="其他常用指令">其他常用指令</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$docker &ndash;version<!-- raw HTML omitted -->Docker version 18.09.2, build 6247962</td>
+<td>查看簡易docker版本</td>
+</tr>
+<tr>
+<td>docker ps</td>
+<td>查看正在啟動的CONTAINER與ID</td>
+</tr>
+<tr>
+<td>docker stop &lsquo;CONTAINER_ID&rsquo;</td>
+<td>停止 Docker 容器</td>
+</tr>
+<tr>
+<td>docker kill &lsquo;CONTAINER_ID&rsquo;</td>
+<td>強制停止 Docker 容器</td>
+</tr>
+<tr>
+<td>docker restart &lsquo;CONTAINER_ID&rsquo;</td>
+<td>重新啟動 Docker 容器</td>
+</tr>
+<tr>
+<td>docker ps -a</td>
+<td>-a :顯示所有的容器，包括未運行的</td>
+</tr>
+<tr>
+<td>docker search &lsquo;ubuntu&rsquo;</td>
+<td>docker search &lsquo;xxx&rsquo; 查詢可下載 image</td>
+</tr>
+<tr>
+<td>docker pull &lsquo;ubuntu&rsquo;</td>
+<td>docker pull &lsquo;xxx&rsquo; 下載 image</td>
+</tr>
+<tr>
+<td>docker images</td>
+<td>查看下載image與ID</td>
+</tr>
+<tr>
+<td>docker system df</td>
+<td>查看使用的磁盘空间</td>
+</tr>
+<tr>
+<td>docker stats</td>
+<td>查看容器使用的系统资源 每隔 1 秒刷新</td>
+</tr>
+<tr>
+<td>docker stats &ndash;no-stream</td>
+<td>查看容器當前的系統資源</td>
+</tr>
+<tr>
+<td>docker stats &lsquo;CONTAINER ID or name&rsquo;&hellip;</td>
+<td>指定查看特定容器</td>
+</tr>
+<tr>
+<td>docker cp &lsquo;CONTAINER ID&rsquo;:/xx local <!-- raw HTML omitted --> Ex: docker cp 9e701a5209fe:/data/db C:/test_temp</td>
+<td>複製CONTAINER內資料出來本地</td>
+</tr>
+<tr>
+<td>docker save</td>
+<td>備份 Docker Image</td>
+</tr>
+</tbody>
+</table>
+<p>清理指令系列另外寫:
+因為image都有一定的大小，使用完不用要記得清除。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>docker rm &lsquo;CONTAINER_ID&rsquo;</td>
+<td>刪除 container</td>
+</tr>
+<tr>
+<td>docker rmi  &lsquo;image_ID&rsquo;</td>
+<td>刪除 image</td>
+</tr>
+<tr>
+<td>docker rm $(docker ps -a -q)</td>
+<td>刪除所有容器(container)//在powershell下才有用</td>
+</tr>
+<tr>
+<td>docker stop $(docker ps -a -q)</td>
+<td>停止所有容器 //在powershell下才有用</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="參考文章">參考文章</h4>
+<p>1.<a href="https://blog.gtwang.org/linux/docker-commands-and-container-management-tutorial/" title="Docker 常用指令與容器操作教學">Docker 常用指令與容器操作教學</a> <!-- raw HTML omitted -->
+2.<a href="https://blog.fundebug.com/2017/04/19/docker-system-explain/" title="谁用光了磁盘？Docker System命令详解">谁用光了磁盘？Docker System命令详解</a>
+3.<a href="https://www.fengzifz.com/2017/03/27/clean-docker/" title="清理Docker，删除没用的文件">清理Docker，删除没用的文件</a>
+4.<a href="https://www.cnblogs.com/sparkdev/p/7821376.html" title="查看 docker 容器使用的资源">查看 docker 容器使用的资源</a></p>
+<hr>
+</div>
+
+
+  </main>
+
+  <footer>
+  <div>
+    &copy; Nagi 2020
+
+    
+
+    &middot; Build with <a href="https://gohugo.io/" target="_blank">Hugo</a> & <a href="https://themes.gohugo.io/soho/" target="_blank">Soho</a> theme
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

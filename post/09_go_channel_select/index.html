@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.69.0" />
+
+  <title>[go]練習Channel select的用法 &middot; nagimemooo</title>
+
+  <meta name="description" content="" />
+
+  
+
+<meta itemprop="name" content="[go]練習Channel select的用法">
+<meta itemprop="description" content="
+練習Channel select的用法
+">
+<meta itemprop="datePublished" content="2020-06-22T15:52:56&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-22T15:52:56&#43;08:00" />
+<meta itemprop="wordCount" content="272">
+<meta itemprop="image" content="https://nagimemooo.github.io/images/profile.png"/>
+
+
+
+<meta itemprop="keywords" content="golang,Channel," />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://nagimemooo.github.io/images/profile.png"/>
+
+<meta name="twitter:title" content="[go]練習Channel select的用法"/>
+<meta name="twitter:description" content="
+練習Channel select的用法
+"/>
+
+
+<meta property="og:title" content="[go]練習Channel select的用法" />
+<meta property="og:description" content="
+練習Channel select的用法
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nagimemooo.github.io/post/09_go_channel_select/" />
+<meta property="og:image" content="https://nagimemooo.github.io/images/profile.png"/>
+<meta property="article:published_time" content="2020-06-22T15:52:56+08:00" />
+<meta property="article:modified_time" content="2020-06-22T15:52:56+08:00" /><meta property="og:site_name" content="Nagi Memo" />
+
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/hyde.css">
+
+  
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="/images/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>nagimemooo</h1>
+
+      
+      <p class="lead">Nagi&#39;s technical memo</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://nagimemooo.github.io">Home</a>
+        </li>
+        <li>
+          <a href="/posts/">Posts</a>
+        </li><li>
+          <a href="/categories/">Categories</a>
+        </li><li>
+          <a href="/tags/">Tags</a>
+        </li><li>
+          <a href="/about/">About</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>[go]練習Channel select的用法</h1>
+
+  <div class="post-date">
+    <time datetime="2020-06-22T15:52:56&#43;0800">Jun 22, 2020</time> &middot; 2 min read
+  </div>
+
+  <blockquote>
+<p>練習Channel select的用法</p>
+</blockquote>
+<h4 id="參考資料">參考資料:</h4>
+<ul>
+<li><a href="https://www.jianshu.com/p/fe5dd2efed5d" title="Go中的Channel——range和select  Kenshinsyrup">Go中的Channel——range和select  Kenshinsyrup</a> range和select解說</li>
+<li><a href="https://zhuanlan.zhihu.com/p/91044663">https://zhuanlan.zhihu.com/p/91044663</a> golang select 的温柔陷阱</li>
+<li><a href="https://tour.golang.org/concurrency/6" title="Default Selection">Default Selection</a> @go playground一般select用法(time.Tick&amp;time.After)</li>
+<li><a href="https://blog.wu-boy.com/2019/11/four-tips-with-select-in-golang/" title="Go 語言使用 Select 四大用法">Go 語言使用 Select 四大用法</a></li>
+</ul>
+<h4 id="select特性">select特性</h4>
+<ul>
+<li>select用於等待多個&quot;channel&quot;的结合，只能接 channel 否則會出錯。</li>
+<li>select 的特性之一，case 是隨機選取。</li>
+<li>如果有多個 channel 需要讀取，而讀取是不間斷的，就必須使用 for + select 機制實現，但要注意for的跳出條件(return出迴圈)</li>
+</ul>
+<p>將上次的範例改寫:
+改成兩個gorotine同時執行，並接收不同go回傳的結果</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+    <span style="color:#e6db74">&#34;fmt&#34;</span>
+    <span style="color:#e6db74">&#34;strconv&#34;</span>
+	<span style="color:#75715e">//&#34;time&#34;
+</span><span style="color:#75715e"></span>)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">worker</span>(<span style="color:#a6e22e">cs</span> <span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">string</span>,<span style="color:#a6e22e">desc</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">count</span> <span style="color:#66d9ef">int</span>) {
+    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">count</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
+        <span style="color:#a6e22e">cs</span> <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;worker(&#34;</span> <span style="color:#f92672">+</span><span style="color:#a6e22e">desc</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;) work num#&#34;</span><span style="color:#f92672">+</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">Itoa</span>(<span style="color:#a6e22e">i</span>)<span style="color:#f92672">+</span><span style="color:#e6db74">&#34; do finish.&#34;</span>
+    }
+    close(<span style="color:#a6e22e">cs</span>) <span style="color:#75715e">//接收端用range等待作法要記得關閉傳送端
+</span><span style="color:#75715e"></span>}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">receiveWorkerNotify</span>(<span style="color:#a6e22e">work1_cs</span> <span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">string</span>,<span style="color:#a6e22e">work2_cs</span> <span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">string</span>) {
+      <span style="color:#a6e22e">work1_closed</span>, <span style="color:#a6e22e">work2_closed</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">false</span>, <span style="color:#66d9ef">false</span>
+
+    <span style="color:#66d9ef">for</span> {
+        <span style="color:#75715e">//if both channels are closed then we can stop
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">work1_closed</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">work2_closed</span> {
+            <span style="color:#66d9ef">return</span>
+        }
+        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Waiting for a new task ...&#34;</span>)
+        <span style="color:#66d9ef">select</span> {
+        <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">taskDesc</span>, <span style="color:#a6e22e">ok</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">work1_cs</span>:
+            <span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">ok</span> {
+                <span style="color:#a6e22e">work1_closed</span> = <span style="color:#66d9ef">true</span>
+                <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34; ... work1_cs channel closed!&#34;</span>)
+            } <span style="color:#66d9ef">else</span> {
+                <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Received from work1_cs channel. taskDesc:&#34;</span>, <span style="color:#a6e22e">taskDesc</span>)
+            }
+        <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">taskDesc</span>, <span style="color:#a6e22e">ok</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">work2_cs</span>:
+            <span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">ok</span> {
+                <span style="color:#a6e22e">work2_closed</span> = <span style="color:#66d9ef">true</span>
+                <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34; ... work2_cs channel closed!&#34;</span>)
+            } <span style="color:#66d9ef">else</span> {
+                <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Received from work2_cs channel.  Now taskDesc:&#34;</span>, <span style="color:#a6e22e">taskDesc</span>)
+            }
+        }
+    }
+}
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#a6e22e">work1_cs</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">string</span>)
+	<span style="color:#a6e22e">work2_cs</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">string</span>)
+    <span style="color:#66d9ef">go</span> <span style="color:#a6e22e">worker</span>(<span style="color:#a6e22e">work1_cs</span>,<span style="color:#e6db74">&#34;work1_cs&#34;</span>, <span style="color:#ae81ff">5</span>)
+	<span style="color:#66d9ef">go</span> <span style="color:#a6e22e">worker</span>(<span style="color:#a6e22e">work2_cs</span>,<span style="color:#e6db74">&#34;work2_cs&#34;</span>, <span style="color:#ae81ff">5</span>)
+    <span style="color:#a6e22e">receiveWorkerNotify</span>(<span style="color:#a6e22e">work1_cs</span>,<span style="color:#a6e22e">work2_cs</span>)  <span style="color:#75715e">//接收端不能用go，要等待，不然main會結束
+</span><span style="color:#75715e"></span>	<span style="color:#75715e">//time.Sleep(4 * time.Second)
+</span><span style="color:#75715e"></span>}
+</code></pre></div><h4 id="default區塊">default區塊</h4>
+<ul>
+<li>select中也可以有default區塊，其一直是準備好的，且没有任何case區塊準備好，執行default區塊</li>
+<li>select + default 方式可用來來確保 channel 是否已滿</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">ch</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">int</span>, <span style="color:#ae81ff">1</span>)<span style="color:#75715e">//改看看
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">ch</span> <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span>
+		<span style="color:#66d9ef">select</span> {
+		<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">ch</span> <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">2</span>:
+			<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;channel value is&#34;</span>, <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">ch</span>)
+			<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;channel value is&#34;</span>, <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">ch</span>)
+		<span style="color:#66d9ef">default</span>:
+			<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;channel blocking&#34;</span>)
+		}
+	
+}
+</code></pre></div><h4 id="timeout機制">timeout機制</h4>
+<ul>
+<li>為避免等不到接收值，可以在select中加上timeout機制或time.After</li>
+<li>如果沒有timeout則會all goroutines are asleep - deadlock!</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+	<span style="color:#e6db74">&#34;time&#34;</span>
+)
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">ch</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">int</span>, <span style="color:#ae81ff">2</span>)
+	<span style="color:#75715e">//ch &lt;- 1 //不傳送值
+</span><span style="color:#75715e"></span>
+	<span style="color:#66d9ef">select</span> {
+	<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">ch</span>:
+		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;channel value is&#34;</span>, <span style="color:#a6e22e">x</span>)
+	<span style="color:#66d9ef">case</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">After</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1</span>):
+		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;timeout&#34;</span>)
+
+	}
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;end&#34;</span>)
+	}
+
+</code></pre></div>
+</div>
+
+
+  </main>
+
+  <footer>
+  <div>
+    &copy; Nagi 2020
+
+    
+
+    &middot; Build with <a href="https://gohugo.io/" target="_blank">Hugo</a> & <a href="https://themes.gohugo.io/soho/" target="_blank">Soho</a> theme
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

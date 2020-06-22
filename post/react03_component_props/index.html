@@ -5,32 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="Hugo 0.69.0" />
 
-  <title>My First Post &middot; nagimemooo</title>
+  <title>[React] component語法- props出場 (function vs class) &middot; nagimemooo</title>
 
   <meta name="description" content="" />
 
   
 
-<meta itemprop="name" content="My First Post">
-<meta itemprop="description" content="Cut out summary from your post content here.">
+<meta itemprop="name" content="[React] component語法- props出場 (function vs class)">
+<meta itemprop="description" content="網路參考範例: React 组件 Components 與 Props
+React component (組件)語法  function component  可以使用(function component)函式定義组件JSX ReactDOM.">
 <meta itemprop="datePublished" content="2020-05-30T18:34:33&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-30T18:34:33&#43;08:00" />
-<meta itemprop="wordCount" content="14">
+<meta itemprop="wordCount" content="99">
 <meta itemprop="image" content="https://nagimemooo.github.io/images/profile.png"/>
 
 
 
-<meta itemprop="keywords" content="react,vscode," />
+<meta itemprop="keywords" content="react,component," />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://nagimemooo.github.io/images/profile.png"/>
 
-<meta name="twitter:title" content="My First Post"/>
-<meta name="twitter:description" content="Cut out summary from your post content here."/>
+<meta name="twitter:title" content="[React] component語法- props出場 (function vs class)"/>
+<meta name="twitter:description" content="網路參考範例: React 组件 Components 與 Props
+React component (組件)語法  function component  可以使用(function component)函式定義组件JSX ReactDOM."/>
 
 
-<meta property="og:title" content="My First Post" />
-<meta property="og:description" content="Cut out summary from your post content here." />
+<meta property="og:title" content="[React] component語法- props出場 (function vs class)" />
+<meta property="og:description" content="網路參考範例: React 组件 Components 與 Props
+React component (組件)語法  function component  可以使用(function component)函式定義组件JSX ReactDOM." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://nagimemooo.github.io/post/react03_component_props/" />
 <meta property="og:image" content="https://nagimemooo.github.io/images/profile.png"/>
@@ -118,14 +121,64 @@
 
   <main class="content container">
   <div class="post">
-  <h1>My First Post</h1>
+  <h1>[React] component語法- props出場 (function vs class)</h1>
 
   <div class="post-date">
     <time datetime="2020-05-30T18:34:33&#43;0800">May 30, 2020</time> &middot; 1 min read
   </div>
 
-  <p>Cut out summary from your post content here.</p>
-<p>The remaining content of your post.</p>
+  <p>網路參考範例:
+<a href="https://www.runoob.com/react/react-components.html" title="React 组件">React 组件</a>
+<a href="https://zh-hant.reactjs.org/docs/components-and-props.html" title="Components 與 Props">Components 與 Props</a></p>
+<h3 id="react-component-組件語法">React component (組件)語法</h3>
+<hr>
+<h4 id="function-component">function component</h4>
+<ul>
+<li>可以使用(function component)函式定義组件JSX</li>
+<li>ReactDOM.render 中{函式名稱}變成了&lt;函式名稱/&gt;</li>
+<li>命名首字必須大寫</li>
+<li>如果需要向component傳参数，可以使用 this.props 對象，</li>
+<li>props 通常是不可變的(唯獨)，不能修改自己的</li>
+<li>如果想要更改props 要改用State (下一篇 [React] function component &amp; useState )</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//function component
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">HelloWorld</span>() {
+	<span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Hello</span> <span style="color:#a6e22e">World</span><span style="color:#f92672">!&lt;</span><span style="color:#960050;background-color:#1e0010">/h1&gt;;</span>
+}
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">HelloName</span>(<span style="color:#a6e22e">props</span>) {
+	<span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Hello</span> {<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">name</span>}<span style="color:#f92672">!&lt;</span><span style="color:#960050;background-color:#1e0010">/h1&gt;;</span>
+}
+<span style="color:#a6e22e">ReactDOM</span>.<span style="color:#a6e22e">render</span>(
+ <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">StrictMode</span><span style="color:#f92672">&gt;</span>
+	 <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">HelloWorld</span><span style="color:#f92672">/&gt;</span>
+	 <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">HelloName</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;May&#34;</span><span style="color:#f92672">/&gt;</span>
+	<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/React.StrictMode&gt;,</span>
+	document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;example&#39;</span>)
+);
+</code></pre></div><hr>
+<h4 id="使用class來做-component">使用class來做 component</h4>
+<ul>
+<li>也可以使用 ES6 class來 來定義</li>
+<li>繼承React.Component且在用render(){}包一層</li>
+<li>props 要改用 this.props</li>
+<li>如果想要更改props 要改用state (下一篇 [React] class component &amp; setState )</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//class來 component
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HelloName</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">Component</span> {
+  <span style="color:#a6e22e">render</span>() {
+    <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Hello</span>, {<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">name</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h1&gt;;</span>
+  }
+}
+
+<span style="color:#a6e22e">ReactDOM</span>.<span style="color:#a6e22e">render</span>(
+ <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">StrictMode</span><span style="color:#f92672">&gt;</span>
+	<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">HelloName</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;May&#34;</span> <span style="color:#f92672">/&gt;</span>;,
+	<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/React.StrictMode&gt;,</span>
+	document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;example&#39;</span>)
+);
+</code></pre></div><p>組件裡面可以再包組件，透過這樣可以重新利用
+範例練習: <a href="https://codesandbox.io/s/usercard-vh0e4" title="USER info">USER info</a></p>
+
 </div>
 
 

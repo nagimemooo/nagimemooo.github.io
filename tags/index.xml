@@ -6,10 +6,37 @@
     <description>Recent content in Tags on nagimemooo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 22 Jun 2020 11:30:53 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2020 15:56:24 +0800</lastBuildDate>
     
 	<atom:link href="https://nagimemooo.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Channel</title>
+      <link>https://nagimemooo.github.io/tags/channel/</link>
+      <pubDate>Mon, 22 Jun 2020 15:56:24 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/tags/channel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://nagimemooo.github.io/tags/golang/</link>
+      <pubDate>Mon, 22 Jun 2020 15:56:24 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://nagimemooo.github.io/tags/docker/</link>
+      <pubDate>Mon, 22 Jun 2020 15:24:14 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>tool</title>
@@ -17,6 +44,15 @@
       <pubDate>Mon, 22 Jun 2020 11:30:53 +0800</pubDate>
       
       <guid>https://nagimemooo.github.io/tags/tool/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>class component</title>
+      <link>https://nagimemooo.github.io/tags/class-component/</link>
+      <pubDate>Sat, 30 May 2020 18:36:32 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/tags/class-component/</guid>
       <description></description>
     </item>
     
@@ -30,20 +66,29 @@
     </item>
     
     <item>
-      <title>vscode</title>
-      <link>https://nagimemooo.github.io/tags/vscode/</link>
+      <title>setState</title>
+      <link>https://nagimemooo.github.io/tags/setstate/</link>
       <pubDate>Sat, 30 May 2020 18:36:32 +0800</pubDate>
       
-      <guid>https://nagimemooo.github.io/tags/vscode/</guid>
+      <guid>https://nagimemooo.github.io/tags/setstate/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>golang</title>
-      <link>https://nagimemooo.github.io/tags/golang/</link>
-      <pubDate>Mon, 18 May 2020 23:51:23 +0800</pubDate>
+      <title>component</title>
+      <link>https://nagimemooo.github.io/tags/component/</link>
+      <pubDate>Sat, 30 May 2020 18:34:33 +0800</pubDate>
       
-      <guid>https://nagimemooo.github.io/tags/golang/</guid>
+      <guid>https://nagimemooo.github.io/tags/component/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jsx</title>
+      <link>https://nagimemooo.github.io/tags/jsx/</link>
+      <pubDate>Sat, 30 May 2020 18:32:15 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/tags/jsx/</guid>
       <description></description>
     </item>
     
@@ -53,6 +98,15 @@
       <pubDate>Mon, 18 May 2020 23:51:23 +0800</pubDate>
       
       <guid>https://nagimemooo.github.io/tags/log/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vscode</title>
+      <link>https://nagimemooo.github.io/tags/vscode/</link>
+      <pubDate>Sat, 16 May 2020 15:42:53 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/tags/vscode/</guid>
       <description></description>
     </item>
     
@@ -89,15 +143,6 @@
       <pubDate>Fri, 01 May 2020 18:42:55 +0800</pubDate>
       
       <guid>https://nagimemooo.github.io/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>docker</title>
-      <link>https://nagimemooo.github.io/tags/docker/</link>
-      <pubDate>Fri, 01 May 2020 10:30:25 +0800</pubDate>
-      
-      <guid>https://nagimemooo.github.io/tags/docker/</guid>
       <description></description>
     </item>
     

@@ -6,10 +6,107 @@
     <description>Recent content in Posts on nagimemooo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 22 Jun 2020 11:30:53 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2020 15:56:24 +0800</lastBuildDate>
     
 	<atom:link href="https://nagimemooo.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[go]使用for-select-case 注意事項</title>
+      <link>https://nagimemooo.github.io/post/10_go_channel_select_notice/</link>
+      <pubDate>Mon, 22 Jun 2020 15:56:24 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/post/10_go_channel_select_notice/</guid>
+      <description>&lt;h4 id=&#34;使用for-select-case-注意事項&#34;&gt;使用for-select-case 注意事項&lt;/h4&gt;
+&lt;p&gt;這一天在查詢 select 用法看到這一篇文章:&lt;a href=&#34;https://zhuanlan.zhihu.com/p/91044663&#34; title=&#34;golang select 的温柔陷阱&#34;&gt;golang select 的温柔陷阱&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;才發現完成case執行時間也是會依照其他case而影響，&lt;/li&gt;
+&lt;li&gt;因此這篇最後有提醒:請盡量在返回chan的函数中減少耗時操作&lt;/li&gt;
+&lt;li&gt;另外case 在一起準備好的情況下，是隨機執行的，避免顺序敏感的情形&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>[go]練習Channel select的用法</title>
+      <link>https://nagimemooo.github.io/post/09_go_channel_select/</link>
+      <pubDate>Mon, 22 Jun 2020 15:52:56 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/post/09_go_channel_select/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;練習Channel select的用法&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>[go]練習Goroutines 與Channel的傳送與接收</title>
+      <link>https://nagimemooo.github.io/post/08_go_channel_goroutine/</link>
+      <pubDate>Mon, 22 Jun 2020 15:41:33 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/post/08_go_channel_goroutine/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;練習Goroutines 與Channel的傳送與接收&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本文內文：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;練習Goroutines 與Channel的傳送與接收&lt;/li&gt;
+&lt;li&gt;調整Buffered Channel來查看差異&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>[go]練習Channel的關閉與否判斷</title>
+      <link>https://nagimemooo.github.io/post/07_go_channel_close/</link>
+      <pubDate>Mon, 22 Jun 2020 15:35:55 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/post/07_go_channel_close/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;練習Channel的關閉與否判斷&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本章內文&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Buffered Channels&lt;/li&gt;
+&lt;li&gt;close Channel&lt;/li&gt;
+&lt;li&gt;判斷關閉ok 與range差異&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>[Docker]快速啟動可用VNC進去連線之ubuntu</title>
+      <link>https://nagimemooo.github.io/post/docker_ubuntu_vnc/</link>
+      <pubDate>Mon, 22 Jun 2020 15:24:14 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/post/docker_ubuntu_vnc/</guid>
+      <description>&lt;h3 id=&#34;用docker啟動ubuntu並用vnc進去連線&#34;&gt;用docker啟動ubuntu，並用VNC進去連線&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一般來說docker可以快速去建立一個ubuntu環境，但如果習慣畫面操作，還需要再安裝VNC設定，不知道有沒有人做好的VNC版本呢? 網路上找到一個docker image專案可以做到這件事-&amp;gt;&lt;a href=&#34;https://github.com/fcwu/docker-ubuntu-vnc-desktop&#34; title=&#34;docker-ubuntu-vnc-desktop&#34;&gt;docker-ubuntu-vnc-desktop&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>[docker]elasticSearch/kibana </title>
+      <link>https://nagimemooo.github.io/post/docker_elasticsearch_kibana/</link>
+      <pubDate>Mon, 22 Jun 2020 15:03:55 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/post/docker_elasticsearch_kibana/</guid>
+      <description>&lt;p&gt;本章介紹&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;建立elasticSearch/kibana [docker]&lt;/li&gt;
+&lt;li&gt;建立index與傳送資料&lt;/li&gt;
+&lt;li&gt;查詢資料&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>[docker]常用docker指令筆記整理</title>
+      <link>https://nagimemooo.github.io/post/docker_cmd/</link>
+      <pubDate>Mon, 22 Jun 2020 14:33:48 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/post/docker_cmd/</guid>
+      <description>&lt;p&gt;本章紀錄&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;常用docker指令筆記整理&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
     
     <item>
       <title>好用工具紀錄</title>
@@ -23,30 +120,35 @@
     </item>
     
     <item>
-      <title>My First Post</title>
+      <title>[React] 練習class component改變State的用法</title>
       <link>https://nagimemooo.github.io/post/react04_class_setstate/</link>
       <pubDate>Sat, 30 May 2020 18:36:32 +0800</pubDate>
       
       <guid>https://nagimemooo.github.io/post/react04_class_setstate/</guid>
-      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;練習React 改變State的用法&lt;/p&gt;
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
-      <title>My First Post</title>
+      <title>[React] component語法- props出場 (function vs class)</title>
       <link>https://nagimemooo.github.io/post/react03_component_props/</link>
       <pubDate>Sat, 30 May 2020 18:34:33 +0800</pubDate>
       
       <guid>https://nagimemooo.github.io/post/react03_component_props/</guid>
-      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
+      <description>網路參考範例: React 组件 Components 與 Props
+React component (組件)語法  function component  可以使用(function component)函式定義组件JSX ReactDOM.</description>
     </item>
     
     <item>
-      <title>My First Post</title>
+      <title>[React] react JSX 基本語法說明</title>
       <link>https://nagimemooo.github.io/post/react02_jsx/</link>
       <pubDate>Sat, 30 May 2020 18:32:15 +0800</pubDate>
       
       <guid>https://nagimemooo.github.io/post/react02_jsx/</guid>
-      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
+      <description>上一篇提到建立一個基本專案，這次來做一些介紹，及對index.js做一些改寫練習。
+ 參考網址: 【React.js入門 - 06】 JSX @IT邦幫忙鐵人分享
+React篇: JSX語法撰寫指引</description>
     </item>
     
     <item>
@@ -65,7 +167,7 @@
     </item>
     
     <item>
-      <title>[ React ] 初始開發環境設定與名詞介紹</title>
+      <title>[React] 初始開發環境設定與名詞介紹</title>
       <link>https://nagimemooo.github.io/post/react01_setting/</link>
       <pubDate>Sat, 16 May 2020 15:42:53 +0800</pubDate>
       

@@ -3,23 +3,78 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://nagimemooo.github.io/post/10_go_channel_select_notice/</loc>
+    <lastmod>2020-06-22T15:56:24+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nagimemooo.github.io/categories/</loc>
-    <lastmod>2020-06-22T11:30:53+08:00</lastmod>
+    <lastmod>2020-06-22T15:56:24+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nagimemooo.github.io/tags/channel/</loc>
+    <lastmod>2020-06-22T15:56:24+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nagimemooo.github.io/tags/golang/</loc>
+    <lastmod>2020-06-22T15:56:24+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://nagimemooo.github.io/post/</loc>
-    <lastmod>2020-06-22T11:30:53+08:00</lastmod>
+    <lastmod>2020-06-22T15:56:24+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://nagimemooo.github.io/tags/</loc>
-    <lastmod>2020-06-22T11:30:53+08:00</lastmod>
+    <lastmod>2020-06-22T15:56:24+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nagimemooo.github.io/categories/%E5%BE%8C%E7%AB%AF-go/</loc>
+    <lastmod>2020-06-22T15:56:24+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nagimemooo.github.io/post/09_go_channel_select/</loc>
+    <lastmod>2020-06-22T15:52:56+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nagimemooo.github.io/post/08_go_channel_goroutine/</loc>
+    <lastmod>2020-06-22T15:41:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nagimemooo.github.io/post/07_go_channel_close/</loc>
+    <lastmod>2020-06-22T15:35:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nagimemooo.github.io/post/docker_ubuntu_vnc/</loc>
+    <lastmod>2020-06-22T15:24:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nagimemooo.github.io/tags/docker/</loc>
+    <lastmod>2020-06-22T15:24:14+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://nagimemooo.github.io/categories/tech%E7%AD%86%E8%A8%98/</loc>
-    <lastmod>2020-06-22T11:30:53+08:00</lastmod>
+    <lastmod>2020-06-22T15:24:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nagimemooo.github.io/post/docker_elasticsearch_kibana/</loc>
+    <lastmod>2020-06-22T15:03:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nagimemooo.github.io/post/docker_cmd/</loc>
+    <lastmod>2020-06-22T14:33:48+08:00</lastmod>
   </url>
   
   <url>
@@ -38,12 +93,17 @@
   </url>
   
   <url>
+    <loc>https://nagimemooo.github.io/tags/class-component/</loc>
+    <lastmod>2020-05-30T18:36:32+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nagimemooo.github.io/tags/react/</loc>
     <lastmod>2020-05-30T18:36:32+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://nagimemooo.github.io/tags/vscode/</loc>
+    <loc>https://nagimemooo.github.io/tags/setstate/</loc>
     <lastmod>2020-05-30T18:36:32+08:00</lastmod>
   </url>
   
@@ -58,7 +118,17 @@
   </url>
   
   <url>
+    <loc>https://nagimemooo.github.io/tags/component/</loc>
+    <lastmod>2020-05-30T18:34:33+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nagimemooo.github.io/post/react02_jsx/</loc>
+    <lastmod>2020-05-30T18:32:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nagimemooo.github.io/tags/jsx/</loc>
     <lastmod>2020-05-30T18:32:15+08:00</lastmod>
   </url>
   
@@ -68,22 +138,17 @@
   </url>
   
   <url>
-    <loc>https://nagimemooo.github.io/tags/golang/</loc>
-    <lastmod>2020-05-30T18:37:32+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://nagimemooo.github.io/tags/log/</loc>
     <lastmod>2020-05-18T23:51:23+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://nagimemooo.github.io/categories/%E5%BE%8C%E7%AB%AF-go/</loc>
-    <lastmod>2020-05-30T18:37:32+08:00</lastmod>
+    <loc>https://nagimemooo.github.io/post/react01_setting/</loc>
+    <lastmod>2020-05-16T15:42:53+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://nagimemooo.github.io/post/react01_setting/</loc>
+    <loc>https://nagimemooo.github.io/tags/vscode/</loc>
     <lastmod>2020-05-16T15:42:53+08:00</lastmod>
   </url>
   
@@ -129,11 +194,6 @@
   
   <url>
     <loc>https://nagimemooo.github.io/post/docker_mongo/</loc>
-    <lastmod>2020-05-01T10:30:25+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nagimemooo.github.io/tags/docker/</loc>
     <lastmod>2020-05-01T10:30:25+08:00</lastmod>
   </url>
   

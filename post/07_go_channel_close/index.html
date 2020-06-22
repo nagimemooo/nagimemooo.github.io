@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.69.0" />
+
+  <title>[go]練習Channel的關閉與否判斷 &middot; nagimemooo</title>
+
+  <meta name="description" content="" />
+
+  
+
+<meta itemprop="name" content="[go]練習Channel的關閉與否判斷">
+<meta itemprop="description" content="
+練習Channel的關閉與否判斷
+
+本章內文
+
+Buffered Channels
+close Channel
+判斷關閉ok 與range差異
+">
+<meta itemprop="datePublished" content="2020-06-22T15:35:55&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-22T15:35:55&#43;08:00" />
+<meta itemprop="wordCount" content="186">
+<meta itemprop="image" content="https://nagimemooo.github.io/images/profile.png"/>
+
+
+
+<meta itemprop="keywords" content="golang,Channel," />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://nagimemooo.github.io/images/profile.png"/>
+
+<meta name="twitter:title" content="[go]練習Channel的關閉與否判斷"/>
+<meta name="twitter:description" content="
+練習Channel的關閉與否判斷
+
+本章內文
+
+Buffered Channels
+close Channel
+判斷關閉ok 與range差異
+"/>
+
+
+<meta property="og:title" content="[go]練習Channel的關閉與否判斷" />
+<meta property="og:description" content="
+練習Channel的關閉與否判斷
+
+本章內文
+
+Buffered Channels
+close Channel
+判斷關閉ok 與range差異
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nagimemooo.github.io/post/07_go_channel_close/" />
+<meta property="og:image" content="https://nagimemooo.github.io/images/profile.png"/>
+<meta property="article:published_time" content="2020-06-22T15:35:55+08:00" />
+<meta property="article:modified_time" content="2020-06-22T15:35:55+08:00" /><meta property="og:site_name" content="Nagi Memo" />
+
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/hyde.css">
+
+  
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="/images/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>nagimemooo</h1>
+
+      
+      <p class="lead">Nagi&#39;s technical memo</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://nagimemooo.github.io">Home</a>
+        </li>
+        <li>
+          <a href="/posts/">Posts</a>
+        </li><li>
+          <a href="/categories/">Categories</a>
+        </li><li>
+          <a href="/tags/">Tags</a>
+        </li><li>
+          <a href="/about/">About</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>[go]練習Channel的關閉與否判斷</h1>
+
+  <div class="post-date">
+    <time datetime="2020-06-22T15:35:55&#43;0800">Jun 22, 2020</time> &middot; 1 min read
+  </div>
+
+  <blockquote>
+<p>練習Channel的關閉與否判斷</p>
+</blockquote>
+<p>本章內文</p>
+<ul>
+<li>Buffered Channels</li>
+<li>close Channel</li>
+<li>判斷關閉ok 與range差異</li>
+</ul>
+<h4 id="go練習場">go練習場</h4>
+<p><a href="https://tour.golang.org/concurrency/3" title="Buffered Channels">Buffered Channels</a>
+<a href="https://tour.golang.org/concurrency/4" title="Range and Close">Range and Close</a></p>
+<h4 id="參考文章">參考文章</h4>
+<p><a href="https://www.jianshu.com/p/fe5dd2efed5d" title="Go中的Channel——range和select  Kenshinsyrup">Go中的Channel——range和select  Kenshinsyrup</a> range和select解說
+<a href="https://mileslin.github.io/2020/01/Golang/Goroutines-%E4%BD%BF%E7%94%A8-Channel-%E4%BA%A4%E6%8F%9B%E8%B3%87%E6%96%99/" title="[Go] Goroutines 使用 Channel 交換資料">[Go] Goroutines 使用 Channel 交換資料</a>  channel 開關的範例</p>
+<h4 id="範例">範例：</h4>
+<ul>
+<li>close()可以用來關閉c，關閉後的c值為0</li>
+<li>x, ok := &lt;-c //將C接收賦值給x，與判斷c是否關閉</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">int</span>, <span style="color:#ae81ff">10</span>)
+	<span style="color:#a6e22e">c</span> <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span> <span style="color:#75715e">//會跳到接收端
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">c</span> <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">2</span>
+	close(<span style="color:#a6e22e">c</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">c</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">c</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">c</span>) <span style="color:#75715e">//被關掉c就會是0
+</span><span style="color:#75715e"></span>
+	<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">ok</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">c</span> <span style="color:#75715e">//將C接收賦值給x，與判斷c是否關閉
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">ok</span> {
+		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Channel is open!&#34;</span>)
+
+	} <span style="color:#66d9ef">else</span> {
+		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Channel is closed!&#34;</span>)
+	}
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;x is &#34;</span>, <span style="color:#a6e22e">x</span>)
+}
+</code></pre></div><p>改寫</p>
+<ul>
+<li>Go提供了range關鍵字，會自動等待channel的動作一直到channel被關閉</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">int</span>, <span style="color:#ae81ff">10</span>)
+	<span style="color:#a6e22e">c</span> <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">1</span> <span style="color:#75715e">//會跳到接收端
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">c</span> <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">2</span>
+	<span style="color:#a6e22e">c</span> <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">3</span>
+	close(<span style="color:#a6e22e">c</span>)
+	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">c</span> { <span style="color:#75715e">//不用fmt.Println(&lt;-c)來接，不知道數量缺乏彈性
+</span><span style="color:#75715e"></span>		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Packing received cake: &#34;</span>, <span style="color:#a6e22e">s</span>)
+	}
+}
+</code></pre></div><p>另一個範例</p>
+<ul>
+<li>傳送端做事，做完記得close，接收端用range接收並等待</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<span style="color:#f92672">import</span> (
+    <span style="color:#e6db74">&#34;fmt&#34;</span>
+    <span style="color:#e6db74">&#34;strconv&#34;</span>
+	<span style="color:#75715e">//&#34;time&#34;
+</span><span style="color:#75715e"></span>)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">worker</span>(<span style="color:#a6e22e">cs</span> <span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">count</span> <span style="color:#66d9ef">int</span>) {
+    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">1</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">count</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
+        <span style="color:#a6e22e">cs</span> <span style="color:#f92672">&lt;-</span> <span style="color:#e6db74">&#34;worker do&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">Itoa</span>(<span style="color:#a6e22e">i</span>)<span style="color:#f92672">+</span><span style="color:#e6db74">&#34; finish.&#34;</span>
+    }
+    close(<span style="color:#a6e22e">cs</span>) <span style="color:#75715e">//接收端用range等待作法要記得關閉傳送端
+</span><span style="color:#75715e"></span>}
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">receiveWorkerNotify</span>(<span style="color:#a6e22e">cs</span> <span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">string</span>) {
+    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">cs</span> {
+        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Received notify: &#34;</span>, <span style="color:#a6e22e">s</span>)
+    }
+}
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+    <span style="color:#a6e22e">cs</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">string</span>)
+    <span style="color:#66d9ef">go</span> <span style="color:#a6e22e">worker</span>(<span style="color:#a6e22e">cs</span>, <span style="color:#ae81ff">5</span>)
+   <span style="color:#a6e22e">receiveWorkerNotify</span>(<span style="color:#a6e22e">cs</span>)  <span style="color:#75715e">//接收端不能用go，要等待，不然main會結束
+</span><span style="color:#75715e"></span>	<span style="color:#75715e">//time.Sleep(4 * time.Second)
+</span><span style="color:#75715e"></span>}
+</code></pre></div>
+</div>
+
+
+  </main>
+
+  <footer>
+  <div>
+    &copy; Nagi 2020
+
+    
+
+    &middot; Build with <a href="https://gohugo.io/" target="_blank">Hugo</a> & <a href="https://themes.gohugo.io/soho/" target="_blank">Soho</a> theme
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>
