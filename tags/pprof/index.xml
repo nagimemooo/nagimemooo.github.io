@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pprof on nagimemooo</title>
+    <link>https://nagimemooo.github.io/tags/pprof/</link>
+    <description>Recent content in pprof on nagimemooo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 22 Jun 2020 17:12:49 +0800</lastBuildDate>
+    
+	<atom:link href="https://nagimemooo.github.io/tags/pprof/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[go]性能pprof/品質gosec工具檢測</title>
+      <link>https://nagimemooo.github.io/post/13_go_pprof_goset/</link>
+      <pubDate>Mon, 22 Jun 2020 17:12:49 +0800</pubDate>
+      
+      <guid>https://nagimemooo.github.io/post/13_go_pprof_goset/</guid>
+      <description>&lt;hr&gt;
+&lt;p&gt;本章介紹:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;性能分析工具-pprof 查看CPU/memory等的瓶頸&lt;/li&gt;
+&lt;li&gt;檢視go的品質與建議-gosec&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

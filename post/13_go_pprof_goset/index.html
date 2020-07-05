@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.69.0" />
+
+  <title>[go]性能pprof/品質gosec工具檢測 &middot; nagimemooo</title>
+
+  <meta name="description" content="" />
+
+  
+
+<meta itemprop="name" content="[go]性能pprof/品質gosec工具檢測">
+<meta itemprop="description" content="
+本章介紹:
+
+性能分析工具-pprof 查看CPU/memory等的瓶頸
+檢視go的品質與建議-gosec
+">
+<meta itemprop="datePublished" content="2020-06-22T17:12:49&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-22T17:12:49&#43;08:00" />
+<meta itemprop="wordCount" content="68">
+<meta itemprop="image" content="https://nagimemooo.github.io/images/profile.png"/>
+
+
+
+<meta itemprop="keywords" content="golang,pprof,gosec," />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://nagimemooo.github.io/images/profile.png"/>
+
+<meta name="twitter:title" content="[go]性能pprof/品質gosec工具檢測"/>
+<meta name="twitter:description" content="
+本章介紹:
+
+性能分析工具-pprof 查看CPU/memory等的瓶頸
+檢視go的品質與建議-gosec
+"/>
+
+
+<meta property="og:title" content="[go]性能pprof/品質gosec工具檢測" />
+<meta property="og:description" content="
+本章介紹:
+
+性能分析工具-pprof 查看CPU/memory等的瓶頸
+檢視go的品質與建議-gosec
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nagimemooo.github.io/post/13_go_pprof_goset/" />
+<meta property="og:image" content="https://nagimemooo.github.io/images/profile.png"/>
+<meta property="article:published_time" content="2020-06-22T17:12:49+08:00" />
+<meta property="article:modified_time" content="2020-06-22T17:12:49+08:00" /><meta property="og:site_name" content="Nagi Memo" />
+
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="/css/hyde.css">
+
+  
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="/images/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>nagimemooo</h1>
+
+      
+      <p class="lead">Nagi&#39;s technical memo</p>
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://nagimemooo.github.io">Home</a>
+        </li>
+        <li>
+          <a href="/posts/">Posts</a>
+        </li><li>
+          <a href="/categories/">Categories</a>
+        </li><li>
+          <a href="/tags/">Tags</a>
+        </li><li>
+          <a href="/about/">About</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>[go]性能pprof/品質gosec工具檢測</h1>
+
+  <div class="post-date">
+    <time datetime="2020-06-22T17:12:49&#43;0800">Jun 22, 2020</time> &middot; 1 min read
+  </div>
+
+  <hr>
+<p>本章介紹:</p>
+<ul>
+<li>性能分析工具-pprof 查看CPU/memory等的瓶頸</li>
+<li>檢視go的品質與建議-gosec</li>
+</ul>
+<hr>
+<h4 id="性能分析工具-pprof">性能分析工具-pprof</h4>
+<p>先在程式碼插入以下程式後執行。<!-- raw HTML omitted --></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">import</span> <span style="color:#a6e22e">_</span> <span style="color:#e6db74">&#34;net/http/pprof&#34;</span>
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">go</span> <span style="color:#66d9ef">func</span>() {
+		<span style="color:#a6e22e">http</span>.<span style="color:#a6e22e">ListenAndServe</span>(<span style="color:#e6db74">&#34;0.0.0.0:8080&#34;</span>, <span style="color:#66d9ef">nil</span>)
+	}()
+}
+</code></pre></div><h4 id="看記憶體heap">看記憶體(heap)</h4>
+<p>$go tool pprof  http://127.0.0.1:8080/debug/pprof/heap<!-- raw HTML omitted --></p>
+<p>-&gt; 輸入top<!-- raw HTML omitted -->
+-&gt;輸入web可以看到圖形<!-- raw HTML omitted --></p>
+<p>(pprof) top<!-- raw HTML omitted --></p>
+<p>Showing nodes accounting for 1.50MB, 100% of 1.50MB total
+flat  flat%   sum%        cum   cum%<!-- raw HTML omitted -->
+1.50MB   100%   100%     1.50MB   100%  golang.org/x/net/webdav.(*memFile).Write<!-- raw HTML omitted -->
+0     0%   100%     1.50MB   100%  github.com/swaggo/files.init.8<!-- raw HTML omitted --></p>
+<h4 id="看cpuprofile">看CPU(profile)</h4>
+<p>go tool pprof http://localhost:6060/debug/pprof/profile?seconds=60<!-- raw HTML omitted --></p>
+<h4 id="進階參考文章br">進階參考文章:<!-- raw HTML omitted --></h4>
+<ul>
+<li><a href="https://lrita.github.io/2017/05/26/golang-memory-pprof/" title="golang pprof">golang pprof</a><!-- raw HTML omitted --></li>
+<li><a href="https://colobu.com/2019/08/20/use-pprof-to-compare-go-memory-usage/" title="使用多年的go pprof检查内存泄漏的方法居然是错的?!">使用多年的go pprof检查内存泄漏的方法居然是错的?!</a><!-- raw HTML omitted --></li>
+</ul>
+<hr>
+<h4 id="檢視go的品質與建議">檢視go的品質與建議</h4>
+<p>1.先下載 go set<!-- raw HTML omitted -->
+go get <a href="mailto:github.com/securego/gosec/cmd/gosec@v2.2.0">github.com/securego/gosec/cmd/gosec@v2.2.0</a><!-- raw HTML omitted --></p>
+<p>2.輸出報告(可選格式)<!-- raw HTML omitted -->
+gosec -fmt=json -out=results.json ./&hellip;<!-- raw HTML omitted -->
+gosec -fmt=html -out=results.html ./&hellip;<!-- raw HTML omitted --> *三個點</p>
+</div>
+
+
+  </main>
+
+  <footer>
+  <div>
+    &copy; Nagi 2020
+
+    
+
+    &middot; Build with <a href="https://gohugo.io/" target="_blank">Hugo</a> & <a href="https://themes.gohugo.io/soho/" target="_blank">Soho</a> theme
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>
