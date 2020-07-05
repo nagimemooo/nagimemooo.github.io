@@ -33,17 +33,6 @@ React component (組件)語法  function component  可以使用(function compon
     </item>
     
     <item>
-      <title>[React] react JSX 基本語法說明</title>
-      <link>https://nagimemooo.github.io/post/react02_jsx/</link>
-      <pubDate>Sat, 30 May 2020 18:32:15 +0800</pubDate>
-      
-      <guid>https://nagimemooo.github.io/post/react02_jsx/</guid>
-      <description>上一篇提到建立一個基本專案，這次來做一些介紹，及對index.js做一些改寫練習。
- 參考網址: 【React.js入門 - 06】 JSX @IT邦幫忙鐵人分享
-React篇: JSX語法撰寫指引</description>
-    </item>
-    
-    <item>
       <title>[React] 初始開發環境設定與名詞介紹</title>
       <link>https://nagimemooo.github.io/post/react01_setting/</link>
       <pubDate>Sat, 16 May 2020 15:42:53 +0800</pubDate>
