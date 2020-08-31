@@ -1,1 +1,0 @@
-# nagimemooo.github.io
