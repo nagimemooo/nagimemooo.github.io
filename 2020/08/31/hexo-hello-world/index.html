@@ -20,21 +20,21 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="前文hexo是什麼？Ａ：Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 Markdown 標記語言）解析您的文章，並在幾秒鐘內，透過漂亮的主題產生靜態檔案。（來自 https:&#x2F;&#x2F;hexo.io&#x2F;zh-tw&#x2F;docs&#x2F;） 本章節內容： 使用 Hexo 產生部落格 使用 markdown 撰寫文章 部署到 Git 個人網頁 更改主題與風格">
+  <meta name="description" content="前文 ：hexo是什麼？                            ：Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 Markdown 標記語言）解析您的文章，並在幾秒鐘內，透過漂亮的主題產生靜態檔案。（來自 https:&#x2F;&#x2F;hexo.io&#x2F;zh-tw&#x2F;docs&#x2F;） 本文將會知道： 如何使用 Hexo 產生部落格 如何使用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Ｈexo 撰寫部落格">
-<meta property="og:url" content="http://yoursite.com/2020/08/31/hello-world/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/08/31/hexo-hello-world/index.html">
 <meta property="og:site_name" content="Nagi&#39;s 程式筆記">
-<meta property="og:description" content="前文hexo是什麼？Ａ：Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 Markdown 標記語言）解析您的文章，並在幾秒鐘內，透過漂亮的主題產生靜態檔案。（來自 https:&#x2F;&#x2F;hexo.io&#x2F;zh-tw&#x2F;docs&#x2F;） 本章節內容： 使用 Hexo 產生部落格 使用 markdown 撰寫文章 部署到 Git 個人網頁 更改主題與風格">
+<meta property="og:description" content="前文 ：hexo是什麼？                            ：Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 Markdown 標記語言）解析您的文章，並在幾秒鐘內，透過漂亮的主題產生靜態檔案。（來自 https:&#x2F;&#x2F;hexo.io&#x2F;zh-tw&#x2F;docs&#x2F;） 本文將會知道： 如何使用 Hexo 產生部落格 如何使用">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2020-08-31T12:47:57.540Z">
-<meta property="article:modified_time" content="2020-09-04T12:30:35.303Z">
+<meta property="article:modified_time" content="2020-09-04T13:43:20.133Z">
 <meta property="article:author" content="Ｎagi">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/08/31/hello-world/">
+<link rel="canonical" href="http://yoursite.com/2020/08/31/hexo-hello-world/">
 
 
 <script id="page-configurations">
@@ -170,7 +170,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/31/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/31/hexo-hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://png.pngtree.com/png-clipart/20190520/original/pngtree-girl-looking-at-tablet-drinking-coffee-painted-png-image_4073240.jpg">
@@ -200,7 +200,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-09-04 20:30:35" itemprop="dateModified" datetime="2020-09-04T20:30:35+08:00">2020-09-04</time>
+                <time title="Modified: 2020-09-04 21:43:20" itemprop="dateModified" datetime="2020-09-04T21:43:20+08:00">2020-09-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -227,42 +227,61 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="前文"><a href="#前文" class="headerlink" title="前文"></a>前文</h2><h3 id="hexo是什麼？"><a href="#hexo是什麼？" class="headerlink" title="hexo是什麼？"></a>hexo是什麼？</h3><p>Ａ：Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 Markdown 標記語言）解析您的文章，並在幾秒鐘內，透過漂亮的主題產生靜態檔案。（來自 <a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/%EF%BC%89">https://hexo.io/zh-tw/docs/）</a></p>
-<h3 id="本章節內容："><a href="#本章節內容：" class="headerlink" title="本章節內容："></a>本章節內容：</h3><ol>
-<li>使用 Hexo 產生部落格</li>
-<li>使用 markdown 撰寫文章</li>
-<li>部署到 Git 個人網頁</li>
-<li>更改主題與風格 </li>
+        <blockquote class="blockquote-center">
+            <i class="fa fa-quote-left"></i>
+            <h2 id="前文-：hexo是什麼？"><a href="#前文-：hexo是什麼？" class="headerlink" title="前文 ：hexo是什麼？"></a>前文 ：hexo是什麼？</h2>
+            <i class="fa fa-quote-right"></i>
+          </blockquote>
+ <blockquote class="blockquote-center">
+
+<p>：Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 Markdown 標記語言）解析您的文章，並在幾秒鐘內，透過漂亮的主題產生靜態檔案。（來自 <a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/%EF%BC%89">https://hexo.io/zh-tw/docs/）</a></blockquote></p>
+<h3 id="本文將會知道："><a href="#本文將會知道：" class="headerlink" title="本文將會知道："></a>本文將會知道：</h3><ol>
+<li>如何使用 Hexo 產生部落格</li>
+<li>如何使用 markdown 撰寫文章</li>
+<li>如何部署到 Git 個人網頁</li>
+<li>如何更改主題與內文風格 </li>
 </ol>
 <a id="more"></a>
 
 
-<h2 id="安裝hexo與初始化"><a href="#安裝hexo與初始化" class="headerlink" title="安裝hexo與初始化"></a>安裝hexo與初始化</h2><h3 id="產生基本部落格結構"><a href="#產生基本部落格結構" class="headerlink" title="產生基本部落格結構"></a>產生基本部落格結構</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">安裝工具</span><br><span class="line">$ npm install -g hexo-cli</span><br><span class="line">初始資料夾</span><br><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">進入資料夾及安裝相依</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br><span class="line">這邊就已經做好初始化了</span><br></pre></td></tr></table></figure>
+
+<div class="note class_name">
+            <h2 id="安裝hexo與初始化"><a href="#安裝hexo與初始化" class="headerlink" title="安裝hexo與初始化"></a>安裝hexo與初始化</h2>
+          </div>
+
+
+<h3 id="產生基本部落格結構"><a href="#產生基本部落格結構" class="headerlink" title="產生基本部落格結構"></a>產生基本部落格結構</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">安裝工具</span><br><span class="line">$ npm install -g hexo-cli</span><br><span class="line">初始資料夾</span><br><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">進入資料夾及安裝相依</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br><span class="line">這邊就已經做好初始化了</span><br></pre></td></tr></table></figure>
 <h3 id="啟動部落格-Run-server"><a href="#啟動部落格-Run-server" class="headerlink" title="啟動部落格 Run server"></a>啟動部落格 Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line">開啟瀏覽器 http://localhost:4000 就可以看到部落格了</span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
 <h3 id="顯示版本資訊"><a href="#顯示版本資訊" class="headerlink" title="顯示版本資訊"></a>顯示版本資訊</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$ hexo version</span><br><span class="line">(node:5190) ExperimentalWarning: The fs.promises API is experimental</span><br><span class="line">INFO  Validating config</span><br><span class="line">hexo: 5.1.1</span><br><span class="line">hexo-cli: 4.2.0</span><br><span class="line">os: Darwin 19.0.0 darwin x64</span><br><span class="line">http_parser: 2.8.0</span><br><span class="line">node: 10.16.3</span><br><span class="line">v8: 6.8.275.32-node.54</span><br><span class="line">uv: 1.28.0</span><br><span class="line">zlib: 1.2.11</span><br><span class="line">brotli: 1.0.7</span><br><span class="line">ares: 1.15.0</span><br><span class="line">modules: 64</span><br><span class="line">nghttp2: 1.39.2</span><br><span class="line">napi: 4</span><br><span class="line">openssl: 1.1.1c</span><br><span class="line">icu: 64.2</span><br><span class="line">unicode: 12.1</span><br><span class="line">cldr: 35.1</span><br><span class="line">tz: 2019a</span><br></pre></td></tr></table></figure>
 
-<h2 id="開始撰寫文章"><a href="#開始撰寫文章" class="headerlink" title="開始撰寫文章"></a>開始撰寫文章</h2><h3 id="新增文章-Create-a-new-post"><a href="#新增文章-Create-a-new-post" class="headerlink" title="新增文章 Create a new post"></a>新增文章 Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br><span class="line">會在<span class="built_in">source</span>/posts 底下新增一個 .md 檔案</span><br><span class="line">採用 markdown語法開始撰寫文章</span><br></pre></td></tr></table></figure>
+
+<div class="note class_name">
+            <h2 id="開始撰寫文章"><a href="#開始撰寫文章" class="headerlink" title="開始撰寫文章"></a>開始撰寫文章</h2>
+          </div>
+
+<h3 id="新增文章-Create-a-new-post"><a href="#新增文章-Create-a-new-post" class="headerlink" title="新增文章 Create a new post"></a>新增文章 Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br><span class="line">會在<span class="built_in">source</span>/posts 底下新增一個 .md 檔案</span><br><span class="line">採用 markdown語法開始撰寫文章</span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="產生靜態文件-Generate-static-files"><a href="#產生靜態文件-Generate-static-files" class="headerlink" title="產生靜態文件 Generate static files"></a>產生靜態文件 Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate 或是hexo g</span><br><span class="line">會在public資料夾產生網站靜態檔案</span><br><span class="line">這是用來部署到網站的檔案</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="清理靜態文件-Clean-static-files"><a href="#清理靜態文件-Clean-static-files" class="headerlink" title="清理靜態文件 Clean static files"></a>清理靜態文件 Clean static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">清除快取檔案 (db.json) 和已產生的靜態檔案 (public)</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="部署Deploy-to-remote-sites"><a href="#部署Deploy-to-remote-sites" class="headerlink" title="部署Deploy to remote sites"></a>部署Deploy to remote sites</h2><h3 id="設定Git-空間"><a href="#設定Git-空間" class="headerlink" title="設定Git 空間"></a>設定Git 空間</h3><ul>
+<h2 id="部署網站"><a href="#部署網站" class="headerlink" title="部署網站"></a>部署網站</h2><h3 id="建立與設定-Git-空間"><a href="#建立與設定-Git-空間" class="headerlink" title="建立與設定 Git 空間"></a>建立與設定 Git 空間</h3><ul>
 <li>先在git上新增一個專案叫做[yourname].github.io</li>
 <li>配置 _config.yml<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:&#x2F;&#x2F;github.com&#x2F;yourname&#x2F;yourname.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
+<h3 id="產生靜態文件-Generate-static-files"><a href="#產生靜態文件-Generate-static-files" class="headerlink" title="產生靜態文件 Generate static files"></a>產生靜態文件 Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate 或是hexo g</span><br><span class="line">會在public資料夾產生網站靜態檔案</span><br><span class="line">這是用來部署到網站的檔案</span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
 <h3 id="一鍵部署"><a href="#一鍵部署" class="headerlink" title="一鍵部署"></a>一鍵部署</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>其他空間(ex:heroku) More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 <h3 id="個人網站網址"><a href="#個人網站網址" class="headerlink" title="個人網站網址"></a>個人網站網址</h3><p><a target="_blank" rel="noopener" href="https://yourname.github.io/">https://yourname.github.io/</a></p>
+<h3 id="清理靜態文件-Clean-static-files"><a href="#清理靜態文件-Clean-static-files" class="headerlink" title="清理靜態文件 Clean static files"></a>清理靜態文件 Clean static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">清除快取檔案 (db.json) 和已產生的靜態檔案 (public)</span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="更換部落格主題"><a href="#更換部落格主題" class="headerlink" title="更換部落格主題"></a>更換部落格主題</h2><ul>
-<li><p>Hexo 預設主題是landscape，可以修改網站設定_config.yml來更換．</p>
+<li><p>Hexo 預設主題是landscape，可以修改主網站設定_config.yml來更換．</p>
 </li>
-<li><p>這天換成theme：next，但是啟動hexo s後，開啟的網站卻是亂碼參數頁面＠＠<br>啟動畫面也出現以下訊息：</p>
+<li><p>這天換成 theme：next，但是啟動hexo s後，開啟的網站卻是亂碼參數頁面＠＠<br>啟動畫面也出現以下訊息：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">WARN  ========================= ATTENTION! ==========================</span><br><span class="line">  ===============================================================</span><br><span class="line">WARN   NexT repository is moving here: https://github.com/theme-next</span><br><span class="line">  ===============================================================</span><br><span class="line">WARN   It<span class="string">&#x27;s rebase to v6.0.0 and future maintenance will resume there</span></span><br><span class="line"><span class="string"> ===============================================================</span></span><br></pre></td></tr></table></figure>
 <p>因此直接參考官方更新步驟<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/UPDATE-FROM-5.1.X.md" title="从 NexT v5.1.x 更新">从 NexT v5.1.x 更新</a></p>
 </li>
@@ -272,9 +291,10 @@
 <li>在 Hexo 的主配置文件中设置主题：<br>theme: next-reloaded</li>
 <li>重新開啟就正常了</li>
 </ol>
-<h4 id="更換NexT版面"><a href="#更換NexT版面" class="headerlink" title="更換NexT版面"></a>更換NexT版面</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;hexo-web&#x2F;themes&#x2F;next-reloaded&#x2F;_config.yml</span><br><span class="line">scheme: Pisces</span><br></pre></td></tr></table></figure>
+<h3 id="更換主題設定檔"><a href="#更換主題設定檔" class="headerlink" title="更換主題設定檔"></a>更換主題設定檔</h3><p>主題設定位置：/hexo-web/themes/next-reloaded/_config.yml</p>
+<h3 id="更換NexT版面"><a href="#更換NexT版面" class="headerlink" title="更換NexT版面"></a>更換NexT版面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">scheme: Pisces</span><br></pre></td></tr></table></figure>
 
-<h4 id="新增文章標籤與分類"><a href="#新增文章標籤與分類" class="headerlink" title="新增文章標籤與分類"></a>新增文章標籤與分類</h4><ol>
+<h3 id="新增文章標籤與分類"><a href="#新增文章標籤與分類" class="headerlink" title="新增文章標籤與分類"></a>新增文章標籤與分類</h3><ol>
 <li><p>新增頁面</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
 </li>
@@ -285,20 +305,59 @@
 
 </li>
 </ol>
-<h4 id="在標頭放上可愛的git連結"><a href="#在標頭放上可愛的git連結" class="headerlink" title="在標頭放上可愛的git連結"></a>在標頭放上可愛的git連結</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">_config.yml</span><br><span class="line">github_banner:</span><br><span class="line">  enable: true</span><br><span class="line">（本部落格右上角範例）</span><br></pre></td></tr></table></figure>
+<h3 id="文章中顯示引言"><a href="#文章中顯示引言" class="headerlink" title="文章中顯示引言"></a>文章中顯示引言</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">有分號的上下引言，兩種皆可</span><br><span class="line">&lt;!-- 标签 方式，要求版本在0.4.5或以上 --&gt;</span><br><span class="line">&#123;% centerquote %&#125;blah blah blah&#123;% endcenterquote %&#125;</span><br><span class="line">&lt;!-- 标签别名 --&gt;</span><br><span class="line">&#123;% cq %&#125; blah blah blah &#123;% endcq %&#125;</span><br><span class="line"></span><br><span class="line">單純的置中引言</span><br><span class="line">&lt;!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 --&gt;</span><br><span class="line">&lt;!-- 其中 class&#x3D;&quot;blockquote-center&quot; 是必须的 --&gt;</span><br><span class="line">&lt;blockquote class&#x3D;&quot;blockquote-center&quot;&gt;blah blah blah&lt;&#x2F;blockquote&gt;</span><br><span class="line"></span><br><span class="line">顯示效果在本文開頭喔</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h4 id="顯示部落格作者照片"><a href="#顯示部落格作者照片" class="headerlink" title="顯示部落格作者照片"></a>顯示部落格作者照片</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_config.yml</span><br><span class="line">avatar：圖片網址</span><br></pre></td></tr></table></figure>
+<h3 id="文章開頭標記"><a href="#文章開頭標記" class="headerlink" title="文章開頭標記"></a>文章開頭標記</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% note class_name %&#125; Content (md partial supported) &#123;% endnote %&#125;</span><br><span class="line">其中class_name可不設或是改成下方關鍵字</span><br></pre></td></tr></table></figure>
+<div class="note class_name">
+            <p>Content (不設定) </p>
+          </div>
 
-<h4 id="放上個人社群連結"><a href="#放上個人社群連結" class="headerlink" title="放上個人社群連結"></a>放上個人社群連結</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">social</span><br></pre></td></tr></table></figure>
+<div class="note default">
+            <p>default </p>
+          </div>
+
+<div class="note primary">
+            <p>primary </p>
+          </div>
+
+<div class="note success">
+            <p>success </p>
+          </div>
+
+<div class="note info">
+            <p>info </p>
+          </div>
+
+<div class="note warning">
+            <p>warning </p>
+          </div>
+
+<div class="note danger">
+            <p>danger </p>
+          </div>
+
+<h3 id="在標頭放上可愛的git連結"><a href="#在標頭放上可愛的git連結" class="headerlink" title="在標頭放上可愛的git連結"></a>在標頭放上可愛的git連結</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">_config.yml</span><br><span class="line">github_banner:</span><br><span class="line">  enable: true</span><br><span class="line">（本部落格右上角範例）</span><br></pre></td></tr></table></figure>
+
+<h3 id="顯示部落格作者照片"><a href="#顯示部落格作者照片" class="headerlink" title="顯示部落格作者照片"></a>顯示部落格作者照片</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_config.yml</span><br><span class="line">avatar：圖片網址</span><br></pre></td></tr></table></figure>
+
+<h3 id="放上個人社群連結"><a href="#放上個人社群連結" class="headerlink" title="放上個人社群連結"></a>放上個人社群連結</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">social</span><br><span class="line">可自由新增</span><br></pre></td></tr></table></figure>
 
 <hr>
-<h2 id="參考文章"><a href="#參考文章" class="headerlink" title="參考文章"></a>參考文章</h2><blockquote>
-<p>Quick Start<br>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>!  Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a></p>
-</blockquote>
+<div class="note class_name">
+            <h2 id="參考文章"><a href="#參考文章" class="headerlink" title="參考文章"></a>參考文章</h2>
+          </div>
+
 <ul>
-<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/commands.html">HEXO 指令</a></li>
-<li><a target="_blank" rel="noopener" href="https://theme-next.iissnan.com/getting-started.html">NextT開始使用</a></li>
-<li><a target="_blank" rel="noopener" href="https://theme-next.iissnan.com/theme-settings.html">NextT主题配置</a></li>
+<li><p>Quick Start<br>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>!  Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/commands.html">HEXO 指令</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://theme-next.iissnan.com/getting-started.html">NextT開始使用</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://theme-next.iissnan.com/theme-settings.html">NextT 主题配置</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://theme-next.iissnan.com/tag-plugins.html">NextT 內置標籤</a></p>
+</li>
 </ul>
 
     </div>
@@ -381,7 +440,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%96%87"><span class="nav-number">1.</span> <span class="nav-text">前文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F"><span class="nav-number">1.1.</span> <span class="nav-text">hexo是什麼？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AC%E7%AB%A0%E7%AF%80%E5%85%A7%E5%AE%B9%EF%BC%9A"><span class="nav-number">1.2.</span> <span class="nav-text">本章節內容：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%9Dhexo%E8%88%87%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">2.</span> <span class="nav-text">安裝hexo與初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A2%E7%94%9F%E5%9F%BA%E6%9C%AC%E9%83%A8%E8%90%BD%E6%A0%BC%E7%B5%90%E6%A7%8B"><span class="nav-number">2.1.</span> <span class="nav-text">產生基本部落格結構</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%95%9F%E5%8B%95%E9%83%A8%E8%90%BD%E6%A0%BC-Run-server"><span class="nav-number">2.2.</span> <span class="nav-text">啟動部落格 Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%AF%E7%A4%BA%E7%89%88%E6%9C%AC%E8%B3%87%E8%A8%8A"><span class="nav-number">2.3.</span> <span class="nav-text">顯示版本資訊</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%96%8B%E5%A7%8B%E6%92%B0%E5%AF%AB%E6%96%87%E7%AB%A0"><span class="nav-number">3.</span> <span class="nav-text">開始撰寫文章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%A2%9E%E6%96%87%E7%AB%A0-Create-a-new-post"><span class="nav-number">3.1.</span> <span class="nav-text">新增文章 Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A2%E7%94%9F%E9%9D%9C%E6%85%8B%E6%96%87%E4%BB%B6-Generate-static-files"><span class="nav-number">3.2.</span> <span class="nav-text">產生靜態文件 Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%85%E7%90%86%E9%9D%9C%E6%85%8B%E6%96%87%E4%BB%B6-Clean-static-files"><span class="nav-number">3.3.</span> <span class="nav-text">清理靜態文件 Clean static files</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2Deploy-to-remote-sites"><span class="nav-number">4.</span> <span class="nav-text">部署Deploy to remote sites</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A8%AD%E5%AE%9AGit-%E7%A9%BA%E9%96%93"><span class="nav-number">4.1.</span> <span class="nav-text">設定Git 空間</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E9%8D%B5%E9%83%A8%E7%BD%B2"><span class="nav-number">4.2.</span> <span class="nav-text">一鍵部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%80%8B%E4%BA%BA%E7%B6%B2%E7%AB%99%E7%B6%B2%E5%9D%80"><span class="nav-number">4.3.</span> <span class="nav-text">個人網站網址</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%8F%9B%E9%83%A8%E8%90%BD%E6%A0%BC%E4%B8%BB%E9%A1%8C"><span class="nav-number">5.</span> <span class="nav-text">更換部落格主題</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9B%B4%E6%8F%9BNexT%E7%89%88%E9%9D%A2"><span class="nav-number">5.0.1.</span> <span class="nav-text">更換NexT版面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B0%E5%A2%9E%E6%96%87%E7%AB%A0%E6%A8%99%E7%B1%A4%E8%88%87%E5%88%86%E9%A1%9E"><span class="nav-number">5.0.2.</span> <span class="nav-text">新增文章標籤與分類</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8%E6%A8%99%E9%A0%AD%E6%94%BE%E4%B8%8A%E5%8F%AF%E6%84%9B%E7%9A%84git%E9%80%A3%E7%B5%90"><span class="nav-number">5.0.3.</span> <span class="nav-text">在標頭放上可愛的git連結</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A1%AF%E7%A4%BA%E9%83%A8%E8%90%BD%E6%A0%BC%E4%BD%9C%E8%80%85%E7%85%A7%E7%89%87"><span class="nav-number">5.0.4.</span> <span class="nav-text">顯示部落格作者照片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%94%BE%E4%B8%8A%E5%80%8B%E4%BA%BA%E7%A4%BE%E7%BE%A4%E9%80%A3%E7%B5%90"><span class="nav-number">5.0.5.</span> <span class="nav-text">放上個人社群連結</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%83%E8%80%83%E6%96%87%E7%AB%A0"><span class="nav-number">6.</span> <span class="nav-text">參考文章</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E6%96%87-%EF%BC%9Ahexo%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">前文 ：hexo是什麼？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AC%E6%96%87%E5%B0%87%E6%9C%83%E7%9F%A5%E9%81%93%EF%BC%9A"><span class="nav-number">1.1.</span> <span class="nav-text">本文將會知道：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%9Dhexo%E8%88%87%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">2.</span> <span class="nav-text">安裝hexo與初始化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A2%E7%94%9F%E5%9F%BA%E6%9C%AC%E9%83%A8%E8%90%BD%E6%A0%BC%E7%B5%90%E6%A7%8B"><span class="nav-number">2.1.</span> <span class="nav-text">產生基本部落格結構</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%95%9F%E5%8B%95%E9%83%A8%E8%90%BD%E6%A0%BC-Run-server"><span class="nav-number">2.2.</span> <span class="nav-text">啟動部落格 Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%AF%E7%A4%BA%E7%89%88%E6%9C%AC%E8%B3%87%E8%A8%8A"><span class="nav-number">2.3.</span> <span class="nav-text">顯示版本資訊</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%96%8B%E5%A7%8B%E6%92%B0%E5%AF%AB%E6%96%87%E7%AB%A0"><span class="nav-number">3.</span> <span class="nav-text">開始撰寫文章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%A2%9E%E6%96%87%E7%AB%A0-Create-a-new-post"><span class="nav-number">3.1.</span> <span class="nav-text">新增文章 Create a new post</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E7%B6%B2%E7%AB%99"><span class="nav-number">4.</span> <span class="nav-text">部署網站</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B%E8%88%87%E8%A8%AD%E5%AE%9A-Git-%E7%A9%BA%E9%96%93"><span class="nav-number">4.1.</span> <span class="nav-text">建立與設定 Git 空間</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A2%E7%94%9F%E9%9D%9C%E6%85%8B%E6%96%87%E4%BB%B6-Generate-static-files"><span class="nav-number">4.2.</span> <span class="nav-text">產生靜態文件 Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E9%8D%B5%E9%83%A8%E7%BD%B2"><span class="nav-number">4.3.</span> <span class="nav-text">一鍵部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%80%8B%E4%BA%BA%E7%B6%B2%E7%AB%99%E7%B6%B2%E5%9D%80"><span class="nav-number">4.4.</span> <span class="nav-text">個人網站網址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B8%85%E7%90%86%E9%9D%9C%E6%85%8B%E6%96%87%E4%BB%B6-Clean-static-files"><span class="nav-number">4.5.</span> <span class="nav-text">清理靜態文件 Clean static files</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%8F%9B%E9%83%A8%E8%90%BD%E6%A0%BC%E4%B8%BB%E9%A1%8C"><span class="nav-number">5.</span> <span class="nav-text">更換部落格主題</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%8F%9B%E4%B8%BB%E9%A1%8C%E8%A8%AD%E5%AE%9A%E6%AA%94"><span class="nav-number">5.1.</span> <span class="nav-text">更換主題設定檔</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%8F%9BNexT%E7%89%88%E9%9D%A2"><span class="nav-number">5.2.</span> <span class="nav-text">更換NexT版面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%A2%9E%E6%96%87%E7%AB%A0%E6%A8%99%E7%B1%A4%E8%88%87%E5%88%86%E9%A1%9E"><span class="nav-number">5.3.</span> <span class="nav-text">新增文章標籤與分類</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E4%B8%AD%E9%A1%AF%E7%A4%BA%E5%BC%95%E8%A8%80"><span class="nav-number">5.4.</span> <span class="nav-text">文章中顯示引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E9%96%8B%E9%A0%AD%E6%A8%99%E8%A8%98"><span class="nav-number">5.5.</span> <span class="nav-text">文章開頭標記</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E6%A8%99%E9%A0%AD%E6%94%BE%E4%B8%8A%E5%8F%AF%E6%84%9B%E7%9A%84git%E9%80%A3%E7%B5%90"><span class="nav-number">5.6.</span> <span class="nav-text">在標頭放上可愛的git連結</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%AF%E7%A4%BA%E9%83%A8%E8%90%BD%E6%A0%BC%E4%BD%9C%E8%80%85%E7%85%A7%E7%89%87"><span class="nav-number">5.7.</span> <span class="nav-text">顯示部落格作者照片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%BE%E4%B8%8A%E5%80%8B%E4%BA%BA%E7%A4%BE%E7%BE%A4%E9%80%A3%E7%B5%90"><span class="nav-number">5.8.</span> <span class="nav-text">放上個人社群連結</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%83%E8%80%83%E6%96%87%E7%AB%A0"><span class="nav-number">6.</span> <span class="nav-text">參考文章</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
