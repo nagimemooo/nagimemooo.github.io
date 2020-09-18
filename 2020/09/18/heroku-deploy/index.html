@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="function component中的ref屬性改寫．">
+  <meta name="description" content="Heroku是一個支援多種程式語言的雲平台即服務，免費版提供每個月平台550-1,000小時時間，但每 30 分鐘未使用都會休眠一次，需等待他從休眠時間中甦醒，時間大約 30 秒左右．">
 <meta property="og:type" content="article">
-<meta property="og:title" content="function component中的ref屬性改寫">
-<meta property="og:url" content="http://yoursite.com/2020/09/14/react-useRef/index.html">
+<meta property="og:title" content="heroku-deploy">
+<meta property="og:url" content="http://yoursite.com/2020/09/18/heroku-deploy/index.html">
 <meta property="og:site_name" content="Nagi&#39;s 程式筆記">
-<meta property="og:description" content="function component中的ref屬性改寫．">
+<meta property="og:description" content="Heroku是一個支援多種程式語言的雲平台即服務，免費版提供每個月平台550-1,000小時時間，但每 30 分鐘未使用都會休眠一次，需等待他從休眠時間中甦醒，時間大約 30 秒左右．">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-09-14T12:57:34.000Z">
-<meta property="article:modified_time" content="2020-09-14T13:20:53.419Z">
+<meta property="article:published_time" content="2020-09-18T02:46:22.000Z">
+<meta property="article:modified_time" content="2020-09-18T06:05:45.349Z">
 <meta property="article:author" content="Ｎagi">
-<meta property="article:tag" content="react">
+<meta property="article:tag" content="heroku">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/09/14/react-useRef/">
+<link rel="canonical" href="http://yoursite.com/2020/09/18/heroku-deploy/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>function component中的ref屬性改寫 | Nagi's 程式筆記</title>
+  <title>heroku-deploy | Nagi's 程式筆記</title>
   
 
 
@@ -169,7 +169,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/14/react-useRef/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/18/heroku-deploy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar_memo.png">
@@ -182,7 +182,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          function component中的ref屬性改寫
+          heroku-deploy
         </h1>
 
         <div class="post-meta">
@@ -193,7 +193,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-09-14 20:57:34 / Modified: 21:20:53" itemprop="dateCreated datePublished" datetime="2020-09-14T20:57:34+08:00">2020-09-14</time>
+              <time title="Created: 2020-09-18 10:46:22 / Modified: 14:05:45" itemprop="dateCreated datePublished" datetime="2020-09-18T10:46:22+08:00">2020-09-18</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -209,11 +209,7 @@
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tech/Web/front-end/" itemprop="url" rel="index"><span itemprop="name">front-end</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tech/Web/front-end/react/" itemprop="url" rel="index"><span itemprop="name">react</span></a>
+                  <a href="/categories/Tech/Web/deploy/" itemprop="url" rel="index"><span itemprop="name">deploy</span></a>
                 </span>
             </span>
 
@@ -235,33 +231,48 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>function component中的ref屬性改寫．</p>
+         <blockquote class="blockquote-center">
+Heroku是一個支援多種程式語言的雲平台即服務，免費版提供每個月平台550-1,000小時時間，但每 30 分鐘未使用都會休眠一次，需等待他從休眠時間中甦醒，時間大約 30 秒左右．</blockquote>
+
+
+
 <a id="more"></a>
 
 
-
-<blockquote>
-<p>這天把class component中有input ref的範例改成function component<br>出現錯誤Error: Function components cannot have string refs. We recommend using useRef() instead.</p>
-</blockquote>
+<h2 id="註冊heroku"><a href="#註冊heroku" class="headerlink" title="註冊heroku"></a>註冊heroku</h2><ul>
+<li>先上官網註冊一個帳號</li>
+</ul>
+<h2 id="安裝heroku-CLI"><a href="#安裝heroku-CLI" class="headerlink" title="安裝heroku CLI"></a>安裝heroku CLI</h2><p>參考：<a target="_blank" rel="noopener" href="https://devcenter.heroku.com/articles/heroku-cli#download-and-install">https://devcenter.heroku.com/articles/heroku-cli#download-and-install</a></p>
 <ul>
-<li><p>原因<br><a target="_blank" rel="noopener" href="https://zh-hant.reactjs.org/docs/refs-and-the-dom.html" title="Ref 和 DOM">Ref 和 DOM</a>@ React 裡有說你不能在 function component 上使用 ref，因為他們沒有 instance。</p>
+<li><p>安裝</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">  ➜  testmemooo git:(master) heroku version        </span><br><span class="line"> ›   Warning: heroku update available from 7.40.0 to 7.43.0.</span><br><span class="line">heroku&#x2F;7.40.0 darwin-x64 node-v12.16.2</span><br><span class="line">➜  testmemooo git:(master) npm install -g heroku</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;bin&#x2F;heroku -&gt; &#x2F;usr&#x2F;local&#x2F;lib&#x2F;node_modules&#x2F;heroku&#x2F;bin&#x2F;run</span><br><span class="line">+ heroku@7.43.0</span><br><span class="line">added 788 packages from 316 contributors in 54.332s</span><br><span class="line">➜  testmemooo git:(master) heroku version       </span><br><span class="line">heroku&#x2F;7.43.0 darwin-x64 node-v10.16.3</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>解法<br>  1.如果沒有用到把ref拿掉即正常<br>  2.改用useRef 是一個可以讓我們抓取到 DOM 節點的 hooks。(參考改法:<a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10221937?sc=rss.iron" title="【Day 24】 useRef">【Day 24】 useRef</a> @IT邦幫忙)</p>
+<li><p>登入<br>heroku login</p>
 </li>
 </ul>
-<table><tr><td valign="top" width="30%" height="100%">
-#### class component
+<h3 id="部署React"><a href="#部署React" class="headerlink" title="部署React"></a>部署React</h3><h4 id="方式一：兩分鐘0配置快速部署"><a href="#方式一：兩分鐘0配置快速部署" class="headerlink" title="方式一：兩分鐘0配置快速部署"></a>方式一：兩分鐘0配置快速部署</h4><ul>
+<li>官方已先配置好並照說明指令輸入即可<br><a target="_blank" rel="noopener" href="https://blog.heroku.com/deploying-react-with-zero-configuration">Deploying React with Zero Configuration</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">npm install -g create-react-app</span><br><span class="line">create-react-app &#39;自命名專案&#39;</span><br><span class="line">cd &#39;自命名專案&#39;</span><br><span class="line">git init</span><br><span class="line">heroku create -b https:&#x2F;&#x2F;github.com&#x2F;mars&#x2F;create-react-app-buildpack.git</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;react-create-app on Heroku&quot;</span><br><span class="line">git push heroku master</span><br><span class="line">heroku open</span><br></pre></td></tr></table></figure>
+其中中間那一句heroku create 會在剛剛的網站上新增一個damp-stream-02723專案（命名應該是隨機的）<br>最後一句是開啟網站：<br><a target="_blank" rel="noopener" href="https://damp-stream-02723.herokuapp.com/">https://damp-stream-02723.herokuapp.com/</a><br>這樣就看到網站了，但不知道為什麼不能用原本的命名．</li>
+</ul>
+<p>登入該網站後直接在專案上改名字<br>之後要回到專案上改git 上傳的位置<br><a target="_blank" rel="noopener" href="https://devcenter.heroku.com/articles/renaming-apps#updating-git-remotes">update git remote</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">➜  demomemooo git:(master) git remote rm heroku</span><br><span class="line">使用指令刪除舊有的 remote</span><br><span class="line">➜  demomemooo git:(master) heroku git:remote -a demomemooo</span><br><span class="line"> ›   Error: Couldn&#39;t find that app.</span><br><span class="line"> ›</span><br><span class="line"> ›   Error ID: not_found  </span><br><span class="line"> 利用heroku指令綁定，這邊會失敗是因為當時還沒有在網站上更名</span><br><span class="line">➜  demomemooo git:(master) heroku git:remote -a demomemooo</span><br><span class="line">set git remote heroku to https:&#x2F;&#x2F;git.heroku.com&#x2F;demomemooo.git</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Suggest</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line">  </span><br><span class="line">    getValue()&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">this</span>.refs.lowlevelinput.valaue;</span><br><span class="line">    &#125;</span><br><span class="line">    render()&#123;</span><br><span class="line">      <span class="keyword">const</span> randomid=<span class="built_in">Math</span>.random().toString(<span class="number">16</span>).substring(<span class="number">2</span>);</span><br><span class="line">      <span class="keyword">return</span> (</span><br><span class="line">       &lt;div&gt;</span><br><span class="line">         &lt;input </span><br><span class="line">           list=&#123;randomid&#125;</span><br><span class="line">           defaultValue=&#123;<span class="built_in">this</span>.props.defaultValue&#125;</span><br><span class="line">           ref=<span class="string">&#x27;lowlevelinput&#x27;</span></span><br><span class="line">           id=&#123;<span class="built_in">this</span>.props.id&#125;</span><br><span class="line">           /&gt;  </span><br><span class="line">          &lt;datalist id=&#123;randomid&#125; &gt;</span><br><span class="line">          &#123;<span class="built_in">this</span>.props.options.map(<span class="function">(<span class="params">item,idx</span>)=&gt;</span></span><br><span class="line">             &lt;option value=&#123;item&#125; key=&#123;idx&#125;/&gt;</span><br><span class="line">           )&#125;&lt;/datalist&gt;</span><br><span class="line">       &lt;/div&gt;</span><br><span class="line">      );</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> Suggest;</span><br><span class="line">  <span class="comment">// ReactDOM.render(</span></span><br><span class="line">  <span class="comment">//   &lt;div&gt;</span></span><br><span class="line">  <span class="comment">//     &lt;Suggest options=&#123;[&#x27;esd&#x27;,&#x27;feff&#x27;,&#x27;fsf&#x27;,&#x27;fdsg&#x27;,&#x27;ghg&#x27;]&#125;/&gt;</span></span><br><span class="line">  <span class="comment">//   &lt;/div&gt;,</span></span><br><span class="line">  <span class="comment">//   document.getElementById(&#x27;app&#x27;)</span></span><br><span class="line">  <span class="comment">// );</span></span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://demomemooo.herokuapp.com/">https://demomemooo.herokuapp.com/</a></p>
+<h4 id="方法二-自行建立設定"><a href="#方法二-自行建立設定" class="headerlink" title="方法二 自行建立設定"></a>方法二 自行建立設定</h4><ul>
+<li>先建立React 命名testdemooo<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create-react-app testdemooo</span><br></pre></td></tr></table></figure>
+<ul>
+<li>進入後 按New-&gt;Create New App 輸入命名新增一個專案<br>(ex testdemooo)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>產生完會有部署指令，照做即可</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">新的 Git repository 需做</span><br><span class="line"></span><br><span class="line">$ cd my-project&#x2F;</span><br><span class="line">$ git init</span><br><span class="line">$ heroku git:remote -a testmemooo</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">針對已存在Git repository，簡單新增“ heroku remote</span><br><span class="line"></span><br><span class="line">$ heroku git:remote -a testmemooo</span><br></pre></td></tr></table></figure>
 
-<!-- recent_releases starts -->
-</td><td valign="top" width="30%">
-#### function component
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React , &#123; useRef &#125;<span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//class Suggest extends React.Component&#123;</span></span><br><span class="line">  <span class="keyword">const</span> SuggestOpt=<span class="function">(<span class="params">props</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="comment">// getValue()&#123;</span></span><br><span class="line">    <span class="comment">//   return this.refs.lowlevelinput.valaue;</span></span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line">   <span class="comment">// render()&#123;</span></span><br><span class="line">    <span class="keyword">const</span> handleClick = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      inputRef.current.focus(); <span class="comment">//滑鼠會跳到input的欄位</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">const</span> inputRef = useRef(<span class="literal">null</span>);</span><br><span class="line">      <span class="keyword">const</span> randomid=<span class="built_in">Math</span>.random().toString(<span class="number">16</span>).substring(<span class="number">2</span>);</span><br><span class="line">      <span class="keyword">return</span> (</span><br><span class="line">       &lt;div&gt;</span><br><span class="line">         &lt;input </span><br><span class="line">           list=&#123;randomid&#125;</span><br><span class="line">           defaultValue=&#123;props.defaultValue&#125;</span><br><span class="line">           ref=&#123;inputRef&#125;</span><br><span class="line">           id=&#123;props.id&#125;</span><br><span class="line">           /&gt;  </span><br><span class="line">          &lt;datalist id=&#123;randomid&#125; &gt;</span><br><span class="line">          &#123;props.options.map(<span class="function">(<span class="params">item,idx</span>)=&gt;</span></span><br><span class="line">             &lt;option value=&#123;item&#125; key=&#123;idx&#125;/&gt;</span><br><span class="line">           )&#125;&lt;/datalist&gt;</span><br><span class="line">           &lt;button onClick=&#123;handleClick&#125;&gt;click me&lt;/button&gt;</span><br><span class="line">       &lt;/div&gt;</span><br><span class="line">      );</span><br><span class="line">  <span class="comment">//  &#125;</span></span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> SuggestOpt;</span><br><span class="line"><span class="comment">//1.class Suggest extends React.Component&#123;</span></span><br><span class="line"><span class="comment">//改成const SuggestOpt=(props)=&gt;&#123;</span></span><br><span class="line"><span class="comment">//2.拿掉render()&#123;&#125;</span></span><br><span class="line"><span class="comment">//3.改寫ref</span></span><br></pre></td></tr></table></figure>
-
-</td></tr></table>
-
+<ul>
+<li>但這樣做打開網站會錯誤，以下面文章的最佳解答照做即可<br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/questions/10198600">React專案佈署heroku問題</a><br>大致上做法是自行建立server.js與產生build，只需要推build檔案上去即可（記得gitignor要拿掉build folder）</li>
+</ul>
 
     </div>
 
@@ -271,7 +282,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/react/" rel="tag"># react</a>
+              <a href="/tags/heroku/" rel="tag"># heroku</a>
           </div>
 
         
@@ -280,12 +291,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/09/12/docker-mongo/" rel="prev" title="使用docker啟動mongo與操作">
-      <i class="fa fa-chevron-left"></i> 使用docker啟動mongo與操作
+    <a href="/2020/09/14/docker-ubuntu-vnc/" rel="prev" title="[Docker]快速啟動可用VNC進去連線之ubuntu">
+      <i class="fa fa-chevron-left"></i> [Docker]快速啟動可用VNC進去連線之ubuntu
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/09/14/03-go-signal/" rel="next" title="[Go] 信號處理和退出程式">
-      [Go] 信號處理和退出程式 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/09/18/13-go-pprof-gosec-gotest/" rel="next" title="go 性能/品質/測試覆蓋率工具檢測">
+      go 性能/品質/測試覆蓋率工具檢測 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -345,6 +356,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A8%BB%E5%86%8Aheroku"><span class="nav-number">1.</span> <span class="nav-text">註冊heroku</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%9Dheroku-CLI"><span class="nav-number">2.</span> <span class="nav-text">安裝heroku CLI</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2React"><span class="nav-number">2.1.</span> <span class="nav-text">部署React</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B9%E5%BC%8F%E4%B8%80%EF%BC%9A%E5%85%A9%E5%88%86%E9%90%980%E9%85%8D%E7%BD%AE%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2"><span class="nav-number">2.1.1.</span> <span class="nav-text">方式一：兩分鐘0配置快速部署</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C-%E8%87%AA%E8%A1%8C%E5%BB%BA%E7%AB%8B%E8%A8%AD%E5%AE%9A"><span class="nav-number">2.1.2.</span> <span class="nav-text">方法二 自行建立設定</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

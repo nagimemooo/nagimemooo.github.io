@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="function component中的ref屬性改寫．">
+  <meta name="description" content="一般來說docker可以快速去建立一個ubuntu環境，但如果習慣畫面操作，還需要再安裝VNC設定，不知道有沒有人做好的VNC版本呢? 網路上找到一個docker image專案可以做到這件事-&gt;docker-ubuntu-vnc-desktop">
 <meta property="og:type" content="article">
-<meta property="og:title" content="function component中的ref屬性改寫">
-<meta property="og:url" content="http://yoursite.com/2020/09/14/react-useRef/index.html">
+<meta property="og:title" content="[Docker]快速啟動可用VNC進去連線之ubuntu">
+<meta property="og:url" content="http://yoursite.com/2020/09/14/docker-ubuntu-vnc/index.html">
 <meta property="og:site_name" content="Nagi&#39;s 程式筆記">
-<meta property="og:description" content="function component中的ref屬性改寫．">
+<meta property="og:description" content="一般來說docker可以快速去建立一個ubuntu環境，但如果習慣畫面操作，還需要再安裝VNC設定，不知道有沒有人做好的VNC版本呢? 網路上找到一個docker image專案可以做到這件事-&gt;docker-ubuntu-vnc-desktop">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-09-14T12:57:34.000Z">
-<meta property="article:modified_time" content="2020-09-14T13:20:53.419Z">
+<meta property="article:published_time" content="2020-09-14T14:22:35.000Z">
+<meta property="article:modified_time" content="2020-09-14T14:25:23.824Z">
 <meta property="article:author" content="Ｎagi">
-<meta property="article:tag" content="react">
+<meta property="article:tag" content="docker">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/09/14/react-useRef/">
+<link rel="canonical" href="http://yoursite.com/2020/09/14/docker-ubuntu-vnc/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>function component中的ref屬性改寫 | Nagi's 程式筆記</title>
+  <title>[Docker]快速啟動可用VNC進去連線之ubuntu | Nagi's 程式筆記</title>
   
 
 
@@ -169,7 +169,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/14/react-useRef/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/14/docker-ubuntu-vnc/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar_memo.png">
@@ -182,7 +182,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          function component中的ref屬性改寫
+          [Docker]快速啟動可用VNC進去連線之ubuntu
         </h1>
 
         <div class="post-meta">
@@ -193,7 +193,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-09-14 20:57:34 / Modified: 21:20:53" itemprop="dateCreated datePublished" datetime="2020-09-14T20:57:34+08:00">2020-09-14</time>
+              <time title="Created: 2020-09-14 22:22:35 / Modified: 22:25:23" itemprop="dateCreated datePublished" datetime="2020-09-14T22:22:35+08:00">2020-09-14</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -205,15 +205,7 @@
                 </span>
                   , 
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tech/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tech/Web/front-end/" itemprop="url" rel="index"><span itemprop="name">front-end</span></a>
-                </span>
-                  , 
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tech/Web/front-end/react/" itemprop="url" rel="index"><span itemprop="name">react</span></a>
+                  <a href="/categories/Tech/docker/" itemprop="url" rel="index"><span itemprop="name">docker</span></a>
                 </span>
             </span>
 
@@ -235,33 +227,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>function component中的ref屬性改寫．</p>
+        <blockquote>
+<p>一般來說docker可以快速去建立一個ubuntu環境，但如果習慣畫面操作，還需要再安裝VNC設定，不知道有沒有人做好的VNC版本呢? 網路上找到一個docker image專案可以做到這件事-&gt;<a target="_blank" rel="noopener" href="https://github.com/fcwu/docker-ubuntu-vnc-desktop" title="docker-ubuntu-vnc-desktop">docker-ubuntu-vnc-desktop</a></p>
+</blockquote>
 <a id="more"></a>
 
 
-
-<blockquote>
-<p>這天把class component中有input ref的範例改成function component<br>出現錯誤Error: Function components cannot have string refs. We recommend using useRef() instead.</p>
-</blockquote>
-<ul>
-<li><p>原因<br><a target="_blank" rel="noopener" href="https://zh-hant.reactjs.org/docs/refs-and-the-dom.html" title="Ref 和 DOM">Ref 和 DOM</a>@ React 裡有說你不能在 function component 上使用 ref，因為他們沒有 instance。</p>
-</li>
-<li><p>解法<br>  1.如果沒有用到把ref拿掉即正常<br>  2.改用useRef 是一個可以讓我們抓取到 DOM 節點的 hooks。(參考改法:<a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10221937?sc=rss.iron" title="【Day 24】 useRef">【Day 24】 useRef</a> @IT邦幫忙)</p>
-</li>
-</ul>
-<table><tr><td valign="top" width="30%" height="100%">
-#### class component
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Suggest</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line">  </span><br><span class="line">    getValue()&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">this</span>.refs.lowlevelinput.valaue;</span><br><span class="line">    &#125;</span><br><span class="line">    render()&#123;</span><br><span class="line">      <span class="keyword">const</span> randomid=<span class="built_in">Math</span>.random().toString(<span class="number">16</span>).substring(<span class="number">2</span>);</span><br><span class="line">      <span class="keyword">return</span> (</span><br><span class="line">       &lt;div&gt;</span><br><span class="line">         &lt;input </span><br><span class="line">           list=&#123;randomid&#125;</span><br><span class="line">           defaultValue=&#123;<span class="built_in">this</span>.props.defaultValue&#125;</span><br><span class="line">           ref=<span class="string">&#x27;lowlevelinput&#x27;</span></span><br><span class="line">           id=&#123;<span class="built_in">this</span>.props.id&#125;</span><br><span class="line">           /&gt;  </span><br><span class="line">          &lt;datalist id=&#123;randomid&#125; &gt;</span><br><span class="line">          &#123;<span class="built_in">this</span>.props.options.map(<span class="function">(<span class="params">item,idx</span>)=&gt;</span></span><br><span class="line">             &lt;option value=&#123;item&#125; key=&#123;idx&#125;/&gt;</span><br><span class="line">           )&#125;&lt;/datalist&gt;</span><br><span class="line">       &lt;/div&gt;</span><br><span class="line">      );</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">default</span> Suggest;</span><br><span class="line">  <span class="comment">// ReactDOM.render(</span></span><br><span class="line">  <span class="comment">//   &lt;div&gt;</span></span><br><span class="line">  <span class="comment">//     &lt;Suggest options=&#123;[&#x27;esd&#x27;,&#x27;feff&#x27;,&#x27;fsf&#x27;,&#x27;fdsg&#x27;,&#x27;ghg&#x27;]&#125;/&gt;</span></span><br><span class="line">  <span class="comment">//   &lt;/div&gt;,</span></span><br><span class="line">  <span class="comment">//   document.getElementById(&#x27;app&#x27;)</span></span><br><span class="line">  <span class="comment">// );</span></span><br></pre></td></tr></table></figure>
-
-<!-- recent_releases starts -->
-</td><td valign="top" width="30%">
-#### function component
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React , &#123; useRef &#125;<span class="keyword">from</span> <span class="string">&#x27;react&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//class Suggest extends React.Component&#123;</span></span><br><span class="line">  <span class="keyword">const</span> SuggestOpt=<span class="function">(<span class="params">props</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="comment">// getValue()&#123;</span></span><br><span class="line">    <span class="comment">//   return this.refs.lowlevelinput.valaue;</span></span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line">   <span class="comment">// render()&#123;</span></span><br><span class="line">    <span class="keyword">const</span> handleClick = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      inputRef.current.focus(); <span class="comment">//滑鼠會跳到input的欄位</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">const</span> inputRef = useRef(<span class="literal">null</span>);</span><br><span class="line">      <span class="keyword">const</span> randomid=<span class="built_in">Math</span>.random().toString(<span class="number">16</span>).substring(<span class="number">2</span>);</span><br><span class="line">      <span class="keyword">return</span> (</span><br><span class="line">       &lt;div&gt;</span><br><span class="line">         &lt;input </span><br><span class="line">           list=&#123;randomid&#125;</span><br><span class="line">           defaultValue=&#123;props.defaultValue&#125;</span><br><span class="line">           ref=&#123;inputRef&#125;</span><br><span class="line">           id=&#123;props.id&#125;</span><br><span class="line">           /&gt;  </span><br><span class="line">          &lt;datalist id=&#123;randomid&#125; &gt;</span><br><span class="line">          &#123;props.options.map(<span class="function">(<span class="params">item,idx</span>)=&gt;</span></span><br><span class="line">             &lt;option value=&#123;item&#125; key=&#123;idx&#125;/&gt;</span><br><span class="line">           )&#125;&lt;/datalist&gt;</span><br><span class="line">           &lt;button onClick=&#123;handleClick&#125;&gt;click me&lt;/button&gt;</span><br><span class="line">       &lt;/div&gt;</span><br><span class="line">      );</span><br><span class="line">  <span class="comment">//  &#125;</span></span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> SuggestOpt;</span><br><span class="line"><span class="comment">//1.class Suggest extends React.Component&#123;</span></span><br><span class="line"><span class="comment">//改成const SuggestOpt=(props)=&gt;&#123;</span></span><br><span class="line"><span class="comment">//2.拿掉render()&#123;&#125;</span></span><br><span class="line"><span class="comment">//3.改寫ref</span></span><br></pre></td></tr></table></figure>
-
-</td></tr></table>
-
+<h3 id="遵照git-readme指示啟動"><a href="#遵照git-readme指示啟動" class="headerlink" title="遵照git readme指示啟動:"></a>遵照git readme指示啟動:</h3><h4 id="網頁版本連線"><a href="#網頁版本連線" class="headerlink" title="網頁版本連線"></a>網頁版本連線</h4><p>Quick Start <br><br>Run the docker container and access with port 6080<br></p>
+<p>docker run -p 6080:80 -v /dev/shm:/dev/shm dorowu/ubuntu-desktop-lxde-vnc<br>Browse <a target="_blank" rel="noopener" href="http://127.0.0.1:6080/">http://127.0.0.1:6080/</a><br></p>
+<h4 id="VNC-版本連線"><a href="#VNC-版本連線" class="headerlink" title="VNC 版本連線"></a>VNC 版本連線</h4><p>docker run -p 6080:80 -p 5900:5900 -v /dev/shm:/dev/shm dorowu/ubuntu-desktop-lxde-vnc<br></p>
+<p>下載VNC工具<a target="_blank" rel="noopener" href="https://www.realvnc.com/en/connect/download/viewer/" title="realvnc">realvnc</a> 啟動之後連VNC(local:127.0.0.0)就可以一樣看到畫面了<br></p>
 
     </div>
 
@@ -271,7 +246,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/react/" rel="tag"># react</a>
+              <a href="/tags/docker/" rel="tag"># docker</a>
           </div>
 
         
@@ -280,12 +255,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/09/12/docker-mongo/" rel="prev" title="使用docker啟動mongo與操作">
-      <i class="fa fa-chevron-left"></i> 使用docker啟動mongo與操作
+    <a href="/2020/09/14/03-go-signal/" rel="prev" title="[Go] 信號處理和退出程式">
+      <i class="fa fa-chevron-left"></i> [Go] 信號處理和退出程式
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/09/14/03-go-signal/" rel="next" title="[Go] 信號處理和退出程式">
-      [Go] 信號處理和退出程式 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/09/18/heroku-deploy/" rel="next" title="heroku-deploy">
+      heroku-deploy <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -345,6 +320,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%81%B5%E7%85%A7git-readme%E6%8C%87%E7%A4%BA%E5%95%9F%E5%8B%95"><span class="nav-number">1.</span> <span class="nav-text">遵照git readme指示啟動:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B6%B2%E9%A0%81%E7%89%88%E6%9C%AC%E9%80%A3%E7%B7%9A"><span class="nav-number">1.1.</span> <span class="nav-text">網頁版本連線</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#VNC-%E7%89%88%E6%9C%AC%E9%80%A3%E7%B7%9A"><span class="nav-number">1.2.</span> <span class="nav-text">VNC 版本連線</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
